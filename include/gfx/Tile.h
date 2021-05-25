@@ -8,13 +8,13 @@
 
 typedef struct {
 	const u8 tileSize;
-	const u32* tileData;
+	const u32 (*tileData)[8];
 } tile_t;
 
 //OBJ tiles
 const tile_t playerTiles = {playerTileSize, playerTileData};
 
 //BG tiles
-const tile_t indoorTile = {1, indoorsTileData};
+const tile_t level0Tiles = {1, &indoorsTileData};
 
 void loadTileToMem(const tile_t* tile_p, const u16 tileOffs, u8 baseBlock);
