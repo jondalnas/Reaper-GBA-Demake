@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdlib.h>
 #include <gba_types.h>
 
 #include "Entity.h"
@@ -16,8 +17,12 @@ typedef struct {
 
 class Level {
 public:
+	Level() {
+	}
+
 	void init(LevelData_t* level);
 	Entity* getEntity(u8 index);
+	void update();
 	
 	~Level() {
 		delete entities;
@@ -25,5 +30,6 @@ public:
 
 private:
 	Entity* entities;
+	u8 numEnt;
 	Entity* player;
 };

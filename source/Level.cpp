@@ -4,33 +4,42 @@
 #include <gba_sprites.h>
 #include <stdlib.h>
 
+void Level::update() {
+	for (int i = 0; i < numEnt; i++) {
+		entities[i].update();
+	}
+}
+
 void Level::init(LevelData_t* level) {
 	//Free old level
 	delete entities;
 	
 	//Load new level
 	//Clear OAM
-	OBJATTR none = {ATTR0_DISABLED, 0, 0, 0};
 	for (int i = 0; i < 128; i++) {
-		OAM[i] = none;
+		OAM[i] = {ATTR0_DISABLED, 0, 0, 0};
 	}
 	
 	//Enable backgrounds
 	REG_DISPCNT = MODE_0 | level->bgEnable | OBJ_ON | OBJ_1D_MAP;
 	
-	//Load entity tiles
+	//Load entity tiles and palettes
 	for (int i = 0; i < level->numDiffEntities; i++) {
 		loadTileToMem(&(level->entityTiles[i]), i, OBJ_BLOCK);
 	}
 	
 	//Create entities based on EntityData
-	entities = (Entity*)malloc(level->numEntities * sizeof(Entity));
-	for (int i = 0; i < level->numEntities; i++) {
+	numEnt = level->numEntities;
+	entities = (Entity*)malloc(numEnt * sizeof(Entity));
+	for (int i = 0; i < numEnt; i++) {
 		EntityData_t ed = level->entities[i];
 		Entity e(ed.x, ed.y, &(OAM[i]));
 		entities[i] = e;
 		entities[i].init(&ed);
 	}
+	player = &(entities[0]);
+	//*((vu32*)0x02000104) = (u32)&level->numEntities;
+	*((vu32*)0x02000100) = (u32)&numEnt;
 	
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
