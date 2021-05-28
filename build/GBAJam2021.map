@@ -3,13 +3,55 @@ Archive member included to satisfy reference by file (symbol)
 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
                               Main.o (irqInit)
 D:/devkitPro/libgba/lib\libgba.a(input.o)
-                              Main.o (scanKeys)
+                              Player.o (scanKeys)
 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
                               D:/devkitPro/libgba/lib\libgba.a(interrupt.o) (IntrMain)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
-                              Level.o (operator delete(void*, unsigned int))
+                              Entity.o (operator delete(void*, unsigned int))
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+                              Level.o (operator new(unsigned int))
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o) (std::bad_alloc::~bad_alloc())
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
                               d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o) (operator delete(void*))
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o) (__cxa_allocate_exception)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o) (std::exception::~exception())
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o) (std::terminate())
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o) (__cxa_throw)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_unex_handler.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o) (__cxxabiv1::__unexpected_handler)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o) (std::get_new_handler())
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o) (vtable for __cxxabiv1::__si_class_type_info)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o) (std::type_info::__is_pointer_p() const)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o) (__cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o) (__cxa_begin_catch)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o) (__cxa_get_globals_fast)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o) (__gxx_personality_v0)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_term_handler.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o) (__cxxabiv1::__terminate_handler)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o) (__cxa_type_match)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o) (__cxa_call_terminate)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o) (__aeabi_unwind_cpp_pr1)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(libunwind.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o) (restore_core_regs)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o) (__gnu_unwind_execute)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o) (abort)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
                               d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o (__libc_init_array)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
@@ -17,15 +59,25 @@ d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
                               d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o) (_malloc_r)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
-                              Level.o (memcpy)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o) (memcpy)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memset.o)
                               Main.o (memset)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
                               d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o) (__malloc_lock)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o) (raise)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o) (strcmp)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
                               d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o) (_free_r)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getpid.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o) (_getpid_r)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(kill.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o) (_kill_r)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
                               d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o) (_sbrk_r)
+d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(_exit.o)
+                              d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o) (_exit)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
                               d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o) (fake_heap_start)
 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
@@ -55,11 +107,20 @@ Discarded input sections
                 0x0000000000000000       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
  .data.__dso_handle
                 0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
+ .group         0x0000000000000000       0x10 Entity.o
  .data          0x0000000000000000        0x0 Entity.o
  .bss           0x0000000000000000        0x0 Entity.o
+ .text._ZN6EntityD2Ev
+                0x0000000000000000        0x4 Entity.o
+ .text._ZN6EntityD0Ev
+                0x0000000000000000       0x14 Entity.o
+ .rodata        0x0000000000000000       0x14 Entity.o
  .data          0x0000000000000000        0x0 Level.o
  .bss           0x0000000000000000        0x0 Level.o
  .data          0x0000000000000000        0x0 Main.o
+ .group         0x0000000000000000       0x10 Player.o
+ .data          0x0000000000000000        0x0 Player.o
+ .bss           0x0000000000000000        0x0 Player.o
  .data          0x0000000000000000        0x0 Tile.o
  .bss           0x0000000000000000        0x0 Tile.o
  .data          0x0000000000000000        0x0 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
@@ -72,11 +133,369 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
  .ARM.extab.text._ZdlPvj
                 0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+ .ARM.extab.text._Znwj
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+ .ARM.extab.text._ZNKSt9bad_alloc4whatEv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+ .ARM.extab.text._ZNSt9bad_allocD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+ .ARM.extab.text._ZNSt9bad_allocD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
  .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
  .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
  .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
  .ARM.extab.text._ZdlPv
                 0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text._ZN12_GLOBAL__N_14pool4freeEPv.constprop.0
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text._ZN12_GLOBAL__N_14pool8allocateEj.constprop.0
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .text._ZN9__gnu_cxx9__freeresEv
+                0x0000000000000000       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text._ZN9__gnu_cxx9__freeresEv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.exidx.text._ZN9__gnu_cxx9__freeresEv
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text.__cxa_allocate_exception
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text.__cxa_free_exception
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .text.__cxa_allocate_dependent_exception
+                0x0000000000000000       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text.__cxa_allocate_dependent_exception
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.exidx.text.__cxa_allocate_dependent_exception
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .text.__cxa_free_dependent_exception
+                0x0000000000000000       0x28 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text.__cxa_free_dependent_exception
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.exidx.text.__cxa_free_dependent_exception
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .ARM.extab.text.startup._GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZNSt9exceptionD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZNSt13bad_exceptionD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .rodata._ZNKSt9exception4whatEv.str1.4
+                0x0000000000000000        0xf d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZNKSt9exception4whatEv
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZNKSt9exception4whatEv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZNKSt9exception4whatEv
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZNKSt13bad_exception4whatEv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZNSt9exceptionD0Ev
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZNSt9exceptionD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZNSt9exceptionD0Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZNSt13bad_exceptionD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZN10__cxxabiv115__forced_unwindD2Ev
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZN10__cxxabiv115__forced_unwindD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZN10__cxxabiv115__forced_unwindD2Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZN10__cxxabiv115__forced_unwindD0Ev
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZN10__cxxabiv115__forced_unwindD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZN10__cxxabiv115__forced_unwindD0Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZN10__cxxabiv119__foreign_exceptionD2Ev
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZN10__cxxabiv119__foreign_exceptionD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZN10__cxxabiv119__foreign_exceptionD2Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZN10__cxxabiv119__foreign_exceptionD0Ev
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZN10__cxxabiv119__foreign_exceptionD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZN10__cxxabiv119__foreign_exceptionD0Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZGTtNKSt9exceptionD1Ev
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZGTtNKSt9exceptionD1Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZGTtNKSt9exceptionD1Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text._ZGTtNKSt13bad_exceptionD1Ev
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.extab.text._ZGTtNKSt13bad_exceptionD1Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .ARM.exidx.text._ZGTtNKSt13bad_exceptionD1Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .rodata._ZTVN10__cxxabiv115__forced_unwindE
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .rodata._ZTVN10__cxxabiv119__foreign_exceptionE
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .rodata._ZTVSt9exception
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZSt9terminatev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZN10__cxxabiv112__unexpectedEPFvvE
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZSt10unexpectedv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .text._ZSt13set_terminatePFvvE
+                0x0000000000000000       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZSt13set_terminatePFvvE
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.exidx.text._ZSt13set_terminatePFvvE
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZSt13get_terminatev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .text._ZSt14set_unexpectedPFvvE
+                0x0000000000000000       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZSt14set_unexpectedPFvvE
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.exidx.text._ZSt14set_unexpectedPFvvE
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZSt14get_unexpectedv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.extab.text._ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP21_Unwind_Control_Block
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.extab.text.__cxa_init_primary_exception
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.extab.text.__cxa_throw
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.extab.text.__cxa_rethrow
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_unex_handler.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_unex_handler.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_unex_handler.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .text._ZSt15set_new_handlerPFvvE
+                0x0000000000000000       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .ARM.extab.text._ZSt15set_new_handlerPFvvE
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .ARM.exidx.text._ZSt15set_new_handlerPFvvE
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .ARM.extab.text._ZSt15get_new_handlerv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .rodata._ZSt7nothrow
+                0x0000000000000000        0x1 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.extab.text._ZN10__cxxabiv120__si_class_type_infoD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.extab.text._ZN10__cxxabiv120__si_class_type_infoD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.extab.text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.extab.text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.extab.text._ZNSt9type_infoD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.extab.text._ZNKSt9type_info14__is_pointer_pEv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .text._ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.extab.text._ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.exidx.text._ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .text._ZNSt9type_infoD0Ev
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.extab.text._ZNSt9type_infoD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.exidx.text._ZNSt9type_infoD0Ev
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .text._ZNKSt9type_info10__do_catchEPKS_PPvj
+                0x0000000000000000       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.extab.text._ZNKSt9type_info10__do_catchEPKS_PPvj
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.exidx.text._ZNKSt9type_info10__do_catchEPKS_PPvj
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.extab.text._ZNKSt9type_infoeqERKS_
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .rodata._ZTVSt9type_info
+                0x0000000000000000       0x20 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.extab.text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.extab.text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.extab.text._ZN10__cxxabiv117__class_type_infoD2Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.extab.text._ZN10__cxxabiv117__class_type_infoD0Ev
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.extab.text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.extab.text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.extab.text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .text.__cxa_get_exception_ptr
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.extab.text.__cxa_get_exception_ptr
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.exidx.text.__cxa_get_exception_ptr
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.extab.text.__cxa_end_catch
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .text._ZSt18uncaught_exceptionv
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.extab.text._ZSt18uncaught_exceptionv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.exidx.text._ZSt18uncaught_exceptionv
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .text._ZSt19uncaught_exceptionsv
+                0x0000000000000000       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.extab.text._ZSt19uncaught_exceptionsv
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.exidx.text._ZSt19uncaught_exceptionsv
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .ARM.extab.text.__cxa_get_globals_fast
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .ARM.extab.text.__cxa_get_globals
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.extab.text._ZL21base_of_encoded_valuehP15_Unwind_Context
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.extab.text._ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_term_handler.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_term_handler.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_term_handler.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .ARM.extab.text.__cxa_begin_cleanup
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .ARM.extab.text.__gnu_end_cleanup
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .ARM.extab.text._ZN10__cxxabiv1L24__is_gxx_exception_classEPc
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .ARM.extab.text.__cxa_call_terminate
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.selfrel_offset31
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.search_EIT_table
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_unwind_get_pr_addr
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.get_eit_entry
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.restore_non_core_regs
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.__gnu_unwind_24bit.constprop.0
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_unwind_24bit.constprop.0
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__gnu_unwind_24bit.constprop.0
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_decode_typeinfo_ptr.constprop.0
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_DebugHook
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.unwind_phase2
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text._Unwind_GetCFA
+                0x0000000000000000        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_GetCFA
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text._Unwind_GetCFA
+                0x0000000000000000        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_Unwind_RaiseException
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_Unwind_ForcedUnwind
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_Unwind_Resume
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_Unwind_Resume_or_Rethrow
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_Complete
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_DeleteException
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_VRS_Get
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_GetGR
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_VRS_Set
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_SetGR
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_Unwind_Backtrace
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__aeabi_unwind_cpp_pr0
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__aeabi_unwind_cpp_pr1
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__aeabi_unwind_cpp_pr2
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(libunwind.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(libunwind.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text.next_unwind_byte
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text._Unwind_GetGR.constprop.0
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text.unwind_UCB_from_context
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text.__gnu_unwind_frame
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text._Unwind_GetRegionStart
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text._Unwind_GetLanguageSpecificData
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text.unlikely._Unwind_GetDataRelBase
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.extab.text.unlikely._Unwind_GetTextRelBase
+                0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o)
  .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
  .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
  .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
@@ -95,12 +514,37 @@ Discarded input sections
  .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
  .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
  .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .text._init_signal_r
+                0x0000000000000000       0x38 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .text._signal_r
+                0x0000000000000000       0x50 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .text.__sigtramp_r
+                0x0000000000000000       0x68 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .text.signal   0x0000000000000000       0x54 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .text._init_signal
+                0x0000000000000000       0x3c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .text.__sigtramp
+                0x0000000000000000       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
  .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
  .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
  .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getpid.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getpid.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getpid.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(kill.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(kill.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(kill.o)
  .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
  .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
  .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+ .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(_exit.o)
+ .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(_exit.o)
+ .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(_exit.o)
  .text          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
  .data          0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
  .bss           0x0000000000000000        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
@@ -178,156 +622,764 @@ Linker script and memory map
  *(.plt)
                 0x000000000800021c                . = ALIGN (0x4)
 
-.text           0x000000000800021c     0x12d8
+.text           0x0000000008000220     0x37a0
  *(EXCLUDE_FILE(*.iwram*) .text*)
  .text.__do_global_dtors_aux
-                0x000000000800021c       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
+                0x0000000008000220       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
  .text.frame_dummy
-                0x0000000008000248       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
- .text          0x000000000800026c       0x94 Entity.o
-                0x000000000800026c                Entity::update()
-                0x0000000008000294                Entity::init(EntityData_t*)
- .text          0x0000000008000300      0x124 Level.o
-                0x0000000008000300                Level::update()
-                0x0000000008000324                Level::init(LevelData_t*)
-                0x000000000800041c                Level::getEntity(unsigned char)
- .text          0x0000000008000424       0x6c Main.o
-                0x0000000008000424                VBlank()
- .text.startup  0x0000000008000490       0xe0 Main.o
-                0x0000000008000490                main
- .text          0x0000000008000570       0x48 Tile.o
-                0x0000000008000570                loadTileToMem(tile_t const*, unsigned short, unsigned char)
- .text          0x00000000080005b8      0x3b8 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
-                0x00000000080005b8                dummy
-                0x00000000080005bc                InitInterrupt
-                0x0000000008000618                irqInit
-                0x0000000008000674                SetInterrupt
-                0x0000000008000758                irqSet
-                0x000000000800083c                EnableInterrupt
-                0x0000000008000888                irqEnable
-                0x00000000080008d8                DisableInterrupt
-                0x0000000008000924                irqDisable
- .text          0x0000000008000970       0xbc D:/devkitPro/libgba/lib\libgba.a(input.o)
-                0x0000000008000970                setRepeat
-                0x000000000800097c                scanKeys
-                0x00000000080009f0                keysDownRepeat
-                0x0000000008000a00                keysDown
-                0x0000000008000a10                keysUp
-                0x0000000008000a20                keysHeld
- .text._ZdlPvj  0x0000000008000a2c        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
-                0x0000000008000a2c                operator delete(void*, unsigned int)
- .text._ZdlPv   0x0000000008000a38        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
-                0x0000000008000a38                operator delete(void*)
+                0x000000000800024c       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
+ .text          0x0000000008000270       0x28 Entity.o
+                0x0000000008000270                Entity::update()
+ .text          0x0000000008000298      0x134 Level.o
+                0x0000000008000298                Level::update()
+                0x00000000080002c0                Level::init(LevelData_t*)
+ .text          0x00000000080003cc       0x14 Main.o
+                0x00000000080003cc                VBlank()
+ .text.startup  0x00000000080003e0       0xd4 Main.o
+                0x00000000080003e0                main
+ .text          0x00000000080004b4       0xbc Player.o
+                0x00000000080004b4                Player::update()
+                0x0000000008000540                Player::Player(unsigned short, unsigned short, OBJATTR*, unsigned char)
+                0x0000000008000540                Player::Player(unsigned short, unsigned short, OBJATTR*, unsigned char)
+ .text._ZN6PlayerD2Ev
+                0x0000000008000570        0x4 Player.o
+                0x0000000008000570                Player::~Player()
+                0x0000000008000570                Player::~Player()
+ .text._ZN6PlayerD0Ev
+                0x0000000008000574       0x14 Player.o
+                0x0000000008000574                Player::~Player()
+ .text          0x0000000008000588       0x48 Tile.o
+                0x0000000008000588                loadTileToMem(tile_t const*, unsigned short, unsigned char)
+ .text          0x00000000080005d0      0x3b8 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+                0x00000000080005d0                dummy
+                0x00000000080005d4                InitInterrupt
+                0x0000000008000630                irqInit
+                0x000000000800068c                SetInterrupt
+                0x0000000008000770                irqSet
+                0x0000000008000854                EnableInterrupt
+                0x00000000080008a0                irqEnable
+                0x00000000080008f0                DisableInterrupt
+                0x000000000800093c                irqDisable
+ .text          0x0000000008000988       0xbc D:/devkitPro/libgba/lib\libgba.a(input.o)
+                0x0000000008000988                setRepeat
+                0x0000000008000994                scanKeys
+                0x0000000008000a08                keysDownRepeat
+                0x0000000008000a18                keysDown
+                0x0000000008000a28                keysUp
+                0x0000000008000a38                keysHeld
+ .text._ZdlPvj  0x0000000008000a44        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
+                0x0000000008000a44                operator delete(void*, unsigned int)
+ .text._Znwj    0x0000000008000a50       0x48 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+                0x0000000008000a50                operator new(unsigned int)
+ .text._ZNKSt9bad_alloc4whatEv
+                0x0000000008000a98        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                0x0000000008000a98                std::bad_alloc::what() const
+ .text._ZNSt9bad_allocD2Ev
+                0x0000000008000aa0       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                0x0000000008000aa0                std::bad_alloc::~bad_alloc()
+                0x0000000008000aa0                std::bad_alloc::~bad_alloc()
+ .text._ZNSt9bad_allocD0Ev
+                0x0000000008000abc       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                0x0000000008000abc                std::bad_alloc::~bad_alloc()
+ .text._ZdlPv   0x0000000008000ae0        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
+                0x0000000008000ae0                operator delete(void*)
+ .text._ZN12_GLOBAL__N_14pool4freeEPv.constprop.0
+                0x0000000008000aec       0x7c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .text._ZN12_GLOBAL__N_14pool8allocateEj.constprop.0
+                0x0000000008000b68       0x54 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .text.__cxa_allocate_exception
+                0x0000000008000bbc       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                0x0000000008000bbc                __cxa_allocate_exception
+ .text.__cxa_free_exception
+                0x0000000008000bec       0x28 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                0x0000000008000bec                __cxa_free_exception
+ .text.startup._GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
+                0x0000000008000c14       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .text._ZNSt9exceptionD2Ev
+                0x0000000008000c44        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008000c44                std::exception::~exception()
+                0x0000000008000c44                std::exception::~exception()
+ .text._ZNSt13bad_exceptionD2Ev
+                0x0000000008000c48        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008000c48                std::bad_exception::~bad_exception()
+                0x0000000008000c48                std::bad_exception::~bad_exception()
+ .text._ZNKSt13bad_exception4whatEv
+                0x0000000008000c4c        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008000c4c                std::bad_exception::what() const
+                0x0000000008000c4c                transaction clone for std::bad_exception::what() const
+ .text._ZNSt13bad_exceptionD0Ev
+                0x0000000008000c54       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008000c54                std::bad_exception::~bad_exception()
+ .text._ZN10__cxxabiv111__terminateEPFvvE
+                0x0000000008000c68       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                0x0000000008000c68                __cxxabiv1::__terminate(void (*)())
+ .text._ZSt9terminatev
+                0x0000000008000c7c       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                0x0000000008000c7c                std::terminate()
+ .text._ZN10__cxxabiv112__unexpectedEPFvvE
+                0x0000000008000c8c        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                0x0000000008000c8c                __cxxabiv1::__unexpected(void (*)())
+ .text._ZSt10unexpectedv
+                0x0000000008000c98       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                0x0000000008000c98                std::unexpected()
+ .text._ZSt13get_terminatev
+                0x0000000008000ca8        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                0x0000000008000ca8                std::get_terminate()
+ .text._ZSt14get_unexpectedv
+                0x0000000008000cb4        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                0x0000000008000cb4                std::get_unexpected()
+ .text._ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP21_Unwind_Control_Block
+                0x0000000008000cc0       0x3c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .text.__cxa_init_primary_exception
+                0x0000000008000cfc       0x50 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+                0x0000000008000cfc                __cxa_init_primary_exception
+ .text.__cxa_throw
+                0x0000000008000d4c       0x34 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+                0x0000000008000d4c                __cxa_throw
+ .text.__cxa_rethrow
+                0x0000000008000d80       0x70 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+                0x0000000008000d80                __cxa_rethrow
+ .text._ZSt15get_new_handlerv
+                0x0000000008000df0        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+                0x0000000008000df0                std::get_new_handler()
+ .text._ZN10__cxxabiv120__si_class_type_infoD2Ev
+                0x0000000008000dfc       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x0000000008000dfc                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x0000000008000dfc                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+ .text._ZN10__cxxabiv120__si_class_type_infoD0Ev
+                0x0000000008000e18       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x0000000008000e18                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+ .text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+                0x0000000008000e3c       0x40 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x0000000008000e3c                __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ .text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+                0x0000000008000e7c       0xa4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x0000000008000e7c                __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ .text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+                0x0000000008000f20       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x0000000008000f20                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+ .text._ZNSt9type_infoD2Ev
+                0x0000000008000f4c        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                0x0000000008000f4c                std::type_info::~type_info()
+                0x0000000008000f4c                std::type_info::~type_info()
+ .text._ZNKSt9type_info14__is_pointer_pEv
+                0x0000000008000f50        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                0x0000000008000f50                std::type_info::__is_pointer_p() const
+                0x0000000008000f50                std::type_info::__is_function_p() const
+ .text._ZNKSt9type_infoeqERKS_
+                0x0000000008000f54       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                0x0000000008000f54                std::type_info::operator==(std::type_info const&) const
+ .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+                0x0000000008000f84       0x3c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008000f84                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+ .text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+                0x0000000008000fc0       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008000fc0                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ .text._ZN10__cxxabiv117__class_type_infoD2Ev
+                0x0000000008000fd4       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008000fd4                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x0000000008000fd4                __cxxabiv1::__class_type_info::~__class_type_info()
+ .text._ZN10__cxxabiv117__class_type_infoD0Ev
+                0x0000000008000ff0       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008000ff0                __cxxabiv1::__class_type_info::~__class_type_info()
+ .text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+                0x0000000008001014       0x44 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008001014                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+                0x0000000008001058       0x20 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008001058                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+ .text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+                0x0000000008001078       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008001078                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+ .text.__cxa_begin_catch
+                0x00000000080010a4       0x78 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+                0x00000000080010a4                __cxa_begin_catch
+ .text.__cxa_end_catch
+                0x000000000800111c       0x94 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+                0x000000000800111c                __cxa_end_catch
+ .text.__cxa_get_globals_fast
+                0x00000000080011b0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+                0x00000000080011b0                __cxa_get_globals_fast
+ .text.__cxa_get_globals
+                0x00000000080011b8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+                0x00000000080011b8                __cxa_get_globals
+ .text._ZL28read_encoded_value_with_basehjPKhPj
+                0x00000000080011c0      0x110 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .text._ZL21base_of_encoded_valuehP15_Unwind_Context
+                0x00000000080012d0       0x4c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .text._ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
+                0x000000000800131c       0x94 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .text.__gxx_personality_v0
+                0x00000000080013b0      0x4bc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+                0x00000000080013b0                __gxx_personality_v0
+ .text.__cxa_end_cleanup
+                0x000000000800186c        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+                0x000000000800186c                __cxa_end_cleanup
+ .text.__cxa_type_match
+                0x0000000008001878       0xc8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+                0x0000000008001878                __cxa_type_match
+ .text.__cxa_begin_cleanup
+                0x0000000008001940       0x64 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+                0x0000000008001940                __cxa_begin_cleanup
+ .text.__gnu_end_cleanup
+                0x00000000080019a4       0x74 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+                0x00000000080019a4                __gnu_end_cleanup
+ .text._ZN10__cxxabiv1L24__is_gxx_exception_classEPc
+                0x0000000008001a18       0x3c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .text.__cxa_call_terminate
+                0x0000000008001a54       0x20 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+                0x0000000008001a54                __cxa_call_terminate
+ .text.unlikely.__cxa_call_unexpected
+                0x0000000008001a74      0x104 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+                0x0000000008001a74                __cxa_call_unexpected
+ .text.selfrel_offset31
+                0x0000000008001b78       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.search_EIT_table
+                0x0000000008001b90       0x74 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.__gnu_unwind_get_pr_addr
+                0x0000000008001c04       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.get_eit_entry
+                0x0000000008001c30       0x98 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.restore_non_core_regs
+                0x0000000008001cc8       0x5c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text._Unwind_decode_typeinfo_ptr.constprop.0
+                0x0000000008001d24        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text._Unwind_DebugHook
+                0x0000000008001d30        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.unwind_phase2
+                0x0000000008001d34       0x40 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.unwind_phase2_forced
+                0x0000000008001d74       0xd8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.__gnu_Unwind_RaiseException
+                0x0000000008001e4c       0x58 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001e4c                __gnu_Unwind_RaiseException
+ .text.__gnu_Unwind_ForcedUnwind
+                0x0000000008001ea4       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001ea4                __gnu_Unwind_ForcedUnwind
+ .text.__gnu_Unwind_Resume
+                0x0000000008001ebc       0x4c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001ebc                __gnu_Unwind_Resume
+ .text.__gnu_Unwind_Resume_or_Rethrow
+                0x0000000008001f08       0x20 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001f08                __gnu_Unwind_Resume_or_Rethrow
+ .text._Unwind_Complete
+                0x0000000008001f28        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001f28                _Unwind_Complete
+ .text._Unwind_DeleteException
+                0x0000000008001f2c       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001f2c                _Unwind_DeleteException
+ .text._Unwind_VRS_Get
+                0x0000000008001f44       0x38 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001f44                _Unwind_VRS_Get
+ .text._Unwind_GetGR
+                0x0000000008001f7c       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text._Unwind_VRS_Set
+                0x0000000008001f98       0x38 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001f98                _Unwind_VRS_Set
+ .text._Unwind_SetGR
+                0x0000000008001fd0       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.__gnu_Unwind_Backtrace
+                0x0000000008001fec       0x78 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008001fec                __gnu_Unwind_Backtrace
+ .text.__gnu_unwind_pr_common
+                0x0000000008002064      0x2d0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .text.__aeabi_unwind_cpp_pr0
+                0x0000000008002334       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008002334                __aeabi_unwind_cpp_pr0
+ .text.__aeabi_unwind_cpp_pr1
+                0x0000000008002344       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008002344                __aeabi_unwind_cpp_pr1
+ .text.__aeabi_unwind_cpp_pr2
+                0x0000000008002354       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008002354                __aeabi_unwind_cpp_pr2
+ .text._Unwind_VRS_Pop
+                0x0000000008002364      0x2c8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                0x0000000008002364                _Unwind_VRS_Pop
+ .text          0x000000000800262c      0x1d8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(libunwind.o)
+                0x000000000800262c                __restore_core_regs
+                0x000000000800262c                restore_core_regs
+                0x0000000008002648                __gnu_Unwind_Restore_VFP
+                0x0000000008002650                __gnu_Unwind_Save_VFP
+                0x0000000008002658                __gnu_Unwind_Restore_VFP_D
+                0x0000000008002660                __gnu_Unwind_Save_VFP_D
+                0x0000000008002668                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x0000000008002670                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x0000000008002678                __gnu_Unwind_Restore_WMMXD
+                0x00000000080026bc                __gnu_Unwind_Save_WMMXD
+                0x0000000008002700                __gnu_Unwind_Restore_WMMXC
+                0x0000000008002714                __gnu_Unwind_Save_WMMXC
+                0x0000000008002728                ___Unwind_RaiseException
+                0x0000000008002728                _Unwind_RaiseException
+                0x0000000008002754                _Unwind_Resume
+                0x0000000008002754                ___Unwind_Resume
+                0x0000000008002780                _Unwind_Resume_or_Rethrow
+                0x0000000008002780                ___Unwind_Resume_or_Rethrow
+                0x00000000080027ac                _Unwind_ForcedUnwind
+                0x00000000080027ac                ___Unwind_ForcedUnwind
+                0x00000000080027d8                ___Unwind_Backtrace
+                0x00000000080027d8                _Unwind_Backtrace
+ .text.next_unwind_byte
+                0x0000000008002804       0x34 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .text._Unwind_GetGR.constprop.0
+                0x0000000008002838       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .text.unwind_UCB_from_context
+                0x0000000008002854        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .text.__gnu_unwind_execute
+                0x0000000008002860      0x2fc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                0x0000000008002860                __gnu_unwind_execute
+ .text.__gnu_unwind_frame
+                0x0000000008002b5c       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                0x0000000008002b5c                __gnu_unwind_frame
+ .text._Unwind_GetRegionStart
+                0x0000000008002b88       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                0x0000000008002b88                _Unwind_GetRegionStart
+ .text._Unwind_GetLanguageSpecificData
+                0x0000000008002b98       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                0x0000000008002b98                _Unwind_GetLanguageSpecificData
+ .text.unlikely._Unwind_GetDataRelBase
+                0x0000000008002bb0        0x6 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                0x0000000008002bb0                _Unwind_GetDataRelBase
+ .text.unlikely._Unwind_GetTextRelBase
+                0x0000000008002bb6        0x6 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                0x0000000008002bb6                _Unwind_GetTextRelBase
+ .text.abort    0x0000000008002bbc       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o)
+                0x0000000008002bbc                abort
  .text.__libc_init_array
-                0x0000000008000a44       0x50 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
-                0x0000000008000a44                __libc_init_array
- .text.malloc   0x0000000008000a94       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
-                0x0000000008000a94                malloc
- .text.free     0x0000000008000aa8       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
-                0x0000000008000aa8                free
+                0x0000000008002bcc       0x50 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+                0x0000000008002bcc                __libc_init_array
+ .text.malloc   0x0000000008002c1c       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+                0x0000000008002c1c                malloc
+ .text.free     0x0000000008002c30       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+                0x0000000008002c30                free
  .text._malloc_r
-                0x0000000008000abc      0x58c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x0000000008000abc                _malloc_r
- .text.memcpy   0x0000000008001048       0xa8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
-                0x0000000008001048                memcpy
- .text.memset   0x00000000080010f0       0xb0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memset.o)
-                0x00000000080010f0                memset
+                0x0000000008002c44      0x58c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000008002c44                _malloc_r
+ .text.memcpy   0x00000000080031d0       0xa8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+                0x00000000080031d0                memcpy
+ .text.memset   0x0000000008003278       0xb0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memset.o)
+                0x0000000008003278                memset
  .text.__malloc_lock
-                0x00000000080011a0       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
-                0x00000000080011a0                __malloc_lock
+                0x0000000008003328       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+                0x0000000008003328                __malloc_lock
  .text.__malloc_unlock
-                0x00000000080011b4       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
-                0x00000000080011b4                __malloc_unlock
+                0x000000000800333c       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+                0x000000000800333c                __malloc_unlock
+ .text._raise_r
+                0x0000000008003350       0x64 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+                0x0000000008003350                _raise_r
+ .text.raise    0x00000000080033b4       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+                0x00000000080033b4                raise
+ .text          0x00000000080033c8      0x224 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+                0x00000000080033c8                strcmp
  .text._malloc_trim_r
-                0x00000000080011c8       0xa0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
-                0x00000000080011c8                _malloc_trim_r
- .text._free_r  0x0000000008001268      0x1d8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
-                0x0000000008001268                _free_r
- .text._sbrk_r  0x0000000008001440       0x54 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
-                0x0000000008001440                _sbrk_r
+                0x00000000080035ec       0xa0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+                0x00000000080035ec                _malloc_trim_r
+ .text._free_r  0x000000000800368c      0x1d8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+                0x000000000800368c                _free_r
+ .text._getpid_r
+                0x0000000008003864        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getpid.o)
+                0x0000000008003864                _getpid_r
+ .text._kill_r  0x0000000008003870        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(kill.o)
+                0x0000000008003870                _kill_r
+ .text._sbrk_r  0x000000000800387c       0x54 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+                0x000000000800387c                _sbrk_r
+ .text._exit    0x00000000080038d0       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(_exit.o)
+                0x00000000080038d0                _exit
  .text.__libc_lock_acquire_recursive
-                0x0000000008001494       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
-                0x0000000008001494                __libc_lock_acquire_recursive
+                0x00000000080038e8       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+                0x00000000080038e8                __libc_lock_acquire_recursive
  .text.__libc_lock_release_recursive
-                0x00000000080014b0       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
-                0x00000000080014b0                __libc_lock_release_recursive
+                0x0000000008003904       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+                0x0000000008003904                __libc_lock_release_recursive
  .text.__getreent
-                0x00000000080014cc       0x28 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getreent.o)
-                0x00000000080014cc                __getreent
+                0x0000000008003920       0x28 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getreent.o)
+                0x0000000008003920                __getreent
+ .text.__getreent.__stub
+                0x0000000008003948       0x78 linker stubs
  *(.gnu.linkonce.t.*)
  *(.text.*personality*)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x00000000080014f4        0x0 linker stubs
+ .glue_7t       0x00000000080039c0        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x00000000080014f4        0x0 linker stubs
+ .glue_7        0x00000000080039c0        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x00000000080014f4        0x0 linker stubs
-                0x00000000080014f4                . = ALIGN (0x4)
-                0x00000000080014f4                __text_end = .
+ .vfp11_veneer  0x00000000080039c0        0x0 linker stubs
+                0x00000000080039c0                . = ALIGN (0x4)
+                0x00000000080039c0                __text_end = .
 
-.v4_bx          0x00000000080014f4        0x0
- .v4_bx         0x00000000080014f4        0x0 linker stubs
+.v4_bx          0x00000000080039c0        0x0
+ .v4_bx         0x00000000080039c0        0x0 linker stubs
 
-.iplt           0x00000000080014f4        0x0
- .iplt          0x00000000080014f4        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
+.iplt           0x00000000080039c0        0x0
+ .iplt          0x00000000080039c0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
 
-.fini           0x00000000080014f4        0xc
+.fini           0x00000000080039c0        0xc
  *(.fini)
- .fini          0x00000000080014f4        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crti.o
-                0x00000000080014f4                _fini
- .fini          0x00000000080014f8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtn.o
-                0x0000000008001500                . = ALIGN (0x4)
+ .fini          0x00000000080039c0        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crti.o
+                0x00000000080039c0                _fini
+ .fini          0x00000000080039c4        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtn.o
+                0x00000000080039cc                . = ALIGN (0x4)
 
-.rodata         0x0000000008001500      0x8f0
+.rodata         0x00000000080039cc      0xb08
  *(.rodata)
- .rodata        0x0000000008001500      0x8f0 Main.o
+ .rodata        0x00000000080039cc      0x8f8 Main.o
+ .rodata        0x00000000080042c4       0x14 Player.o
+                0x00000000080042c4                vtable for Player
  *all.rodata*(*)
  *(.roda)
  *(.rodata.*)
+ .rodata._ZNKSt9bad_alloc4whatEv.str1.4
+                0x00000000080042d8        0xf d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+ *fill*         0x00000000080042e7        0x1 ff
+ .rodata._ZTISt9bad_alloc
+                0x00000000080042e8        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                0x00000000080042e8                typeinfo for std::bad_alloc
+ .rodata._ZTSSt9bad_alloc
+                0x00000000080042f4        0xd d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                0x00000000080042f4                typeinfo name for std::bad_alloc
+ *fill*         0x0000000008004301        0x3 ff
+ .rodata._ZTVSt9bad_alloc
+                0x0000000008004304       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                0x0000000008004304                vtable for std::bad_alloc
+ .rodata._ZNKSt13bad_exception4whatEv.str1.4
+                0x0000000008004318       0x13 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ *fill*         0x000000000800432b        0x1 ff
+ .rodata._ZTIN10__cxxabiv115__forced_unwindE
+                0x000000000800432c        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x000000000800432c                typeinfo for __cxxabiv1::__forced_unwind
+ .rodata._ZTIN10__cxxabiv119__foreign_exceptionE
+                0x0000000008004334        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008004334                typeinfo for __cxxabiv1::__foreign_exception
+ .rodata._ZTISt13bad_exception
+                0x000000000800433c        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x000000000800433c                typeinfo for std::bad_exception
+ .rodata._ZTISt9exception
+                0x0000000008004348        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008004348                typeinfo for std::exception
+ .rodata._ZTSN10__cxxabiv115__forced_unwindE
+                0x0000000008004350       0x20 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008004350                typeinfo name for __cxxabiv1::__forced_unwind
+ .rodata._ZTSN10__cxxabiv119__foreign_exceptionE
+                0x0000000008004370       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008004370                typeinfo name for __cxxabiv1::__foreign_exception
+ .rodata._ZTSSt13bad_exception
+                0x0000000008004394       0x12 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x0000000008004394                typeinfo name for std::bad_exception
+ *fill*         0x00000000080043a6        0x2 ff
+ .rodata._ZTSSt9exception
+                0x00000000080043a8        0xd d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x00000000080043a8                typeinfo name for std::exception
+ *fill*         0x00000000080043b5        0x3 ff
+ .rodata._ZTVSt13bad_exception
+                0x00000000080043b8       0x14 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                0x00000000080043b8                vtable for std::bad_exception
+ .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
+                0x00000000080043cc        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x00000000080043cc                typeinfo for __cxxabiv1::__si_class_type_info
+ .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
+                0x00000000080043d8       0x25 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x00000000080043d8                typeinfo name for __cxxabiv1::__si_class_type_info
+ *fill*         0x00000000080043fd        0x3 ff
+ .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
+                0x0000000008004400       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                0x0000000008004400                vtable for __cxxabiv1::__si_class_type_info
+ .rodata._ZTISt9type_info
+                0x000000000800442c        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                0x000000000800442c                typeinfo for std::type_info
+ .rodata._ZTSSt9type_info
+                0x0000000008004434        0xd d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                0x0000000008004434                typeinfo name for std::type_info
+ *fill*         0x0000000008004441        0x3 ff
+ .rodata._ZTIN10__cxxabiv117__class_type_infoE
+                0x0000000008004444        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008004444                typeinfo for __cxxabiv1::__class_type_info
+ .rodata._ZTSN10__cxxabiv117__class_type_infoE
+                0x0000000008004450       0x22 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008004450                typeinfo name for __cxxabiv1::__class_type_info
+ *fill*         0x0000000008004472        0x2 ff
+ .rodata._ZTVN10__cxxabiv117__class_type_infoE
+                0x0000000008004474       0x2c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                0x0000000008004474                vtable for __cxxabiv1::__class_type_info
+ .rodata._ZL28read_encoded_value_with_basehjPKhPj
+                0x00000000080044a0       0x34 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
  *(.gnu.linkonce.r*)
-                0x0000000008001df0                . = ALIGN (0x4)
+                0x00000000080044d4                . = ALIGN (0x4)
 
-.ARM.extab
+.ARM.extab      0x00000000080044d4       0xc4
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008001df0                __exidx_start = .
+ .ARM.extab.text._ZN10__cxxabiv111__terminateEPFvvE
+                0x00000000080044d4       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.extab.text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+                0x00000000080044ec        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.extab.text.__cxa_begin_catch
+                0x00000000080044f8        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.extab.text._ZL28read_encoded_value_with_basehjPKhPj
+                0x0000000008004504        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.extab.text.__gxx_personality_v0
+                0x0000000008004510       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.extab.text.__cxa_type_match
+                0x0000000008004534        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .ARM.extab.text.unlikely.__cxa_call_unexpected
+                0x0000000008004540       0x28 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .ARM.extab.text.unwind_phase2_forced
+                0x0000000008004568        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_unwind_pr_common
+                0x0000000008004574        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text._Unwind_VRS_Pop
+                0x0000000008004580        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.extab.text.__gnu_unwind_execute
+                0x000000000800458c        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                0x0000000008004598                __exidx_start = .
 
-.ARM.exidx      0x0000000008001df0        0x8
+.ARM.exidx      0x0000000008004598      0x1b0
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
  .ARM.exidx.text._ZdlPvj
-                0x0000000008001df0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
- .ARM.exidx.text._ZdlPv
-                0x0000000008001df8        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
+                0x0000000008004598        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
+ .ARM.exidx.text._Znwj
+                0x00000000080045a0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+ .ARM.exidx.text._ZNKSt9bad_alloc4whatEv
+                0x00000000080045a8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+ .ARM.exidx.text._ZNSt9bad_allocD2Ev
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
                                           0x8 (size before relaxing)
-                0x0000000008001df8                __exidx_end = .
+ .ARM.exidx.text._ZNSt9bad_allocD0Ev
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZdlPv
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZN12_GLOBAL__N_14pool4freeEPv.constprop.0
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZN12_GLOBAL__N_14pool8allocateEj.constprop.0
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.__cxa_allocate_exception
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.__cxa_free_exception
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.startup._GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNSt9exceptionD2Ev
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNSt13bad_exceptionD2Ev
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNKSt13bad_exception4whatEv
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNSt13bad_exceptionD0Ev
+                0x00000000080045b0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZN10__cxxabiv111__terminateEPFvvE
+                0x00000000080045b0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.exidx.text._ZSt9terminatev
+                0x00000000080045b8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.exidx.text._ZN10__cxxabiv112__unexpectedEPFvvE
+                0x00000000080045c0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.exidx.text._ZSt10unexpectedv
+                0x00000000080045c8        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZSt13get_terminatev
+                0x00000000080045c8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .ARM.exidx.text._ZSt14get_unexpectedv
+                0x00000000080045d0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP21_Unwind_Control_Block
+                0x00000000080045d0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.exidx.text.__cxa_init_primary_exception
+                0x00000000080045d8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.exidx.text.__cxa_throw
+                0x00000000080045e0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.exidx.text.__cxa_rethrow
+                0x00000000080045e8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .ARM.exidx.text._ZSt15get_new_handlerv
+                0x00000000080045f0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .ARM.exidx.text._ZN10__cxxabiv120__si_class_type_infoD2Ev
+                0x00000000080045f8        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZN10__cxxabiv120__si_class_type_infoD0Ev
+                0x00000000080045f8        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+                0x00000000080045f8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.exidx.text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+                0x0000000008004600        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.exidx.text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+                0x0000000008004608        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .ARM.exidx.text._ZNSt9type_infoD2Ev
+                0x0000000008004610        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .ARM.exidx.text._ZNKSt9type_info14__is_pointer_pEv
+                0x0000000008004618        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNKSt9type_infoeqERKS_
+                0x0000000008004618        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+                0x0000000008004618        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.exidx.text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+                0x0000000008004620        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.exidx.text._ZN10__cxxabiv117__class_type_infoD2Ev
+                0x0000000008004628        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZN10__cxxabiv117__class_type_infoD0Ev
+                0x0000000008004628        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+                0x0000000008004628        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+                0x0000000008004628        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+                0x0000000008004628        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .ARM.exidx.text.__cxa_begin_catch
+                0x0000000008004630        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.exidx.text.__cxa_end_catch
+                0x0000000008004638        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .ARM.exidx.text.__cxa_get_globals_fast
+                0x0000000008004640        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .ARM.exidx.text.__cxa_get_globals
+                0x0000000008004648        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZL28read_encoded_value_with_basehjPKhPj
+                0x0000000008004648        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.exidx.text._ZL21base_of_encoded_valuehP15_Unwind_Context
+                0x0000000008004650        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.exidx.text._ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
+                0x0000000008004658        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.exidx.text.__gxx_personality_v0
+                0x0000000008004660       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.__cxa_type_match
+                0x0000000008004670        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .ARM.exidx.text.__cxa_begin_cleanup
+                0x0000000008004678        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .ARM.exidx.text.__gnu_end_cleanup
+                0x0000000008004680        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._ZN10__cxxabiv1L24__is_gxx_exception_classEPc
+                0x0000000008004680        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.__cxa_call_terminate
+                0x0000000008004680        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.unlikely.__cxa_call_unexpected
+                0x0000000008004680        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .ARM.exidx.text.selfrel_offset31
+                0x0000000008004688        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.search_EIT_table
+                0x0000000008004690        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.__gnu_unwind_get_pr_addr
+                0x0000000008004690        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.get_eit_entry
+                0x0000000008004690        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.restore_non_core_regs
+                0x0000000008004698        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text._Unwind_decode_typeinfo_ptr.constprop.0
+                0x00000000080046a0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text._Unwind_DebugHook
+                0x00000000080046a8        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.unwind_phase2
+                0x00000000080046a8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.unwind_phase2_forced
+                0x00000000080046b0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__gnu_Unwind_RaiseException
+                0x00000000080046b8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__gnu_Unwind_ForcedUnwind
+                0x00000000080046c0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__gnu_Unwind_Resume
+                0x00000000080046c8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__gnu_Unwind_Resume_or_Rethrow
+                0x00000000080046d0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text._Unwind_Complete
+                0x00000000080046d8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text._Unwind_DeleteException
+                0x00000000080046e0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text._Unwind_VRS_Get
+                0x00000000080046e8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text._Unwind_GetGR
+                0x00000000080046f0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._Unwind_VRS_Set
+                0x00000000080046f0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._Unwind_SetGR
+                0x00000000080046f0        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.__gnu_Unwind_Backtrace
+                0x00000000080046f0        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__gnu_unwind_pr_common
+                0x00000000080046f8        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__aeabi_unwind_cpp_pr0
+                0x0000000008004700        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.exidx.text.__aeabi_unwind_cpp_pr1
+                0x0000000008004708        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.__aeabi_unwind_cpp_pr2
+                0x0000000008004708        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._Unwind_VRS_Pop
+                0x0000000008004708       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.next_unwind_byte
+                0x0000000008004718        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text._Unwind_GetGR.constprop.0
+                0x0000000008004718        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.exidx.text.unwind_UCB_from_context
+                0x0000000008004720        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.exidx.text.__gnu_unwind_execute
+                0x0000000008004728        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.exidx.text.__gnu_unwind_frame
+                0x0000000008004730        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.exidx.text._Unwind_GetRegionStart
+                0x0000000008004738        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.exidx.text._Unwind_GetLanguageSpecificData
+                0x0000000008004740        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                                          0x8 (size before relaxing)
+ .ARM.exidx.text.unlikely._Unwind_GetDataRelBase
+                0x0000000008004740        0x8 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.exidx.text.unlikely._Unwind_GetTextRelBase
+                0x0000000008004748        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+                                          0x8 (size before relaxing)
+                0x0000000008004748                __exidx_end = .
 
-.ctors          0x0000000008001df8        0x0
+.ctors          0x0000000008004748        0x0
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x0000000008001df8                . = ALIGN (0x4)
+                0x0000000008004748                . = ALIGN (0x4)
 
-.dtors          0x0000000008001df8        0x0
+.dtors          0x0000000008004748        0x0
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x0000000008001df8                . = ALIGN (0x4)
+                0x0000000008004748                . = ALIGN (0x4)
 
-.eh_frame       0x0000000008001df8        0x4
+.eh_frame       0x0000000008004748        0x4
  *(.eh_frame)
- .eh_frame      0x0000000008001df8        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
- .eh_frame      0x0000000008001df8        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtend.o
-                0x0000000008001dfc                . = ALIGN (0x4)
+ .eh_frame      0x0000000008004748        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
+ .eh_frame      0x0000000008004748        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtend.o
+                0x000000000800474c                . = ALIGN (0x4)
 
 .gcc_except_table
-                0x0000000008001dfc        0x0
+                0x000000000800474c        0x0
  *(.gcc_except_table)
-                0x0000000008001dfc                . = ALIGN (0x4)
-                0x0000000008001dfc                __iwram_lma = .
+                0x000000000800474c                . = ALIGN (0x4)
+                0x000000000800474c                __iwram_lma = .
 
-.iwram          0x0000000003000000       0xb8 load address 0x0000000008001dfc
+.iwram          0x0000000003000000       0xb8 load address 0x000000000800474c
                 0x0000000003000000                __iwram_start__ = ABSOLUTE (.)
  *(.iwram .iwram*)
  .iwram         0x0000000003000000       0xb8 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
@@ -335,12 +1387,12 @@ Linker script and memory map
  *iwram.*(.text* .data*)
                 0x00000000030000b8                . = ALIGN (0x4)
                 0x00000000030000b8                __iwram_end__ = ABSOLUTE (.)
-                0x0000000008001eb4                __data_lma = (__iwram_lma + SIZEOF (.iwram))
+                0x0000000008004804                __data_lma = (__iwram_lma + SIZEOF (.iwram))
 
-.rel.dyn        0x00000000030000b8        0x0 load address 0x0000000008001eb4
+.rel.dyn        0x00000000030000b8        0x0 load address 0x0000000008004804
  .rel.iplt      0x00000000030000b8        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
 
-.bss            0x00000000030000b8      0x130
+.bss            0x00000000030000b8      0x14c
                 0x00000000030000b8                __bss_start = ABSOLUTE (.)
                 0x00000000030000b8                __bss_start__ = ABSOLUTE (.)
  *(.dynbss)
@@ -350,166 +1402,177 @@ Linker script and memory map
                 0x00000000030000b8        0x1 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
  *fill*         0x00000000030000b9        0x3 
  .bss.object.0  0x00000000030000bc       0x18 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
- .bss           0x00000000030000d4        0x8 Main.o
-                0x00000000030000d4                player
-                0x00000000030000d8                currLevel
- .bss           0x00000000030000dc        0xa D:/devkitPro/libgba/lib\libgba.a(input.o)
- *fill*         0x00000000030000e6        0x2 
+ .bss           0x00000000030000d4        0x4 Main.o
+                0x00000000030000d4                currLevel
+ .bss           0x00000000030000d8        0xa D:/devkitPro/libgba/lib\libgba.a(input.o)
+ *fill*         0x00000000030000e2        0x2 
+ .bss._ZN12_GLOBAL__N_114emergency_poolE
+                0x00000000030000e4       0x10 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .bss._ZN12_GLOBAL__N_113__new_handlerE
+                0x00000000030000f4        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .bss._ZL10eh_globals
+                0x00000000030000f8        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
  .bss.__malloc_current_mallinfo
-                0x00000000030000e8       0x28 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x00000000030000e8                __malloc_current_mallinfo
+                0x0000000003000104       0x28 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000003000104                __malloc_current_mallinfo
  .bss.__malloc_max_sbrked_mem
-                0x0000000003000110        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x0000000003000110                __malloc_max_sbrked_mem
+                0x000000000300012c        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x000000000300012c                __malloc_max_sbrked_mem
  .bss.__malloc_max_total_mem
-                0x0000000003000114        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x0000000003000114                __malloc_max_total_mem
+                0x0000000003000130        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000003000130                __malloc_max_total_mem
  .bss.__malloc_top_pad
-                0x0000000003000118        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x0000000003000118                __malloc_top_pad
+                0x0000000003000134        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000003000134                __malloc_top_pad
  .bss.heap_start.0
-                0x000000000300011c        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+                0x0000000003000138        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
  .bss.fake_heap_end
-                0x0000000003000120        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
-                0x0000000003000120                fake_heap_end
+                0x000000000300013c        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+                0x000000000300013c                fake_heap_end
  .bss.fake_heap_start
-                0x0000000003000124        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
-                0x0000000003000124                fake_heap_start
+                0x0000000003000140        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+                0x0000000003000140                fake_heap_start
  .bss.__syscalls
-                0x0000000003000128       0x48 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
-                0x0000000003000128                __syscalls
+                0x0000000003000144       0x48 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+                0x0000000003000144                __syscalls
  *(COMMON)
- COMMON         0x0000000003000170       0x78 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
-                0x0000000003000170                IntrTable
-                0x00000000030001e8                . = ALIGN (0x4)
-                0x00000000030001e8                __bss_end__ = ABSOLUTE (.)
+ COMMON         0x000000000300018c       0x78 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+                0x000000000300018c                IntrTable
+                0x0000000003000204                . = ALIGN (0x4)
+                0x0000000003000204                __bss_end__ = ABSOLUTE (.)
 
-.data           0x00000000030001e8      0x888 load address 0x0000000008001eb4
-                0x00000000030001e8                __data_start__ = ABSOLUTE (.)
+.data           0x0000000003000204      0x88c load address 0x0000000008004804
+                0x0000000003000204                __data_start__ = ABSOLUTE (.)
  *(.data*)
- .data          0x00000000030001e8        0x3 D:/devkitPro/libgba/lib\libgba.a(input.o)
- *fill*         0x00000000030001eb        0x1 ff
+ .data          0x0000000003000204        0x3 D:/devkitPro/libgba/lib\libgba.a(input.o)
+ *fill*         0x0000000003000207        0x1 ff
+ .data._ZN10__cxxabiv120__unexpected_handlerE
+                0x0000000003000208        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_unex_handler.o)
+                0x0000000003000208                __cxxabiv1::__unexpected_handler
+ .data._ZN10__cxxabiv119__terminate_handlerE
+                0x000000000300020c        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_term_handler.o)
+                0x000000000300020c                __cxxabiv1::__terminate_handler
  .data.__malloc_av_
-                0x00000000030001ec      0x408 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x00000000030001ec                __malloc_av_
+                0x0000000003000210      0x408 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000003000210                __malloc_av_
  .data.__malloc_sbrk_base
-                0x00000000030005f4        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x00000000030005f4                __malloc_sbrk_base
+                0x0000000003000618        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000003000618                __malloc_sbrk_base
  .data.__malloc_trim_threshold
-                0x00000000030005f8        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x00000000030005f8                __malloc_trim_threshold
+                0x000000000300061c        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x000000000300061c                __malloc_trim_threshold
  .data.__malloc_recursive_mutex
-                0x00000000030005fc        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+                0x0000000003000620        0xc d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
  .data._impure_ptr
-                0x0000000003000608        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
-                0x0000000003000608                _impure_ptr
- *fill*         0x000000000300060c        0x4 ff
+                0x000000000300062c        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+                0x000000000300062c                _impure_ptr
  .data.impure_data
-                0x0000000003000610      0x460 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+                0x0000000003000630      0x460 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
  *(.gnu.linkonce.d*)
-                0x0000000003000a70                . = ALIGN (0x4)
-                0x000000000800273c                __preinit_lma = (__data_lma + SIZEOF (.data))
+                0x0000000003000a90                . = ALIGN (0x4)
+                0x0000000008005090                __preinit_lma = (__data_lma + SIZEOF (.data))
 
-.igot.plt       0x0000000003000a70        0x0 load address 0x000000000800273c
- .igot.plt      0x0000000003000a70        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
+.igot.plt       0x0000000003000a90        0x0 load address 0x0000000008005090
+ .igot.plt      0x0000000003000a90        0x0 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
 
-.preinit_array  0x0000000003000a70        0x0 load address 0x000000000800273c
-                0x0000000003000a70                __preinit_array_start = ABSOLUTE (.)
+.preinit_array  0x0000000003000a90        0x0 load address 0x0000000008005090
+                0x0000000003000a90                __preinit_array_start = ABSOLUTE (.)
  *(.preinit_array)
-                0x0000000003000a70                __preinit_array_end = ABSOLUTE (.)
-                0x000000000800273c                __init_lma = (__preinit_lma + SIZEOF (.preinit_array))
+                0x0000000003000a90                __preinit_array_end = ABSOLUTE (.)
+                0x0000000008005090                __init_lma = (__preinit_lma + SIZEOF (.preinit_array))
 
-.init_array     0x0000000003000a70        0x4 load address 0x000000000800273c
-                0x0000000003000a70                __init_array_start = ABSOLUTE (.)
+.init_array     0x0000000003000a90        0x8 load address 0x0000000008005090
+                0x0000000003000a90                __init_array_start = ABSOLUTE (.)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x0000000003000a70        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
-                0x0000000003000a74                __init_array_end = ABSOLUTE (.)
-                0x0000000008002740                __fini_lma = (__init_lma + SIZEOF (.init_array))
+ .init_array    0x0000000003000a90        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
+ .init_array    0x0000000003000a94        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+                0x0000000003000a98                __init_array_end = ABSOLUTE (.)
+                0x0000000008005098                __fini_lma = (__init_lma + SIZEOF (.init_array))
 
-.fini_array     0x0000000003000a74        0x4 load address 0x0000000008002740
-                0x0000000003000a74                __fini_array_start = ABSOLUTE (.)
+.fini_array     0x0000000003000a98        0x4 load address 0x0000000008005098
+                0x0000000003000a98                __fini_array_start = ABSOLUTE (.)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
- .fini_array    0x0000000003000a74        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
-                0x0000000003000a78                __fini_array_end = ABSOLUTE (.)
-                0x0000000008002744                __jcr_lma = (__fini_lma + SIZEOF (.fini_array))
+ .fini_array    0x0000000003000a98        0x4 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
+                0x0000000003000a9c                __fini_array_end = ABSOLUTE (.)
+                0x000000000800509c                __jcr_lma = (__fini_lma + SIZEOF (.fini_array))
 
-.jcr            0x0000000003000a78        0x0 load address 0x0000000008002744
+.jcr            0x0000000003000a9c        0x0 load address 0x000000000800509c
  *(.jcr)
-                0x0000000003000a78                __data_end__ = ABSOLUTE (.)
-                0x0000000008002744                __iwram_overlay_lma = (__jcr_lma + SIZEOF (.jcr))
-                0x0000000003000a78                __iwram_overlay_start = .
+                0x0000000003000a9c                __data_end__ = ABSOLUTE (.)
+                0x000000000800509c                __iwram_overlay_lma = (__jcr_lma + SIZEOF (.jcr))
+                0x0000000003000a9c                __iwram_overlay_start = .
 
-.iwram0         0x0000000003000a78        0x0 load address 0x0000000008002744
+.iwram0         0x0000000003000a9c        0x0 load address 0x000000000800509c
  *(.iwram0)
-                0x0000000003000a78                . = ALIGN (0x4)
-                0x0000000008002744                PROVIDE (__load_start_iwram0 = LOADADDR (.iwram0))
-                0x0000000008002744                PROVIDE (__load_stop_iwram0 = (LOADADDR (.iwram0) + SIZEOF (.iwram0)))
+                0x0000000003000a9c                . = ALIGN (0x4)
+                0x000000000800509c                PROVIDE (__load_start_iwram0 = LOADADDR (.iwram0))
+                0x000000000800509c                PROVIDE (__load_stop_iwram0 = (LOADADDR (.iwram0) + SIZEOF (.iwram0)))
 
-.iwram1         0x0000000003000a78        0x0
+.iwram1         0x0000000003000a9c        0x0
  *(.iwram1)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram1 = LOADADDR (.iwram1))
                 [!provide]                        PROVIDE (__load_stop_iwram1 = (LOADADDR (.iwram1) + SIZEOF (.iwram1)))
 
-.iwram2         0x0000000003000a78        0x0
+.iwram2         0x0000000003000a9c        0x0
  *(.iwram2)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram2 = LOADADDR (.iwram2))
                 [!provide]                        PROVIDE (__load_stop_iwram2 = (LOADADDR (.iwram2) + SIZEOF (.iwram2)))
 
-.iwram3         0x0000000003000a78        0x0
+.iwram3         0x0000000003000a9c        0x0
  *(.iwram3)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram3 = LOADADDR (.iwram3))
                 [!provide]                        PROVIDE (__load_stop_iwram3 = (LOADADDR (.iwram3) + SIZEOF (.iwram3)))
 
-.iwram4         0x0000000003000a78        0x0
+.iwram4         0x0000000003000a9c        0x0
  *(.iwram4)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram4 = LOADADDR (.iwram4))
                 [!provide]                        PROVIDE (__load_stop_iwram4 = (LOADADDR (.iwram4) + SIZEOF (.iwram4)))
 
-.iwram5         0x0000000003000a78        0x0
+.iwram5         0x0000000003000a9c        0x0
  *(.iwram5)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram5 = LOADADDR (.iwram5))
                 [!provide]                        PROVIDE (__load_stop_iwram5 = (LOADADDR (.iwram5) + SIZEOF (.iwram5)))
 
-.iwram6         0x0000000003000a78        0x0
+.iwram6         0x0000000003000a9c        0x0
  *(.iwram6)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram6 = LOADADDR (.iwram6))
                 [!provide]                        PROVIDE (__load_stop_iwram6 = (LOADADDR (.iwram6) + SIZEOF (.iwram6)))
 
-.iwram7         0x0000000003000a78        0x0
+.iwram7         0x0000000003000a9c        0x0
  *(.iwram7)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram7 = LOADADDR (.iwram7))
                 [!provide]                        PROVIDE (__load_stop_iwram7 = (LOADADDR (.iwram7) + SIZEOF (.iwram7)))
 
-.iwram8         0x0000000003000a78        0x0
+.iwram8         0x0000000003000a9c        0x0
  *(.iwram8)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram8 = LOADADDR (.iwram8))
                 [!provide]                        PROVIDE (__load_stop_iwram8 = (LOADADDR (.iwram8) + SIZEOF (.iwram8)))
 
-.iwram9         0x0000000003000a78        0x0
+.iwram9         0x0000000003000a9c        0x0
  *(.iwram9)
-                0x0000000003000a78                . = ALIGN (0x4)
+                0x0000000003000a9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__load_start_iwram9 = LOADADDR (.iwram9))
                 [!provide]                        PROVIDE (__load_stop_iwram9 = (LOADADDR (.iwram9) + SIZEOF (.iwram9)))
-                0x0000000003000a78                __iwram_overlay_end = .
-                0x0000000008002744                __ewram_lma = (__iwram_overlay_lma + (__iwram_overlay_end - __iwram_overlay_start))
-                0x0000000003000a78                __iheap_start = .
+                0x0000000003000a9c                __iwram_overlay_end = .
+                0x000000000800509c                __ewram_lma = (__iwram_overlay_lma + (__iwram_overlay_end - __iwram_overlay_start))
+                0x0000000003000a9c                __iheap_start = .
                 0x0000000002000000                __ewram_start = ORIGIN (ewram)
 
-.ewram          0x0000000002000000        0x0 load address 0x0000000008002744
+.ewram          0x0000000002000000        0x0 load address 0x000000000800509c
  *(.ewram*)
                 0x0000000002000000                . = ALIGN (0x4)
                 0x0000000002000000                __ewram_end = ABSOLUTE (.)
-                0x0000000008002744                __pad_lma = (__ewram_lma + SIZEOF (.ewram))
+                0x000000000800509c                __pad_lma = (__ewram_lma + SIZEOF (.ewram))
 
 .sbss           0x0000000002000000        0x0
                 0x0000000002000000                __sbss_start__ = ABSOLUTE (.)
@@ -519,11 +1582,11 @@ Linker script and memory map
                 0x0000000002000000                __end__ = ABSOLUTE (.)
                 0x0000000002000000                __eheap_start = ABSOLUTE (.)
 
-.pad            0x0000000002000000        0x8 load address 0x0000000008002744
+.pad            0x0000000002000000        0x8 load address 0x000000000800509c
                 0x0000000002000000        0x4 LONG 0x52416b64
                 0x0000000002000004        0x4 LONG 0x4d
                 0x0000000002000008                . = ALIGN (0x4)
-                0x000000000800274c                __rom_end__ = (__pad_lma + SIZEOF (.pad))
+                0x00000000080050a4                __rom_end__ = (__pad_lma + SIZEOF (.pad))
 
 .stab
  *(.stab)
@@ -550,20 +1613,45 @@ Linker script and memory map
  .comment       0x0000000000000023       0x24 Entity.o
  .comment       0x0000000000000023       0x24 Level.o
  .comment       0x0000000000000023       0x24 Main.o
+ .comment       0x0000000000000023       0x24 Player.o
  .comment       0x0000000000000023       0x24 Tile.o
  .comment       0x0000000000000023       0x22 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
                                          0x23 (size before relaxing)
  .comment       0x0000000000000045       0x23 D:/devkitPro/libgba/lib\libgba.a(input.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_unex_handler.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_term_handler.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memset.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getpid.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(kill.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+ .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(_exit.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
  .comment       0x0000000000000045       0x24 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getreent.o)
@@ -582,80 +1670,88 @@ Linker script and memory map
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000       0xe8
+.debug_aranges  0x0000000000000000      0x128
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x20 Entity.o
+                0x0000000000000000       0x30 Entity.o
  .debug_aranges
-                0x0000000000000020       0x20 Level.o
+                0x0000000000000030       0x20 Level.o
  .debug_aranges
-                0x0000000000000040       0x28 Main.o
+                0x0000000000000050       0x28 Main.o
  .debug_aranges
-                0x0000000000000068       0x20 Tile.o
+                0x0000000000000078       0x30 Player.o
  .debug_aranges
-                0x0000000000000088       0x20 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+                0x00000000000000a8       0x20 Tile.o
  .debug_aranges
-                0x00000000000000a8       0x20 D:/devkitPro/libgba/lib\libgba.a(input.o)
+                0x00000000000000c8       0x20 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
  .debug_aranges
-                0x00000000000000c8       0x20 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
+                0x00000000000000e8       0x20 D:/devkitPro/libgba/lib\libgba.a(input.o)
+ .debug_aranges
+                0x0000000000000108       0x20 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x46fd
+.debug_info     0x0000000000000000     0x51e8
  *(.debug_info)
- .debug_info    0x0000000000000000      0xc9c Entity.o
- .debug_info    0x0000000000000c9c     0x18a7 Level.o
- .debug_info    0x0000000000002543     0x104a Main.o
- .debug_info    0x000000000000358d      0xac8 Tile.o
- .debug_info    0x0000000000004055      0x41b D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
- .debug_info    0x0000000000004470      0x267 D:/devkitPro/libgba/lib\libgba.a(input.o)
- .debug_info    0x00000000000046d7       0x26 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
+ .debug_info    0x0000000000000000      0xc5c Entity.o
+ .debug_info    0x0000000000000c5c     0x165d Level.o
+ .debug_info    0x00000000000022b9      0xe27 Main.o
+ .debug_info    0x00000000000030e0      0xf98 Player.o
+ .debug_info    0x0000000000004078      0xac8 Tile.o
+ .debug_info    0x0000000000004b40      0x41b D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+ .debug_info    0x0000000000004f5b      0x267 D:/devkitPro/libgba/lib\libgba.a(input.o)
+ .debug_info    0x00000000000051c2       0x26 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
 
-.debug_abbrev   0x0000000000000000      0xddd
+.debug_abbrev   0x0000000000000000     0x1184
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0x1f0 Entity.o
- .debug_abbrev  0x00000000000001f0      0x409 Level.o
- .debug_abbrev  0x00000000000005f9      0x383 Main.o
- .debug_abbrev  0x000000000000097c      0x139 Tile.o
- .debug_abbrev  0x0000000000000ab5      0x1ee D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
- .debug_abbrev  0x0000000000000ca3      0x126 D:/devkitPro/libgba/lib\libgba.a(input.o)
- .debug_abbrev  0x0000000000000dc9       0x14 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
+ .debug_abbrev  0x0000000000000000      0x272 Entity.o
+ .debug_abbrev  0x0000000000000272      0x3d2 Level.o
+ .debug_abbrev  0x0000000000000644      0x39f Main.o
+ .debug_abbrev  0x00000000000009e3      0x340 Player.o
+ .debug_abbrev  0x0000000000000d23      0x139 Tile.o
+ .debug_abbrev  0x0000000000000e5c      0x1ee D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+ .debug_abbrev  0x000000000000104a      0x126 D:/devkitPro/libgba/lib\libgba.a(input.o)
+ .debug_abbrev  0x0000000000001170       0x14 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
 
-.debug_line     0x0000000000000000     0x179e
+.debug_line     0x0000000000000000     0x1933
  *(.debug_line)
- .debug_line    0x0000000000000000      0x28f Entity.o
- .debug_line    0x000000000000028f      0x57c Level.o
- .debug_line    0x000000000000080b      0x4df Main.o
- .debug_line    0x0000000000000cea      0x1bd Tile.o
- .debug_line    0x0000000000000ea7      0x5ae D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
- .debug_line    0x0000000000001455      0x297 D:/devkitPro/libgba/lib\libgba.a(input.o)
- .debug_line    0x00000000000016ec       0xb2 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
+ .debug_line    0x0000000000000000      0x216 Entity.o
+ .debug_line    0x0000000000000216      0x50b Level.o
+ .debug_line    0x0000000000000721      0x454 Main.o
+ .debug_line    0x0000000000000b75      0x30a Player.o
+ .debug_line    0x0000000000000e7f      0x1bd Tile.o
+ .debug_line    0x000000000000103c      0x5ae D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+ .debug_line    0x00000000000015ea      0x297 D:/devkitPro/libgba/lib\libgba.a(input.o)
+ .debug_line    0x0000000000001881       0xb2 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
 
-.debug_frame    0x0000000000000000      0x254
+.debug_frame    0x0000000000000000      0x2c4
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x44 Entity.o
- .debug_frame   0x0000000000000044       0x64 Level.o
+ .debug_frame   0x0000000000000000       0x50 Entity.o
+ .debug_frame   0x0000000000000050       0x58 Level.o
  .debug_frame   0x00000000000000a8       0x48 Main.o
- .debug_frame   0x00000000000000f0       0x34 Tile.o
- .debug_frame   0x0000000000000124       0xb0 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
- .debug_frame   0x00000000000001d4       0x80 D:/devkitPro/libgba/lib\libgba.a(input.o)
+ .debug_frame   0x00000000000000f0       0x70 Player.o
+ .debug_frame   0x0000000000000160       0x34 Tile.o
+ .debug_frame   0x0000000000000194       0xb0 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+ .debug_frame   0x0000000000000244       0x80 D:/devkitPro/libgba/lib\libgba.a(input.o)
 
-.debug_str      0x0000000000000000      0xc74
+.debug_str      0x0000000000000000      0xd14
  *(.debug_str)
- .debug_str     0x0000000000000000      0x2d1 Entity.o
-                                        0x35a (size before relaxing)
- .debug_str     0x00000000000002d1      0x41d Level.o
-                                        0x798 (size before relaxing)
- .debug_str     0x00000000000006ee      0x288 Main.o
-                                        0x945 (size before relaxing)
- .debug_str     0x0000000000000976       0x4b Tile.o
+ .debug_str     0x0000000000000000      0x285 Entity.o
+                                        0x2f2 (size before relaxing)
+ .debug_str     0x0000000000000285      0x428 Level.o
+                                        0x6c1 (size before relaxing)
+ .debug_str     0x00000000000006ad      0x1ea Main.o
+                                        0x7b5 (size before relaxing)
+ .debug_str     0x0000000000000897      0x17f Player.o
+                                        0x455 (size before relaxing)
+ .debug_str     0x0000000000000a16       0x4b Tile.o
                                         0x24a (size before relaxing)
- .debug_str     0x00000000000009c1      0x196 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+ .debug_str     0x0000000000000a61      0x196 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
                                         0x310 (size before relaxing)
- .debug_str     0x0000000000000b57       0xbd D:/devkitPro/libgba/lib\libgba.a(input.o)
+ .debug_str     0x0000000000000bf7       0xbd D:/devkitPro/libgba/lib\libgba.a(input.o)
                                         0x21b (size before relaxing)
- .debug_str     0x0000000000000c14       0x60 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
+ .debug_str     0x0000000000000cb4       0x60 D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
                                          0xa0 (size before relaxing)
 
 .debug_loc      0x0000000000000000      0x485
@@ -701,45 +1797,99 @@ Linker script and memory map
  .ARM.attributes
                 0x00000000000000ba       0x2a Main.o
  .ARM.attributes
-                0x00000000000000e4       0x2a Tile.o
+                0x00000000000000e4       0x2a Player.o
  .ARM.attributes
-                0x000000000000010e       0x2a D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
+                0x000000000000010e       0x2a Tile.o
  .ARM.attributes
-                0x0000000000000138       0x2a D:/devkitPro/libgba/lib\libgba.a(input.o)
+                0x0000000000000138       0x2a D:/devkitPro/libgba/lib\libgba.a(interrupt.o)
  .ARM.attributes
-                0x0000000000000162       0x1a D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
+                0x0000000000000162       0x2a D:/devkitPro/libgba/lib\libgba.a(input.o)
  .ARM.attributes
-                0x000000000000017c       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
+                0x000000000000018c       0x1a D:/devkitPro/libgba/lib\libgba.a(InterruptDispatcher.o)
  .ARM.attributes
-                0x00000000000001a6       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
+                0x00000000000001a6       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
  .ARM.attributes
-                0x00000000000001d0       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+                0x00000000000001d0       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
  .ARM.attributes
-                0x00000000000001fa       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+                0x00000000000001fa       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(bad_alloc.o)
  .ARM.attributes
-                0x0000000000000224       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000000000224       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
  .ARM.attributes
-                0x000000000000024e       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+                0x000000000000024e       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_alloc.o)
  .ARM.attributes
-                0x0000000000000278       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memset.o)
+                0x0000000000000278       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_exception.o)
  .ARM.attributes
-                0x00000000000002a2       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+                0x00000000000002a2       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_terminate.o)
  .ARM.attributes
-                0x00000000000002cc       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+                0x00000000000002cc       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_throw.o)
  .ARM.attributes
-                0x00000000000002f6       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+                0x00000000000002f6       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_unex_handler.o)
  .ARM.attributes
-                0x0000000000000320       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+                0x0000000000000326       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
  .ARM.attributes
-                0x0000000000000350       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+                0x0000000000000350       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(si_class_type_info.o)
  .ARM.attributes
-                0x000000000000037a       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getreent.o)
+                0x000000000000037a       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(tinfo.o)
  .ARM.attributes
-                0x00000000000003a4       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+                0x00000000000003a4       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(class_type_info.o)
  .ARM.attributes
-                0x00000000000003d4       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtend.o
+                0x00000000000003ce       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_catch.o)
  .ARM.attributes
-                0x0000000000000404       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtn.o
+                0x00000000000003f8       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_globals.o)
+ .ARM.attributes
+                0x0000000000000422       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_personality.o)
+ .ARM.attributes
+                0x000000000000044c       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_term_handler.o)
+ .ARM.attributes
+                0x000000000000047c       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_arm.o)
+ .ARM.attributes
+                0x00000000000004a6       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(eh_call.o)
+ .ARM.attributes
+                0x00000000000004d0       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(unwind-arm.o)
+ .ARM.attributes
+                0x00000000000004fa       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(libunwind.o)
+ .ARM.attributes
+                0x0000000000000516       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb\libgcc.a(pr-support.o)
+ .ARM.attributes
+                0x0000000000000540       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-abort.o)
+ .ARM.attributes
+                0x000000000000056a       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000594       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x00000000000005be       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x00000000000005e8       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x0000000000000612       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000000000000063c       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x0000000000000666       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-signal.o)
+ .ARM.attributes
+                0x0000000000000690       0x1a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x00000000000006aa       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000000000006d4       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getpid.o)
+ .ARM.attributes
+                0x00000000000006fe       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(kill.o)
+ .ARM.attributes
+                0x0000000000000728       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+ .ARM.attributes
+                0x0000000000000752       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(_exit.o)
+ .ARM.attributes
+                0x000000000000077c       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+ .ARM.attributes
+                0x00000000000007ac       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+ .ARM.attributes
+                0x00000000000007d6       0x2a d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(getreent.o)
+ .ARM.attributes
+                0x0000000000000800       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000830       0x30 d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtend.o
+ .ARM.attributes
+                0x0000000000000860       0x1c d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)
@@ -749,6 +1899,7 @@ LOAD d:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/11.1.0/thumb/crtbegin.o
 LOAD Entity.o
 LOAD Level.o
 LOAD Main.o
+LOAD Player.o
 LOAD Tile.o
 LOAD D:/devkitPro/libgba/lib\libmm.a
 LOAD D:/devkitPro/libgba/lib\libgba.a
@@ -766,24 +1917,30 @@ OUTPUT(D:/devkitPro/projects/GBAJam2021/GBAJam2021.elf elf32-littlearm)
 LOAD linker stubs
 
 .debug_loclists
-                0x0000000000000000      0x1f5
+                0x0000000000000000      0x278
  .debug_loclists
-                0x0000000000000000       0x34 Entity.o
+                0x0000000000000000       0x32 Entity.o
  .debug_loclists
-                0x0000000000000034      0x157 Level.o
+                0x0000000000000032       0xef Level.o
  .debug_loclists
-                0x000000000000018b       0x18 Main.o
+                0x0000000000000121       0x23 Main.o
  .debug_loclists
-                0x00000000000001a3       0x52 Tile.o
+                0x0000000000000144       0xe2 Player.o
+ .debug_loclists
+                0x0000000000000226       0x52 Tile.o
 
 .debug_rnglists
-                0x0000000000000000       0x97
+                0x0000000000000000       0xdc
  .debug_rnglists
-                0x0000000000000000       0x2d Level.o
+                0x0000000000000000       0x1f Entity.o
  .debug_rnglists
-                0x000000000000002d       0x4d Main.o
+                0x000000000000001f       0x33 Level.o
  .debug_rnglists
-                0x000000000000007a       0x1d Tile.o
+                0x0000000000000052       0x4d Main.o
+ .debug_rnglists
+                0x000000000000009f       0x20 Player.o
+ .debug_rnglists
+                0x00000000000000bf       0x1d Tile.o
 
 .debug_ranges   0x0000000000000000       0x70
  .debug_ranges  0x0000000000000000       0x70 D:/devkitPro/libgba/lib\libgba.a(interrupt.o)

@@ -1,5 +1,4 @@
 #include <gba_video.h>
-#include <gba_input.h>
 #include <gba_sprites.h>
 #include <gba_interrupt.h>
 
@@ -9,16 +8,9 @@
 #include "Level.h"
 
 //Maybe addressing OAM directly isn't a good idea, instead copy a OBJATTR[] to OAM on every v-blank, so we don't get screen tearing
-Entity* player;
 Level* currLevel;
 
 void VBlank() {
-	scanKeys();
-	if (REG_KEYINPUT & DPAD) {
-		player->x += (REG_KEYINPUT & KEY_RIGHT) ? ((REG_KEYINPUT & KEY_LEFT) ? 0 : -1) : 1;
-		player->y += (REG_KEYINPUT & KEY_DOWN) ? ((REG_KEYINPUT & KEY_UP) ? 0 : -1) : 1;
-	}
-	
 	currLevel->update();
 }
 
@@ -33,15 +25,11 @@ int main(void) {
 	
 	loadPalettesToMem();
 	
-	EntityData_t playerData = {0, 0, SQUARE, false, false, 0, false, false, 1, false, false, 0, 0, 0, 0};
+	EntityData_t playerData = {50, 50, EntityTypes::player};
 	
 	LevelData_t level0Data = {BG0_ON, 1, &playerData, 1, &playerTiles, &level0Tiles, level0ScreenData};
-	currLevel = (Level*) malloc(sizeof(Level));
+	currLevel = new Level();
 	currLevel->init(&level0Data);
-	
-	player = currLevel->getEntity(0);
-	
-	
 	
 	while(1);
 }

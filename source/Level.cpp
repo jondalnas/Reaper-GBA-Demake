@@ -1,4 +1,5 @@
 #include "Level.h"
+#include "Player.h"
 
 #include <gba_video.h>
 #include <gba_sprites.h>
@@ -6,7 +7,7 @@
 
 void Level::update() {
 	for (int i = 0; i < numEnt; i++) {
-		entities[i].update();
+		entities[i]->update();
 	}
 }
 
@@ -30,16 +31,21 @@ void Level::init(LevelData_t* level) {
 	
 	//Create entities based on EntityData
 	numEnt = level->numEntities;
-	entities = (Entity*)malloc(numEnt * sizeof(Entity));
+	entities = (Entity**)malloc(numEnt * sizeof(Entity*));
 	for (int i = 0; i < numEnt; i++) {
 		EntityData_t ed = level->entities[i];
-		Entity e(ed.x, ed.y, &(OAM[i]));
-		entities[i] = e;
-		entities[i].init(&ed);
+		
+		switch(ed.type) {
+			case EntityTypes::player: {
+					entities[i] = new Player(ed.x, ed.y, &(OAM[i]), i);
+					break;
+				}
+			
+			default:
+				return;
+		}
 	}
-	player = &(entities[0]);
-	//*((vu32*)0x02000104) = (u32)&level->numEntities;
-	*((vu32*)0x02000100) = (u32)&numEnt;
+	player = entities[0];
 	
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
@@ -50,6 +56,6 @@ void Level::init(LevelData_t* level) {
 	}
 }
 
-Entity* Level::getEntity(u8 index) {
-	return &(entities[index]);
+inline Entity* Level::getEntity(u8 index) {
+	return entities[index];
 }

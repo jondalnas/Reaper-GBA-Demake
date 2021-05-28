@@ -21,7 +21,7 @@ public:
 	}
 
 	void init(LevelData_t* level);
-	Entity* getEntity(u8 index);
+	inline Entity* getEntity(u8 index);
 	void update();
 	
 	~Level() {
@@ -29,7 +29,7 @@ public:
 	}
 
 private:
-	Entity* entities;
+	Entity** entities;
 	u8 numEnt;
 	Entity* player;
 };
