@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+*.GBA
+
+# GBA files
+*.sav
+
+# Make build files
+build/
+*.elf
