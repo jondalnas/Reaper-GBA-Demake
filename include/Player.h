@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include <gba_sprites.h>
 
 class Player: public Entity {
 public:
@@ -10,5 +11,7 @@ public:
 	
 	void init(u8 entityNum);	
 private:
-	u8 rot;
+	u16 _rot;
+	u8 _entityNum;
+	OBJAFFINE* _affine;
 };
