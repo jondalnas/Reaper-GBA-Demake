@@ -9,6 +9,13 @@ void Level::update() {
 	for (int i = 0; i < numEnt; i++) {
 		entities[i]->update();
 	}
+	
+	BG_OFFSET[0].x = player->x;
+	BG_OFFSET[0].y = player->y;
+	BG_OFFSET[1].x = player->x;
+	BG_OFFSET[1].y = player->y;
+	BG_OFFSET[2].x = player->x;
+	BG_OFFSET[2].y = player->y;
 }
 
 void Level::init(LevelData_t* level) {

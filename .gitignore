@@ -36,5 +36,5 @@
 *.sav
 
 # Make build files
-build/
+*/build/
 *.elf

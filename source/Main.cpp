@@ -25,7 +25,7 @@ int main(void) {
 	
 	loadPalettesToMem();
 	
-	EntityData_t playerData = {50, 50, EntityTypes::player};
+	EntityData_t playerData = {0, 0, EntityTypes::player};
 	
 	LevelData_t level0Data = {BG0_ON, 1, &playerData, 1, &playerTiles, &level0Tiles, level0ScreenData};
 	currLevel = new Level();
