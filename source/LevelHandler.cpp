@@ -1,8 +1,8 @@
 #include "gfx/LevelHandler.h"
 
 void scrollLevelU(const level_t* level, u16 x, u16 y) {
-	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1);
-	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1);
+	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
+	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
 	
 	short yD = y0;
 	if (yD < 0)
@@ -14,7 +14,7 @@ void scrollLevelU(const level_t* level, u16 x, u16 y) {
 	short xS = x0;
 	if (xD < 0)
 		xD += VIRTUAL_SCREEN_TILE_SIZE;
-	for (u8 x = 0; x < SCREEN_TILE_WIDTH+1; x++) {
+	for (u8 x = 0; x < SCREEN_TILE_WIDTH+2; x++) {
 		if (xD >= VIRTUAL_SCREEN_TILE_SIZE)
 			xD -= VIRTUAL_SCREEN_TILE_SIZE;
 			
@@ -32,7 +32,7 @@ void scrollLevelU(const level_t* level, u16 x, u16 y) {
 }
 
 void scrollLevelD(const level_t* level, u16 x, u16 y) {
-	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1);
+	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
 	short y1 = (y >> 3) + (SCREEN_TILE_HEIGHT >> 1);
 	
 	short yD = y1;
@@ -45,7 +45,7 @@ void scrollLevelD(const level_t* level, u16 x, u16 y) {
 	short xS = x0;
 	if (xD < 0)
 		xD += VIRTUAL_SCREEN_TILE_SIZE;
-	for (u8 x = 0; x < SCREEN_TILE_WIDTH+1; x++) {
+	for (u8 x = 0; x < SCREEN_TILE_WIDTH+2; x++) {
 		if (xD >= VIRTUAL_SCREEN_TILE_SIZE)
 			xD -= VIRTUAL_SCREEN_TILE_SIZE;
 			
@@ -64,14 +64,14 @@ void scrollLevelD(const level_t* level, u16 x, u16 y) {
 }
 
 void scrollLevelL(const level_t* level, u16 x, u16 y) {
-	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1);
-	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1);
+	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
+	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
 	
 	short yD = y0;
 	short yS = y0;
 	if (yD < 0)
 		yD += VIRTUAL_SCREEN_TILE_SIZE;
-	for (u8 y = 0; y < SCREEN_TILE_HEIGHT+1; y++) {
+	for (u8 y = 0; y < SCREEN_TILE_HEIGHT+2; y++) {
 		if (yD >= VIRTUAL_SCREEN_TILE_SIZE)
 			yD -= VIRTUAL_SCREEN_TILE_SIZE;
 		
@@ -96,13 +96,13 @@ void scrollLevelL(const level_t* level, u16 x, u16 y) {
 
 void scrollLevelR(const level_t* level, u16 x, u16 y) {
 	short x1 = (x >> 3) + (SCREEN_TILE_WIDTH >> 1);
-	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1);
+	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
 	
 	short yD = y0;
 	short yS = y0;
 	if (yD < 0)
 		yD += VIRTUAL_SCREEN_TILE_SIZE;
-	for (u8 y = 0; y < SCREEN_TILE_HEIGHT+1; y++) {
+	for (u8 y = 0; y < SCREEN_TILE_HEIGHT+2; y++) {
 		if (yD >= VIRTUAL_SCREEN_TILE_SIZE)
 			yD -= VIRTUAL_SCREEN_TILE_SIZE;
 		

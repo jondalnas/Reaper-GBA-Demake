@@ -4,7 +4,7 @@
 
 #include "Math.h"
 
-#define PLAYER_ROT_SPEED 3
+#define PLAYER_ROT_SPEED 6
 
 Player::Player(unsigned short x, unsigned short y, OBJATTR* attributeObj, u8 entityNum) : Entity(x, y, attributeObj), _entityNum(entityNum) {
 	_attributeObj->attr0 = 72 | OBJ_ROT_SCALE_ON | OBJ_MODE(0) | OBJ_16_COLOR | ATTR0_SQUARE;

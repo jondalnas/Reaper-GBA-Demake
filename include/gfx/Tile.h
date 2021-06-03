@@ -15,6 +15,6 @@ typedef struct {
 const tile_t playerTiles = {playerTileSize,  playerTileData};
 
 //BG tiles
-const tile_t level0Tiles = {3, level0TileData};
+const tile_t level0Tiles = {7, level0TileData};
 
 void loadTileToMem(const tile_t* tile_p, const u16 tileOffs, u8 baseBlock);

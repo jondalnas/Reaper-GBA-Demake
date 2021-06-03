@@ -28,7 +28,7 @@ public:
 	}
 
 private:
-	u8 x, y;
+	u16 x, y;
 	
 	Entity** entities = NULL;
 	u8 numEnt;

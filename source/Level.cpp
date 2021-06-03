@@ -13,8 +13,8 @@ void Level::update() {
 	x = player->x;
 	y = player->y;
 	
-	BG_OFFSET[0].x = x - (SCREEN_WIDTH >> 1);
-	BG_OFFSET[0].y = y - (SCREEN_HEIGHT >> 1);
+	BG_OFFSET[0].x = x - (SCREEN_WIDTH >> 1) - 4;
+	BG_OFFSET[0].y = y - (SCREEN_HEIGHT >> 1) - 4;
 	BG_OFFSET[1].x = x - (SCREEN_WIDTH >> 1);
 	BG_OFFSET[1].y = y - (SCREEN_HEIGHT >> 1);
 	BG_OFFSET[2].x = x - (SCREEN_WIDTH >> 1);
@@ -68,15 +68,15 @@ Level::Level(LevelData_t* level) {
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
 	
 	//Load level
-	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1);
-	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1);
+	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
+	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
 	
 	short yD = y0;
 	short yS = y0;
 	if (yD < 0)
 		yD += VIRTUAL_SCREEN_TILE_SIZE;
 	
-	for (u8 y = 0; y < SCREEN_TILE_HEIGHT + 1; y++) {
+	for (u8 y = 0; y < SCREEN_TILE_HEIGHT + 2; y++) {
 		if (yD >= VIRTUAL_SCREEN_TILE_SIZE)
 			yD -= VIRTUAL_SCREEN_TILE_SIZE;
 		
@@ -85,7 +85,7 @@ Level::Level(LevelData_t* level) {
 		if (xD < 0)
 			xD += VIRTUAL_SCREEN_TILE_SIZE;
 		
-		for (u8 x = 0; x < SCREEN_TILE_WIDTH + 1; x++) {
+		for (u8 x = 0; x < SCREEN_TILE_WIDTH + 2; x++) {
 			if (xD >= VIRTUAL_SCREEN_TILE_SIZE)
 				xD -= VIRTUAL_SCREEN_TILE_SIZE;
 			
