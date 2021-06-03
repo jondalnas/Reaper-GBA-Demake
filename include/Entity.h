@@ -16,15 +16,15 @@ typedef struct {
 
 class Entity {
 public:
+	u16 x, y;
+	u8 tx, ty;
+	short tdx, tdy;
+	
 	Entity(unsigned short x, unsigned short y, OBJATTR* attributeObj) : x(x), y(y), _attributeObj(attributeObj) {}
 	
 	virtual ~Entity() {}
-
-	unsigned short x;
-	unsigned short y;
 	
 	virtual void update();
-	
 protected:
 	OBJATTR* _attributeObj;
 };

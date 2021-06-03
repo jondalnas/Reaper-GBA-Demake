@@ -10,15 +10,23 @@ void Level::update() {
 		entities[i]->update();
 	}
 	
-	BG_OFFSET[0].x = player->x;
-	BG_OFFSET[0].y = player->y;
-	BG_OFFSET[1].x = player->x;
-	BG_OFFSET[1].y = player->y;
-	BG_OFFSET[2].x = player->x;
-	BG_OFFSET[2].y = player->y;
+	x = player->x;
+	y = player->y;
+	
+	BG_OFFSET[0].x = x - (SCREEN_WIDTH >> 1);
+	BG_OFFSET[0].y = y - (SCREEN_HEIGHT >> 1);
+	BG_OFFSET[1].x = x - (SCREEN_WIDTH >> 1);
+	BG_OFFSET[1].y = y - (SCREEN_HEIGHT >> 1);
+	BG_OFFSET[2].x = x - (SCREEN_WIDTH >> 1);
+	BG_OFFSET[2].y = y - (SCREEN_HEIGHT >> 1);
+	
+	if (player->tdy == -1) scrollLevelU(&level0, x, y);
+	else if (player->tdy == 1) scrollLevelD(&level0, x, y);
+	if (player->tdx == -1) scrollLevelL(&level0, x, y);
+	else if (player->tdx == 1) scrollLevelR(&level0, x, y);
 }
 
-void Level::init(LevelData_t* level) {
+Level::Level(LevelData_t* level) {
 	//Free old level
 	delete entities;
 	
@@ -49,17 +57,52 @@ void Level::init(LevelData_t* level) {
 				}
 			
 			default:
-				return;
+				break;
 		}
 	}
 	player = entities[0];
+	//x = player->x;
+	//y = player->y;
 	
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
 	
 	//Load level
-	for (int i = 0; i < 1024; i++) {
-		((u16*) SCREEN_BASE_BLOCK(8))[i] = (*(level->levelTileScreenData))[i];
+	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1);
+	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1);
+	
+	short yD = y0;
+	short yS = y0;
+	if (yD < 0)
+		yD += VIRTUAL_SCREEN_TILE_SIZE;
+	
+	for (u8 y = 0; y < SCREEN_TILE_HEIGHT + 1; y++) {
+		if (yD >= VIRTUAL_SCREEN_TILE_SIZE)
+			yD -= VIRTUAL_SCREEN_TILE_SIZE;
+		
+		short xD = x0;
+		short xS = x0;
+		if (xD < 0)
+			xD += VIRTUAL_SCREEN_TILE_SIZE;
+		
+		for (u8 x = 0; x < SCREEN_TILE_WIDTH + 1; x++) {
+			if (xD >= VIRTUAL_SCREEN_TILE_SIZE)
+				xD -= VIRTUAL_SCREEN_TILE_SIZE;
+			
+			if (yS < 0 || xS < 0 || yS >= level->levelScreenData->height || xS >= level->levelScreenData->width) {
+				((u16*) SCREEN_BASE_BLOCK(8))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->defaultTile; //BG0
+				((u16*) SCREEN_BASE_BLOCK(9))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->defaultTile; //BG1
+			} else {
+				((u16*) SCREEN_BASE_BLOCK(8))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->screenData[0][xS + yS * level->levelScreenData->width]; //BG0
+				((u16*) SCREEN_BASE_BLOCK(9))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->screenData[1][xS + yS * level->levelScreenData->width]; //BG1
+			}
+			
+			xD++;
+			xS++;
+		}
+		
+		yD++;
+		yS++;
 	}
 }
 

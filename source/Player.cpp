@@ -38,6 +38,28 @@ void Player::update() {
 		if (_rot > 359) _rot += 360;
 	}
 	
+	tdx = tdy = 0;
+	u8 newTX = x >> 3, newTY = y >> 3;
+	if (tx != newTX) {
+		if (tx < newTX) {
+			tdx = 1;
+		} else {
+			tdx = -1;
+		}
+		
+		tx = newTX;
+	}
+	
+	if (ty != newTY) {
+		if (ty < newTY) {
+			tdy = 1;
+		} else {
+			tdy = -1;
+		}
+		
+		ty = newTY;
+	}
+	
 	_affine->pa = getCos(_rot);
 	_affine->pb = getSin(_rot);
 	_affine->pc = -getSin(_rot);

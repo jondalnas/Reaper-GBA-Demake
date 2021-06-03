@@ -5,6 +5,28 @@ void Entity::update() {
 	_attributeObj->attr0 |= y & 0x00ff;
 	_attributeObj->attr1 &= ~0x01ff; //0x01ff = x bitmask
 	_attributeObj->attr1 |= x & 0x01ff;
+	
+	tdx = tdy = 0;
+	u8 newTX = x >> 3, newTY = y >> 3;
+	if (tx != newTX) {
+		if (tx < newTX) {
+			tdx = 1;
+		} else {
+			tdx = -1;
+		}
+		
+		tx = newTX;
+	}
+	
+	if (ty != newTY) {
+		if (ty < newTY) {
+			tdy = 1;
+		} else {
+			tdy = -1;
+		}
+		
+		ty = newTY;
+	}
 }
 
 /*void Entity::init(EntityData_t* entityData) {
