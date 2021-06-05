@@ -1,4 +1,5 @@
 #include "Entity.h"
+#include "Level.h"
 
 void Entity::update() {
 	_attributeObj->attr0 &= ~0x00ff; //0x00ff = y bitmask
@@ -27,6 +28,40 @@ void Entity::update() {
 		
 		ty = newTY;
 	}
+}
+
+void Entity::move(u16 dx, u16 dy) {
+	u8 tx0 = (x + dx - _radius) >> 3;
+	u8 ty0 = (y      - _radius) >> 3;
+	u8 tx1 = (x + dx + _radius) >> 3;
+	u8 ty1 = (y      + _radius) >> 3;
+	
+	if (tx0 >= _level->_width || tx1 >= _level->_width) goto dy;
+	
+	for (u8 yy = ty0; yy <= ty1; yy++) {
+		for (u8 xx = tx0; xx <= tx1; xx++) {
+			if (_level->getTileFlag(xx, yy) == 0b00000001) goto dy;
+		}
+	}
+	
+	x += dx;
+	
+	dy:
+	
+	tx0 = (x      - _radius) >> 3;
+	ty0 = (y + dy - _radius) >> 3;
+	tx1 = (x      + _radius) >> 3;
+	ty1 = (y + dy + _radius) >> 3;
+	
+	if (ty0 >= _level->_height || ty1 >= _level->_height) return;
+	
+	for (u8 yy = ty0; yy <= ty1; yy++) {
+		for (u8 xx = tx0; xx <= tx1; xx++) {
+			if (_level->getTileFlag(xx, yy) == 0b00000001) return;
+		}
+	}
+	
+	y += dy;
 }
 
 /*void Entity::init(EntityData_t* entityData) {

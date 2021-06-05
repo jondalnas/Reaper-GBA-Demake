@@ -4,6 +4,8 @@
 
 #include "gfx/Tile.h"
 
+class Level;
+
 enum EntityTypes {
 	player
 };
@@ -20,11 +22,14 @@ public:
 	u8 tx, ty;
 	short tdx, tdy;
 	
-	Entity(unsigned short x, unsigned short y, OBJATTR* attributeObj) : x(x), y(y), _attributeObj(attributeObj) {}
-	
+	Entity(unsigned short x, unsigned short y, u8 radius, Level* level, OBJATTR* attributeObj) : x(x), y(y), _radius(radius), _level(level), _attributeObj(attributeObj) {}
 	virtual ~Entity() {}
 	
 	virtual void update();
 protected:
+	u8 _radius;
+	Level* _level;
 	OBJATTR* _attributeObj;
+	
+	void move(u16 dx, u16 dy);
 };

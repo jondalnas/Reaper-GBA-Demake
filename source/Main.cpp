@@ -23,9 +23,9 @@ int main(void) {
 	
 	loadPalettesToMem();
 	
-	EntityData_t playerData = {0, 0, EntityTypes::player};
+	EntityData_t playerData = {8, 8, EntityTypes::player};
 	
-	LevelData_t level0Data = {BG0_ON | BG1_ON, 1, &playerData, 1, &playerTiles, &level0Tiles, &level0};
+	LevelData_t level0Data = {BG0_ON | BG1_ON, level0width, level0height, 1, &playerData, 1, &playerTiles, &level0Tiles, &level0, level0TileFlag};
 	currLevel = new Level(&level0Data);
 	
 	irqInit();
@@ -33,6 +33,4 @@ int main(void) {
 	irqSet(IRQ_VBLANK, VBlank);
 	
 	while(1);
-	
-	return 0;
 }

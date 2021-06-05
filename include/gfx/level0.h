@@ -13,4 +13,6 @@ extern const u16 level0ScreenData0[47*42];
 
 extern const u16 level0ScreenData1[47*42];
 
+extern const u8 level0TileFlag[47*42];
+
 extern const u16* level0ScreenData[2];

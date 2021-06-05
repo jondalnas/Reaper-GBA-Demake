@@ -15,9 +15,10 @@ typedef struct {
 	const u16 defaultTile;
 	const u8 backgrounds;
 	const u16** screenData;
+	const u8* tileFlags;
 } level_t;
 
-const level_t level0 = {level0width, level0height, level0defaultTile, 2, level0ScreenData};
+const level_t level0 = {level0width, level0height, level0defaultTile, 2, level0ScreenData, level0TileFlag};
 
 void scrollLevelU(const level_t* level, u16 x, u16 y);
 void scrollLevelD(const level_t* level, u16 x, u16 y);

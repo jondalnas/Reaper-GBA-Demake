@@ -4,7 +4,7 @@
 
 class Player: public Entity {
 public:
-	Player(unsigned short x, unsigned short y, OBJATTR* attributeObj, u8 entityNum);
+	Player(unsigned short x, unsigned short y, Level* level, OBJATTR* attributeObj, u8 entityNum);
 	~Player() {}
 
 	void update();

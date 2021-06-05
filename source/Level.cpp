@@ -1,34 +1,39 @@
 #include "Level.h"
 #include "Player.h"
+#include "Entity.h"
 
 #include <gba_video.h>
 #include <gba_sprites.h>
 #include <stdlib.h>
 
 void Level::update() {
-	for (int i = 0; i < numEnt; i++) {
-		entities[i]->update();
+	for (int i = 0; i < _numEnt; i++) {
+		_entities[i]->update();
 	}
 	
-	x = player->x;
-	y = player->y;
+	_x = _player->x;
+	_y = _player->y;
 	
-	BG_OFFSET[0].x = x - (SCREEN_WIDTH >> 1) - 4;
-	BG_OFFSET[0].y = y - (SCREEN_HEIGHT >> 1) - 4;
-	BG_OFFSET[1].x = x - (SCREEN_WIDTH >> 1);
-	BG_OFFSET[1].y = y - (SCREEN_HEIGHT >> 1);
-	BG_OFFSET[2].x = x - (SCREEN_WIDTH >> 1);
-	BG_OFFSET[2].y = y - (SCREEN_HEIGHT >> 1);
+	BG_OFFSET[0].x = _x - (SCREEN_WIDTH >> 1) - 4;
+	BG_OFFSET[0].y = _y - (SCREEN_HEIGHT >> 1) - 4;
+	BG_OFFSET[1].x = _x - (SCREEN_WIDTH >> 1);
+	BG_OFFSET[1].y = _y - (SCREEN_HEIGHT >> 1);
+	BG_OFFSET[2].x = _x - (SCREEN_WIDTH >> 1);
+	BG_OFFSET[2].y = _y - (SCREEN_HEIGHT >> 1);
 	
-	if (player->tdy == -1) scrollLevelU(&level0, x, y);
-	else if (player->tdy == 1) scrollLevelD(&level0, x, y);
-	if (player->tdx == -1) scrollLevelL(&level0, x, y);
-	else if (player->tdx == 1) scrollLevelR(&level0, x, y);
+	if (_player->tdy == -1) scrollLevelU(&level0, _x, _y);
+	else if (_player->tdy == 1) scrollLevelD(&level0, _x, _y);
+	if (_player->tdx == -1) scrollLevelL(&level0, _x, _y);
+	else if (_player->tdx == 1) scrollLevelR(&level0, _x, _y);
 }
 
 Level::Level(LevelData_t* level) {
 	//Free old level
-	delete entities;
+	delete _entities;
+	
+	//Set width and height of level
+	_width = level->width;
+	_height = level->height;
 	
 	//Load new level
 	//Clear OAM
@@ -45,14 +50,14 @@ Level::Level(LevelData_t* level) {
 	}
 	
 	//Create entities based on EntityData
-	numEnt = level->numEntities;
-	entities = (Entity**)malloc(numEnt * sizeof(Entity*));
-	for (int i = 0; i < numEnt; i++) {
+	_numEnt = level->numEntities;
+	_entities = (Entity**)malloc(_numEnt * sizeof(Entity*));
+	for (int i = 0; i < _numEnt; i++) {
 		EntityData_t ed = level->entities[i];
 		
 		switch(ed.type) {
 			case EntityTypes::player: {
-					entities[i] = new Player(ed.x, ed.y, &(OAM[i]), i);
+					_entities[i] = new Player(ed.x, ed.y, this, &(OAM[i]), i);
 					break;
 				}
 			
@@ -60,16 +65,19 @@ Level::Level(LevelData_t* level) {
 				break;
 		}
 	}
-	player = entities[0];
-	//x = player->x;
-	//y = player->y;
-	
+	_player = _entities[0];
+	_x = _player->x;
+	_y = _player->y;
+		
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
 	
+	//Set tile flag data
+	_tileFlags = level->tileFlags;
+	
 	//Load level
-	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
-	short y0 = (y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
+	short x0 = (_x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
+	short y0 = (_y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
 	
 	short yD = y0;
 	short yS = y0;
@@ -104,8 +112,4 @@ Level::Level(LevelData_t* level) {
 		yD++;
 		yS++;
 	}
-}
-
-inline Entity* Level::getEntity(u8 index) {
-	return entities[index];
 }
