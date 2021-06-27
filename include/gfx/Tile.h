@@ -3,6 +3,7 @@
 #include <gba_types.h>
 #include "player.h"
 #include "level0.h"
+#include "brawler.h"
 
 #define OBJ_BLOCK 4
 
@@ -13,6 +14,7 @@ typedef struct {
 
 //OBJ tiles
 const tile_t playerTiles = {playerTileSize,  playerTileData};
+const tile_t brawlerTiles = {brawlerTileSize,  brawlerTileData};
 
 //BG tiles
 const tile_t level0Tiles = {7, level0TileData};

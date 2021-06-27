@@ -24,8 +24,12 @@ int main(void) {
 	loadPalettesToMem();
 	
 	EntityData_t playerData = {8, 8, EntityTypes::player};
+	EntityData_t brawlerData = {8, 48, EntityTypes::brawler};
 	
-	LevelData_t level0Data = {BG0_ON | BG1_ON, level0width, level0height, 1, &playerData, 1, &playerTiles, &level0Tiles, &level0, level0TileFlag};
+	const EntityData_t* level0Entities[2] = {&playerData, &brawlerData};
+	const tile_t* level0EntityTiles[2] = {&playerTiles, &brawlerTiles};
+	
+	LevelData_t level0Data = {BG0_ON | BG1_ON, level0width, level0height, 2, level0Entities, 2, level0EntityTiles, &level0Tiles, &level0, level0TileFlag};
 	currLevel = new Level(&level0Data);
 	
 	irqInit();

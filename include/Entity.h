@@ -7,7 +7,8 @@
 class Level;
 
 enum EntityTypes {
-	player
+	player,
+	brawler
 };
 
 typedef struct {
@@ -31,5 +32,5 @@ protected:
 	Level* _level;
 	OBJATTR* _attributeObj;
 	
-	void move(u16 dx, u16 dy);
+	void move(short dx, short dy);
 };

@@ -1,30 +1,32 @@
 #include "Level.h"
-#include "Player.h"
-#include "Entity.h"
 
 #include <gba_video.h>
 #include <gba_sprites.h>
 #include <stdlib.h>
+
+#include "Player.h"
+#include "Brawler.h"
+#include "Entity.h"
 
 void Level::update() {
 	for (int i = 0; i < _numEnt; i++) {
 		_entities[i]->update();
 	}
 	
-	_x = _player->x;
-	_y = _player->y;
+	_x = _player->x - (SCREEN_WIDTH >> 1);
+	_y = _player->y - (SCREEN_HEIGHT >> 1);
 	
-	BG_OFFSET[0].x = _x - (SCREEN_WIDTH >> 1) - 4;
-	BG_OFFSET[0].y = _y - (SCREEN_HEIGHT >> 1) - 4;
-	BG_OFFSET[1].x = _x - (SCREEN_WIDTH >> 1);
-	BG_OFFSET[1].y = _y - (SCREEN_HEIGHT >> 1);
-	BG_OFFSET[2].x = _x - (SCREEN_WIDTH >> 1);
-	BG_OFFSET[2].y = _y - (SCREEN_HEIGHT >> 1);
+	BG_OFFSET[0].x = _x - 4;
+	BG_OFFSET[0].y = _y - 4;
+	BG_OFFSET[1].x = _x;
+	BG_OFFSET[1].y = _y;
+	BG_OFFSET[2].x = _x;
+	BG_OFFSET[2].y = _y;
 	
-	if (_player->tdy == -1) scrollLevelU(&level0, _x, _y);
-	else if (_player->tdy == 1) scrollLevelD(&level0, _x, _y);
-	if (_player->tdx == -1) scrollLevelL(&level0, _x, _y);
-	else if (_player->tdx == 1) scrollLevelR(&level0, _x, _y);
+	if (_player->tdy == -1) 	scrollLevelU(&level0, _player->x, _player->y);
+	else if (_player->tdy == 1) scrollLevelD(&level0, _player->x, _player->y);
+	if (_player->tdx == -1) 	scrollLevelL(&level0, _player->x, _player->y);
+	else if (_player->tdx == 1) scrollLevelR(&level0, _player->x, _player->y);
 }
 
 Level::Level(LevelData_t* level) {
@@ -45,21 +47,28 @@ Level::Level(LevelData_t* level) {
 	REG_DISPCNT = MODE_0 | level->bgEnable | OBJ_ON | OBJ_1D_MAP;
 	
 	//Load entity tiles and palettes
-	for (int i = 0; i < level->numDiffEntities; i++) {
-		loadTileToMem(&(level->entityTiles[i]), i, OBJ_BLOCK);
+	u8 p = 0;
+	for (u8 i = 0; i < level->numDiffEntities; i++) {
+		loadTileToMem(level->entityTiles[i], p, OBJ_BLOCK);
+		p += level->entityTiles[i]->tileSize;
 	}
 	
 	//Create entities based on EntityData
 	_numEnt = level->numEntities;
 	_entities = (Entity**)malloc(_numEnt * sizeof(Entity*));
 	for (int i = 0; i < _numEnt; i++) {
-		EntityData_t ed = level->entities[i];
+		const EntityData_t* ed = level->entities[i];
 		
-		switch(ed.type) {
+		switch(ed->type) {
 			case EntityTypes::player: {
-					_entities[i] = new Player(ed.x, ed.y, this, &(OAM[i]), i);
-					break;
-				}
+				_entities[i] = new Player(ed->x, ed->y, this, &(OAM[i]), i);
+				break;
+			}
+				
+			case EntityTypes::brawler: {
+				_entities[i] = new Brawler(ed->x, ed->y, this, &(OAM[i]), i);
+				break;
+			}
 			
 			default:
 				break;

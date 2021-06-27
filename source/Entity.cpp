@@ -30,17 +30,23 @@ void Entity::update() {
 	}
 }
 
-void Entity::move(u16 dx, u16 dy) {
-	u8 tx0 = (x + dx - _radius) >> 3;
-	u8 ty0 = (y      - _radius) >> 3;
-	u8 tx1 = (x + dx + _radius) >> 3;
-	u8 ty1 = (y      + _radius) >> 3;
+void Entity::move(short dx, short dy) {
+	u8 tx0, tx1, ty0, ty1;
+
+	tx0 = (x + dx - _radius) >> 3;
+	tx1 = (x + dx + _radius) >> 3;
 	
 	if (tx0 >= _level->_width || tx1 >= _level->_width) goto dy;
 	
+	//Offset by 4 pixels, because all collision layers are as well
+	tx0 = (x + dx - 4 - _radius) >> 3;
+	ty0 = (y      - 4 - _radius) >> 3;
+	tx1 = (x + dx - 4 + _radius) >> 3;
+	ty1 = (y      - 4 + _radius) >> 3;
+	
 	for (u8 yy = ty0; yy <= ty1; yy++) {
 		for (u8 xx = tx0; xx <= tx1; xx++) {
-			if (_level->getTileFlag(xx, yy) == 0b00000001) goto dy;
+			if (_level->getTileFlag(xx, yy) & 0b00000001) goto dy;
 		}
 	}
 	
@@ -48,16 +54,20 @@ void Entity::move(u16 dx, u16 dy) {
 	
 	dy:
 	
-	tx0 = (x      - _radius) >> 3;
 	ty0 = (y + dy - _radius) >> 3;
-	tx1 = (x      + _radius) >> 3;
 	ty1 = (y + dy + _radius) >> 3;
 	
 	if (ty0 >= _level->_height || ty1 >= _level->_height) return;
 	
+	//Offset by 4 pixels, because all collision layers are as well
+	tx0 = (x      - 4 - _radius) >> 3;
+	ty0 = (y + dy - 4 - _radius) >> 3;
+	tx1 = (x      - 4 + _radius) >> 3;
+	ty1 = (y + dy - 4 + _radius) >> 3;
+	
 	for (u8 yy = ty0; yy <= ty1; yy++) {
 		for (u8 xx = tx0; xx <= tx1; xx++) {
-			if (_level->getTileFlag(xx, yy) == 0b00000001) return;
+			if (_level->getTileFlag(xx, yy) & 0b00000001) return;
 		}
 	}
 	

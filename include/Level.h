@@ -13,9 +13,9 @@ typedef struct {
 	const u16 width;
 	const u16 height;
 	const u8 numEntities;
-	const EntityData_t* entities;
+	const EntityData_t** entities;
 	const u8 numDiffEntities;
-	const tile_t* entityTiles;
+	const tile_t** entityTiles;
 	const tile_t* levelTileCharacterData;
 	const level_t* levelScreenData;
 	const u8* tileFlags;
@@ -37,8 +37,19 @@ public:
 		return _tileFlags[x + y * _width];
 	}
 	
+	inline u16 getX() {
+		return _x;
+	}
+	
+	inline u16 getY() {
+		return _y;
+	}
+	
 	~Level() {
-		if (_entities != NULL) delete _entities;
+		if (_entities != NULL) {
+			for (u8 i = 0; i < _numEnt; i++) delete _entities[i];
+			delete _entities;
+		}
 	}
 
 private:
