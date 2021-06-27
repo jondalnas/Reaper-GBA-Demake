@@ -27,6 +27,9 @@ public:
 	virtual ~Entity() {}
 	
 	virtual void update();
+	inline u8 getRadius() {
+		return _radius;
+	}
 protected:
 	u8 _radius;
 	Level* _level;

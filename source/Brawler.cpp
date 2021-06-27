@@ -23,7 +23,7 @@ void Brawler::update() {
 	_rot += BRAWLER_ROT_SPEED;
 	if (_rot >= 360) _rot -= 360;
 	
-	move(-1, 0);
+	//move(1, 0);
 
 	u16 cos = getCos(_rot);
 	u16 sin = getSin(_rot);
@@ -32,8 +32,8 @@ void Brawler::update() {
 	_affine->pc = -sin;
 	_affine->pd = cos;
 	
-	short sx = x - _level->getX();
-	short sy = y - _level->getY();
+	short sx = x - 8 - _level->getX();
+	short sy = y - 8 - _level->getY();
 	
 	if (sx < -16 || sy < -16 || sx >= SCREEN_WIDTH + 16 || sy >= SCREEN_HEIGHT + 16) {
 		_attributeObj->attr0 = ATTR0_DISABLED;

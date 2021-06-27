@@ -37,6 +37,10 @@ public:
 		return _tileFlags[x + y * _width];
 	}
 	
+	inline u8 getNumEntites() {
+		return _numEnt;
+	}
+	
 	inline u16 getX() {
 		return _x;
 	}
