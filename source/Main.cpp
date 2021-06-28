@@ -23,8 +23,8 @@ int main(void) {
 	
 	loadPalettesToMem();
 	
-	EntityData_t playerData = {8, 8, EntityTypes::player};
-	EntityData_t brawlerData = {8, 48, EntityTypes::brawler};
+	EntityData_t playerData = {8 << 16, 8 << 16, EntityTypes::player};
+	EntityData_t brawlerData = {48 << 16, 48 << 16, EntityTypes::brawler};
 	
 	const EntityData_t* level0Entities[2] = {&playerData, &brawlerData};
 	const tile_t* level0EntityTiles[2] = {&playerTiles, &brawlerTiles};

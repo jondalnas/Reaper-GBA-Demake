@@ -2,9 +2,11 @@
 
 #include <stdlib.h>
 #include <gba_types.h>
+#include <vector>
 
 #include "gfx/LevelHandler.h"
 #include "Entity.h"
+#include "Player.h"
 
 class Entity;
 
@@ -49,11 +51,15 @@ public:
 		return _y;
 	}
 	
+	inline Player* getPlayer() {
+		return _player;
+	}
+	
 	~Level() {
-		if (_entities != NULL) {
-			for (u8 i = 0; i < _numEnt; i++) delete _entities[i];
-			delete _entities;
+		for (auto e : _entities) {
+			delete e;
 		}
+		_entities.clear();
 	}
 
 private:
@@ -61,7 +67,7 @@ private:
 	
 	const u8* _tileFlags;
 	
-	Entity** _entities = NULL;
+	std::vector<Entity*> _entities = {};
 	u8 _numEnt;
-	Entity* _player;
+	Player* _player;
 };

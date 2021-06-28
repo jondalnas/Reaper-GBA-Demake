@@ -12,18 +12,18 @@ enum EntityTypes {
 };
 
 typedef struct {
-	u16 x;
-	u16 y;
+	u32 x; //Fixed point 16-16
+	u32 y; //Fixed point 16-16
 	EntityTypes type;
 } EntityData_t;
 
 class Entity {
 public:
-	u16 x, y;
+	u32 x, y; //Fixed point 16-16
 	u8 tx, ty;
 	short tdx, tdy;
 	
-	Entity(unsigned short x, unsigned short y, u8 radius, Level* level, OBJATTR* attributeObj) : x(x), y(y), _radius(radius), _level(level), _attributeObj(attributeObj) {}
+	Entity(u32 x, u32 y, u8 radius, Level* level, OBJATTR* attributeObj) : x(x), y(y), _radius(radius), _level(level), _attributeObj(attributeObj) {}
 	virtual ~Entity() {}
 	
 	virtual void update();
@@ -35,5 +35,5 @@ protected:
 	Level* _level;
 	OBJATTR* _attributeObj;
 	
-	void move(short dx, short dy);
+	void move(int dx, int dy);
 };

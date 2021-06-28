@@ -13,8 +13,8 @@ void Level::update() {
 		_entities[i]->update();
 	}
 	
-	_x = _player->x - (SCREEN_WIDTH >> 1);
-	_y = _player->y - (SCREEN_HEIGHT >> 1);
+	_x = (_player->x >> 16) - (SCREEN_WIDTH >> 1);
+	_y = (_player->y >> 16) - (SCREEN_HEIGHT >> 1);
 	
 	BG_OFFSET[0].x = _x - 4;
 	BG_OFFSET[0].y = _y - 4;
@@ -23,15 +23,18 @@ void Level::update() {
 	BG_OFFSET[2].x = _x;
 	BG_OFFSET[2].y = _y;
 	
-	if (_player->tdy == -1) 	scrollLevelU(&level0, _player->x, _player->y);
-	else if (_player->tdy == 1) scrollLevelD(&level0, _player->x, _player->y);
-	if (_player->tdx == -1) 	scrollLevelL(&level0, _player->x, _player->y);
-	else if (_player->tdx == 1) scrollLevelR(&level0, _player->x, _player->y);
+	if (_player->tdy == -1) 	scrollLevelU(&level0, _player->x >> 16, _player->y >> 16);
+	else if (_player->tdy == 1) scrollLevelD(&level0, _player->x >> 16, _player->y >> 16);
+	if (_player->tdx == -1) 	scrollLevelL(&level0, _player->x >> 16, _player->y >> 16);
+	else if (_player->tdx == 1) scrollLevelR(&level0, _player->x >> 16, _player->y >> 16);
 }
 
 Level::Level(LevelData_t* level) {
 	//Free old level
-	delete _entities;
+	for (auto e : _entities) {
+		delete e;
+	}
+	_entities.clear();
 	
 	//Set width and height of level
 	_width = level->width;
@@ -55,18 +58,17 @@ Level::Level(LevelData_t* level) {
 	
 	//Create entities based on EntityData
 	_numEnt = level->numEntities;
-	_entities = (Entity**)malloc(_numEnt * sizeof(Entity*));
 	for (int i = 0; i < _numEnt; i++) {
 		const EntityData_t* ed = level->entities[i];
 		
 		switch(ed->type) {
 			case EntityTypes::player: {
-				_entities[i] = new Player(ed->x, ed->y, this, &(OAM[i]), i);
+				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[i]), i));
 				break;
 			}
 				
 			case EntityTypes::brawler: {
-				_entities[i] = new Brawler(ed->x, ed->y, this, &(OAM[i]), i);
+				_entities.push_back((Entity*)new Brawler(ed->x, ed->y, this, &(OAM[i]), i));
 				break;
 			}
 			
@@ -74,9 +76,9 @@ Level::Level(LevelData_t* level) {
 				break;
 		}
 	}
-	_player = _entities[0];
-	_x = _player->x;
-	_y = _player->y;
+	_player = (Player*)_entities[0];
+	_x = _player->x >> 16;
+	_y = _player->y >> 16;
 		
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);

@@ -1,16 +1,9 @@
-#include "Entity.h"
+#include "Enemy.h"
 
-class Brawler: public Entity {
+class Brawler: public Enemy {
 public:
-	Brawler(unsigned short x, unsigned short y, Level* level, OBJATTR* attributeObj, u8 entityNum);
+	Brawler(u32 x, u32 y, Level* level, OBJATTR* attributeObj, u8 entityNum);
 	~Brawler() {}
-
-	void update();
 	
-	void init(u8 entityNum);	
-private:
-	u16 _rot;
-	u8 _entityNum;
-	OBJATTR _initialAttribute;
-	OBJAFFINE* _affine;
+	void update();
 };
