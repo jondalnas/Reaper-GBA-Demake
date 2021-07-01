@@ -89,9 +89,9 @@ void Player::update() {
 	
 	if (_swingCooldown <= PLAYER_ATK_COOLDOWN) {
 		_swingAttributeObj->attr0 &= ~0x00FF;
-		_swingAttributeObj->attr0 |= (72 + ((cos >> 7) | (sin < 0 ? 0xFC00 : 0x0000))) & 0x00FF;
+		_swingAttributeObj->attr0 |= (72 - ((sin >> 7) | (sin < 0 ? 0xFC00 : 0x0000)) - ((cos >> 5) | (cos < 0 ? 0xF800 : 0x0000))) & 0x00FF;
 		_swingAttributeObj->attr1 &= ~0x01FF;
-		_swingAttributeObj->attr1 |= (112 + ((cos >> 7) | (cos < 0 ? 0xFC00 : 0x0000))) & 0x01FF;
+		_swingAttributeObj->attr1 |= (112 + ((cos >> 7) | (cos < 0 ? 0xFE00 : 0x0000)) + ((sin >> 5) | (sin < 0 ? 0xF800 : 0x0000))) & 0x01FF;
 	}
 	
 	tdx = tdy = 0;
