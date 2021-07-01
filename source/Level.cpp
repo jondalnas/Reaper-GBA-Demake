@@ -71,21 +71,25 @@ Level::Level(LevelData_t* level) {
 	
 	//Create entities based on EntityData
 	_numEnt = level->numEntities;
+	u8 entityNum = 0;
 	for (int i = 0; i < _numEnt; i++) {
 		const EntityData_t* ed = level->entities[i];
 		
 		switch(ed->type) {
 			case EntityTypes::player: {
-				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[i]), i));
+				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[entityNum]), &(OAM[entityNum + 1]), i));
+				entityNum += 2;
 				break;
 			}
 				
 			case EntityTypes::brawler: {
-				_entities.push_back((Entity*)new Brawler(ed->x, ed->y, this, &(OAM[i]), i));
+				_entities.push_back((Entity*)new Brawler(ed->x, ed->y, this, &(OAM[entityNum]), i));
+				entityNum++;
 				break;
 			}
 			
 			default:
+				entityNum++;
 				break;
 		}
 	}
