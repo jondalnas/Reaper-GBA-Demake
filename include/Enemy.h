@@ -11,6 +11,7 @@ public:
 	
 	void init(u8 entityNum);
 	void collideWithScythe();
+	u8 collides(Entity* e);
 	void kill();
 	
 protected:

@@ -101,3 +101,9 @@ void Enemy::kill() {
 	
 	_attributeObj->attr0 = ATTR0_DISABLED;
 }
+
+u8 Enemy::collides(Entity* e) {
+	if (_dead) return 0;
+
+	return 1;
+}

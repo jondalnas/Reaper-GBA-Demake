@@ -37,7 +37,12 @@ void Entity::move(int dx, int dy) {
 		if (e == this) continue;
 		
 		if (((x + dx) >> 16) - _radius < (e->x >> 16) + e->getRadius() && ((x + dx) >> 16) + _radius > (e->x >> 16) - e->getRadius() &&
-			((y + dy) >> 16) - _radius < (e->y >> 16) + e->getRadius() && ((y + dy) >> 16) + _radius > (e->y >> 16) - e->getRadius()) return;
+			((y + dy) >> 16) - _radius < (e->y >> 16) + e->getRadius() && ((y + dy) >> 16) + _radius > (e->y >> 16) - e->getRadius()) {
+				u8 col = e->collides(this);
+				if (collides(e) || col) {
+					return;
+				}
+			}
 	}
 
 	u8 tx0 = (((x + dx) >> 16) - _radius) >> 3;
@@ -121,6 +126,10 @@ u8 Entity::isLineToEntityBlocked(Entity* e) {
 		if ((flag & TILE_FLAG_SOLID) && !(flag & TILE_FLAG_TRANSPARENT)) return 1;
 	}
 	
+	return 0;
+}
+
+u8 Entity::collides(Entity* e) {
 	return 0;
 }
 
