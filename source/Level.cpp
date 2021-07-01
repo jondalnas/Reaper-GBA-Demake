@@ -77,8 +77,8 @@ Level::Level(LevelData_t* level) {
 		
 		switch(ed->type) {
 			case EntityTypes::player: {
-				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[entityNum]), &(OAM[entityNum + 1]), i));
-				entityNum += 2;
+				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[entityNum]), &(OAM[entityNum + 2]), &(OAM[entityNum + 1]), i));
+				entityNum += 3;
 				break;
 			}
 				

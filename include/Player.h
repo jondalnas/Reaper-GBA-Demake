@@ -4,7 +4,7 @@
 
 class Player: public Entity {
 public:
-	Player(u32 x, u32 y, Level* level, OBJATTR* attributeObj, OBJATTR* scytheAttributeObj, u8 entityNum);
+	Player(u32 x, u32 y, Level* level, OBJATTR* attributeObj, OBJATTR* scytheAttributeObj, OBJATTR* swingAttributeObj, u8 entityNum);
 	~Player() {}
 
 	void update();
@@ -17,6 +17,9 @@ private:
 	OBJAFFINE* _affine;
 	
 	OBJATTR* _scytheAttributeObj;
+	OBJATTR* _swingAttributeObj;
+	u16 _swingAttributeObjATTR0;
+	u8 _swingCooldown;
 	
 	void collideWithScythe() {}
 };
