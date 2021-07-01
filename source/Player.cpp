@@ -1,8 +1,11 @@
 #include "Player.h"
 
 #include <gba_input.h>
+#include <vector>
 
 #include "Math.h"
+#include "Level.h"
+#include "Enemy.h"
 
 #define PLAYER_ROT_SPEED 6
 #define PLAYER_MOV_SPEED (2 << 16)
@@ -36,6 +39,22 @@ void Player::update() {
 		_rot -= PLAYER_ROT_SPEED;
 		
 		if (_rot > 359) _rot += 360;
+	}
+	
+	//A BUTTON
+	if (!(REG_KEYINPUT & KEY_A)) {
+		short cos = Math::cos(_rot);
+		short sin = Math::sin(_rot);
+		std::vector<Entity*>* entities = _level->getEntitiesInside(((sin >> 5) | (sin < 0 ? 0xF800 : 0x0000)) + (x >> 16), -((cos >> 5) | (cos < 0 ? 0xF800 : 0x0000)) + (y >> 16), 16, 16);
+		
+		*((vu16*) 0x02000100) = ((sin >> 5) | (sin < 0 ? 0xF800 : 0x0000)) - 8 + (x >> 16);
+		*((vu16*) 0x02000102) = -((cos >> 5) | (cos < 0 ? 0xF800 : 0x0000)) - 8 + (y >> 16);
+		
+		for (u8 i = 0; i < entities->size(); i++) {
+			(*entities)[i]->collideWithScythe();
+		}
+		
+		delete entities;
 	}
 	
 	tdx = tdy = 0;

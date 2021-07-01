@@ -9,9 +9,12 @@ public:
 
 	void update();
 	
-	void init(u8 entityNum);	
+	void init(u8 entityNum);
+	
 private:
 	u16 _rot;
 	u8 _entityNum;
 	OBJAFFINE* _affine;
+	
+	void collideWithScythe() {}
 };

@@ -10,6 +10,8 @@ public:
 	virtual void update();
 	
 	void init(u8 entityNum);
+	void collideWithScythe();
+	void kill();
 	
 protected:
 	void lookAtPlayer(Player* p);
@@ -21,4 +23,7 @@ protected:
 	OBJAFFINE* _affine;
 	
 	u8 _noticedPlayer;
+	
+private:
+	u8 _dead = 0;
 };

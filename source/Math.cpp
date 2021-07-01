@@ -20,7 +20,7 @@ const u16 Math::atan2LUT[64] = {0x005A, 0x005A, 0x005A, 0x005A, 0x010E, 0x010E, 
 								0x0000, 0x002D, 0x003F, 0x0047, 0x011C, 0x0120, 0x0128, 0x013B};
 
 //Only accepts numbers from 0-359
-u16 Math::cos(u16 deg) {
+short Math::cos(u16 deg) {
 	if (deg < 90)
 		return cos90[deg];
 	else if (deg < 180)
@@ -32,7 +32,7 @@ u16 Math::cos(u16 deg) {
 }
 
 //Only accepts numbers from 0-359
-u16 Math::sin(u16 deg) {
+short Math::sin(u16 deg) {
 	if (deg < 90)
 		return cos90[90-deg];
 	else if (deg < 180)

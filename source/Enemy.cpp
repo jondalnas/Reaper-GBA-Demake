@@ -21,6 +21,8 @@ Enemy::Enemy(u32 x, u32 y, u8 radius, Level* level, OBJATTR* attributeObj, u8 en
 }
 
 void Enemy::update() {
+	if (_dead) return;
+
 	Entity::update();
 
 	if (!isLineToEntityBlocked(_level->getPlayer())) {
@@ -88,4 +90,14 @@ void Enemy::goToPlayer(Player* p) {
 			move(ENEMY_MOV_SPEED, ENEMY_MOV_SPEED);
 		}
 	}
+}
+
+void Enemy::collideWithScythe() {
+	kill();
+}
+
+void Enemy::kill() {
+	_dead = 1;
+	
+	_attributeObj->attr0 = ATTR0_DISABLED;
 }

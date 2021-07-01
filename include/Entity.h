@@ -27,6 +27,7 @@ public:
 	virtual ~Entity() {}
 	
 	virtual void update();
+	virtual void collideWithScythe() = 0;
 	
 	u8 isLineToEntityBlocked(Entity* e);
 	

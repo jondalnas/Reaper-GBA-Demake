@@ -33,6 +33,7 @@ public:
 	u16 _width, _height;
 
 	void update();
+	std::vector<Entity*>* getEntitiesInside(u16 x, u16 y, u16 w, u16 h);
 
 	inline Entity* getEntity(u8 index) {
 		return _entities[index];

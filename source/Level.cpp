@@ -29,6 +29,19 @@ void Level::update() {
 	else if (_player->tdx == 1) scrollLevelR(&level0, _player->x >> 16, _player->y >> 16);
 }
 
+std::vector<Entity*>* Level::getEntitiesInside(u16 x, u16 y, u16 w, u16 h) {
+	std::vector<Entity*>* result = new std::vector<Entity*>();
+	
+	for (u8 i = 0; i < getNumEntites(); i++) {
+		Entity* e = getEntity(i);
+		
+		if (x < (e->x >> 16) + 8 + e->getRadius() && x + w > (e->x >> 16) + 8 - e->getRadius() &&
+			y < (e->y >> 16) + 8 + e->getRadius() && y + h > (e->y >> 16) + 8 - e->getRadius()) result->push_back(e);
+	}
+	
+	return result;
+}
+
 Level::Level(LevelData_t* level) {
 	//Free old level
 	for (auto e : _entities) {
