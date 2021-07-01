@@ -27,6 +27,9 @@ public:
 	virtual ~Entity() {}
 	
 	virtual void update();
+	
+	u8 isLineToEntityBlocked(Entity* e);
+	
 	inline u8 getRadius() {
 		return _radius;
 	}

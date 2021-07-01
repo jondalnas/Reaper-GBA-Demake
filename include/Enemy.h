@@ -12,11 +12,13 @@ public:
 	void init(u8 entityNum);
 	
 protected:
-	void calcEnemyLookDir(Player* p);
+	void lookAtPlayer(Player* p);
 	void goToPlayer(Player* p);
 
 	u16 _rot;
 	u8 _entityNum;
 	OBJATTR _initialAttribute;
 	OBJAFFINE* _affine;
+	
+	u8 _noticedPlayer;
 };

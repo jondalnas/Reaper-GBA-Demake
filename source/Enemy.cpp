@@ -21,9 +21,18 @@ Enemy::Enemy(u32 x, u32 y, u8 radius, Level* level, OBJATTR* attributeObj, u8 en
 }
 
 void Enemy::update() {
-	calcEnemyLookDir(_level->getPlayer());
-	goToPlayer(_level->getPlayer());
+	Entity::update();
 
+	if (!isLineToEntityBlocked(_level->getPlayer())) {
+		_noticedPlayer = 1;
+	}
+	
+	if (_noticedPlayer) {
+		lookAtPlayer(_level->getPlayer());
+		goToPlayer(_level->getPlayer());
+	}
+
+	//Update entity parts
 	u16 cos = Math::cos(_rot);
 	u16 sin = Math::sin(_rot);
 	_affine->pa = cos;
@@ -42,7 +51,7 @@ void Enemy::update() {
 	}
 }
 
-void Enemy::calcEnemyLookDir(Player* p) {
+void Enemy::lookAtPlayer(Player* p) {
 	//Calc look dir
 	short xx = (p->x - x) >> 16;
 	short yy = (p->y - y) >> 16;

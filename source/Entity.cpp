@@ -2,11 +2,6 @@
 #include "Level.h"
 
 void Entity::update() {
-	_attributeObj->attr0 &= ~0x00ff; //0x00ff = y bitmask
-	_attributeObj->attr0 |= ((u16)(y >> 16) - 16) & 0x00ff;
-	_attributeObj->attr1 &= ~0x01ff; //0x01ff = x bitmask
-	_attributeObj->attr1 |= ((u16)(x >> 16) - 16) & 0x01ff;
-	
 	tdx = tdy = 0;
 	u8 newTX = x >> (3 + 16), newTY = y >> (3 + 16);
 	if (tx != newTX) {
@@ -61,12 +56,72 @@ void Entity::move(int dx, int dy) {
 	
 	for (u8 yy = ty0; yy <= ty1; yy++) {
 		for (u8 xx = tx0; xx <= tx1; xx++) {
-			if (_level->getTileFlag(xx, yy) & 0b00000001) return;
+			if (_level->getTileFlag(xx, yy) & TILE_FLAG_SOLID) return;
 		}
 	}
 	
 	x += dx;
 	y += dy;
+}
+
+u8 Entity::isLineToEntityBlocked(Entity* e) {
+	short dx = (short)e->tx - tx;
+	short dy = (short)e->ty - ty;
+	
+	u8 ndx = 0, ndy = 0;
+	
+	//Flip dx and dy
+	if (dx < 0) {
+		dx = -dx;
+		ndx = 1;
+	}
+	
+	if (dy < 0) {
+		dy = -dy;
+		ndy = 1;
+	}
+	
+	//Convert to fixed point 8-8
+	dx <<= 8;
+	dy <<= 8;
+	
+	//The number of times, xx and yy sound be added to a register to get to other entity
+	u8 length = 1;
+	
+	//Right shift so the line is drawn with at most steps of 1 tile, left shift length to double length of line, as we half the step amount
+	while((dx & 0xFF00) || (dy & 0xFF00)) {
+		dx >>= 1;
+		dy >>= 1;
+		length <<= 1;
+		
+		//If length of line is too long, then return that the line is blocked
+		if (length >= 128) return 1;
+	}
+	
+	short xx = tx << 8, yy = ty << 8;
+	//Check if current tile is solid and not transparent
+	u8 flag = _level->getTileFlag(xx >> 8, yy >> 8);
+	if ((flag & TILE_FLAG_SOLID) && !(flag & TILE_FLAG_TRANSPARENT)) return 1;
+	
+	//Flip dx and dy black to normal
+	if (ndx) {
+		dx = -dx;
+	}
+	
+	if (ndy) {
+		dy = -dy;
+	}
+	
+	for (u8 i = 0; i < length; i++) {
+		xx += dx;
+		yy += dy;
+		
+		//If tile is solid and not transparent, then line is blocked
+		flag = _level->getTileFlag(xx >> 8, yy >> 8);
+		if ((flag & TILE_FLAG_SOLID) && !(flag & TILE_FLAG_TRANSPARENT)) return 1;
+	}
+	
+	return 0;
 }
 
 /*void Entity::init(EntityData_t* entityData) {

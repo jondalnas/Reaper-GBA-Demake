@@ -8,6 +8,9 @@
 #include "Entity.h"
 #include "Player.h"
 
+#define TILE_FLAG_SOLID 0x01
+#define TILE_FLAG_TRANSPARENT 0x02
+
 class Entity;
 
 typedef struct {
