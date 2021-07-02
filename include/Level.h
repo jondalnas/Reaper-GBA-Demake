@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <gba_types.h>
 #include <vector>
+#include <stack>
 
 #include "gfx/LevelHandler.h"
 #include "Entity.h"
@@ -73,5 +74,6 @@ private:
 	
 	std::vector<Entity*> _entities = {};
 	u8 _numEnt;
+	std::stack<u8> _OAMNum;
 	Player* _player;
 };

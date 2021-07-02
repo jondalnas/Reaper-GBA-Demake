@@ -69,27 +69,33 @@ Level::Level(LevelData_t* level) {
 		p += level->entityTiles[i]->tileSize;
 	}
 	
+	//Initialize list of OAMs
+	_OAMNum = std::stack<u8>();
+	for (u8 i = 0; i < 32; i++) {
+		_OAMNum.push(i);
+	}
+	
 	//Create entities based on EntityData
 	_numEnt = level->numEntities;
-	u8 entityNum = 0;
 	for (int i = 0; i < _numEnt; i++) {
 		const EntityData_t* ed = level->entities[i];
 		
 		switch(ed->type) {
 			case EntityTypes::player: {
-				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[entityNum]), &(OAM[entityNum + 2]), &(OAM[entityNum + 1]), i));
-				entityNum += 3;
+				u8 playerOAM = _OAMNum.top(); _OAMNum.pop();
+				u8 scytheOAM = _OAMNum.top(); _OAMNum.pop();
+				u8 swingOAM = _OAMNum.top(); _OAMNum.pop();
+				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[playerOAM]), playerOAM, &(OAM[scytheOAM]), scytheOAM, &(OAM[swingOAM]), swingOAM, i));
 				break;
 			}
 				
 			case EntityTypes::brawler: {
-				_entities.push_back((Entity*)new Brawler(ed->x, ed->y, this, &(OAM[entityNum]), i));
-				entityNum++;
+				u8 brawlerOAM = _OAMNum.top(); _OAMNum.pop();
+				_entities.push_back((Entity*)new Brawler(ed->x, ed->y, this, &(OAM[brawlerOAM]), brawlerOAM, i));
 				break;
 			}
 			
 			default:
-				entityNum++;
 				break;
 		}
 	}

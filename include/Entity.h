@@ -23,7 +23,7 @@ public:
 	u8 tx, ty;
 	short tdx, tdy;
 	
-	Entity(u32 x, u32 y, u8 radius, Level* level, OBJATTR* attributeObj) : x(x), y(y), _radius(radius), _level(level), _attributeObj(attributeObj) {}
+	Entity(u32 x, u32 y, u8 radius, Level* level, OBJATTR* attributeObj, u8 entityOAM) : x(x), y(y), _radius(radius), _level(level), _attributeObj(attributeObj)/*, _entityOAM(entityOAM)*/ {}
 	virtual ~Entity() {}
 	
 	virtual void update();
@@ -35,10 +35,12 @@ public:
 	inline u8 getRadius() {
 		return _radius;
 	}
+	
 protected:
 	u8 _radius;
 	Level* _level;
 	OBJATTR* _attributeObj;
+	u8 _entityOAM;
 	
 	void move(int dx, int dy);
 };
