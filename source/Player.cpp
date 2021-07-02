@@ -125,20 +125,27 @@ void Player::update() {
 		u8 xt = _scytheX >> 3;
 		u8 yt = _scytheY >> 3;
 		
-		*((vu16*) 0x02000100) = xt;
-		*((vu16*) 0x02000102) = yt;
-		
 		//Check if scythe collides with level
 		if (_level->getTileFlag(xt + 0, yt + 0) & TILE_FLAG_SOLID ||
 			_level->getTileFlag(xt + 1, yt + 0) & TILE_FLAG_SOLID ||
 			_level->getTileFlag(xt + 0, yt + 1) & TILE_FLAG_SOLID ||
 			_level->getTileFlag(xt + 1, yt + 1) & TILE_FLAG_SOLID ||
 			xt >= _level->_width || yt >= _level->_height) {
+			//If scythe collides with wall or boundries, then reset it to player hands
 			_throwTime = 255;
 		} else {
+			//If not, then see if it collides with enemies
+			std::vector<Entity*>* entities = _level->getEntitiesInside(_scytheX, _scytheY, 16, 16);
+			
+			for (u8 i = 0; i < entities->size(); i++) {
+				(*entities)[i]->collideWithScythe();
+			}
+			
+			delete entities;
+			
 			//Get screen position
-			short sx = (_scytheX) - 8 - _level->getX();
-			short sy = (_scytheY) - 8 - _level->getY();
+			short sx = _scytheX - 8 - _level->getX();
+			short sy = _scytheY - 8 - _level->getY();
 			
 			if (sx < -16 || sy < -16 || sx >= SCREEN_WIDTH + 32 || sy >= SCREEN_HEIGHT + 32) {
 				_scytheAttributeObj->attr0 = ATTR0_DISABLED;
