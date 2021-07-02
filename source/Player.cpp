@@ -76,9 +76,9 @@ void Player::update() {
 		if (!(REG_KEYINPUT & KEY_A)) {
 			if (_throwButtonHoldDown < PLAYER_TRW_BTN_DOWN_TIME) _throwButtonHoldDown++;
 		} else {
-			if (!_lastA) {
+			if (_lastA) {
 				if (_throwButtonHoldDown < PLAYER_TRW_BTN_DOWN_TIME) {
-					std::vector<Entity*>* entities = _level->getEntitiesInside(((sin >> 5) | (sin < 0 ? 0xF800 : 0x0000)) + (x >> 16), -((cos >> 5) | (cos < 0 ? 0xF800 : 0x0000)) + (y >> 16), 16, 16);
+					std::vector<Entity*>* entities = _level->getEntitiesInside(((sin >> 4) | (sin < 0 ? 0xF000 : 0x0000)) + (x >> 16), -((cos >> 4) | (cos < 0 ? 0xF000 : 0x0000)) + (y >> 16), 16, 16);
 					
 					for (u8 i = 0; i < entities->size(); i++) {
 						(*entities)[i]->collideWithScythe();
@@ -105,7 +105,7 @@ void Player::update() {
 			_throwButtonHoldDown = 0;
 		}
 		
-		_lastA = REG_KEYINPUT & KEY_A;
+		_lastA = !(REG_KEYINPUT & KEY_A);
 	}
 	
 	//Update scythe and swing position

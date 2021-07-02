@@ -71,9 +71,10 @@ Level::Level(LevelData_t* level) {
 	
 	//Initialize list of OAMs
 	_OAMNum = std::stack<u8>();
-	for (u8 i = 0; i < 32; i++) {
-		_OAMNum.push(i);
+	for (u8 i = 0; i < 128; i++) {
+		_OAMNum.push(127 - i);
 	}
+	*((vu8*) 0x02000100) = _OAMNum.top();
 	
 	//Create entities based on EntityData
 	_numEnt = level->numEntities;
