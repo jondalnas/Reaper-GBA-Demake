@@ -1,6 +1,15 @@
 #include "Entity.h"
 #include "Level.h"
 
+Entity::Entity(u32 x, u32 y, u8 radius, Level* level) : x(x), y(y), _radius(radius), _level(level) {
+	_entityOAM = _level->lendOAM();
+	_attributeObj = &(OAM[_entityOAM]);
+}
+
+Entity::~Entity() {
+	_level->giveOAMBack(_entityOAM);
+}
+
 void Entity::update() {
 	tdx = tdy = 0;
 	u8 newTX = x >> (3 + 16), newTY = y >> (3 + 16);

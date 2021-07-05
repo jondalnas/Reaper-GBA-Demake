@@ -4,7 +4,7 @@ class Player;
 
 class Enemy: public Entity {
 public:
-	Enemy(u32 x, u32 y, u8 radius, Level* level, OBJATTR* attributeObj, u8 enemyOAM, u8 entityNum);
+	Enemy(u32 x, u32 y, u8 radius, Level* level, u8 entityNum);
 	~Enemy() {}
 
 	virtual void update();
@@ -13,6 +13,7 @@ public:
 	void collideWithScythe();
 	u8 collides(Entity* e);
 	void kill();
+	u8 teleport();
 	
 protected:
 	void lookAtPlayer(Player* p);

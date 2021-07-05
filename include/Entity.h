@@ -23,12 +23,15 @@ public:
 	u8 tx, ty;
 	short tdx, tdy;
 	
-	Entity(u32 x, u32 y, u8 radius, Level* level, OBJATTR* attributeObj, u8 entityOAM) : x(x), y(y), _radius(radius), _level(level), _attributeObj(attributeObj)/*, _entityOAM(entityOAM)*/ {}
-	virtual ~Entity() {}
+	Entity(u32 x, u32 y, u8 radius, Level* level);
+	virtual ~Entity();
 	
 	virtual void update();
 	virtual void collideWithScythe() = 0;
 	virtual u8 collides(Entity* e);
+	virtual u8 teleport() {
+		return 0;
+	}
 	
 	u8 isLineToEntityBlocked(Entity* e);
 	

@@ -9,6 +9,12 @@
 #include "Entity.h"
 
 void Level::update() {
+	//If time is frozen, then don't update anything but the player
+	if (timeFrozen) {
+		_player->update();
+		return;
+	}
+	
 	for (int i = 0; i < _numEnt; i++) {
 		_entities[i]->update();
 	}
@@ -23,10 +29,10 @@ void Level::update() {
 	BG_OFFSET[2].x = _x;
 	BG_OFFSET[2].y = _y;
 	
-	if (_player->tdy == -1) 	scrollLevelU(&level0, _player->x >> 16, _player->y >> 16);
-	else if (_player->tdy == 1) scrollLevelD(&level0, _player->x >> 16, _player->y >> 16);
-	if (_player->tdx == -1) 	scrollLevelL(&level0, _player->x >> 16, _player->y >> 16);
-	else if (_player->tdx == 1) scrollLevelR(&level0, _player->x >> 16, _player->y >> 16);
+	if 		(_player->tdy == -1) scrollLevelU(&level0, _player->x >> 16, _player->y >> 16);
+	else if (_player->tdy == 1)  scrollLevelD(&level0, _player->x >> 16, _player->y >> 16);
+	if 		(_player->tdx == -1) scrollLevelL(&level0, _player->x >> 16, _player->y >> 16);
+	else if (_player->tdx == 1)  scrollLevelR(&level0, _player->x >> 16, _player->y >> 16);
 }
 
 std::vector<Entity*>* Level::getEntitiesInside(u16 x, u16 y, u16 w, u16 h) {
@@ -70,11 +76,10 @@ Level::Level(LevelData_t* level) {
 	}
 	
 	//Initialize list of OAMs
-	_OAMNum = std::stack<u8>();
+	_OAMNum = new std::stack<u8>();
 	for (u8 i = 0; i < 128; i++) {
-		_OAMNum.push(127 - i);
+		_OAMNum->push(127 - i);
 	}
-	*((vu8*) 0x02000100) = _OAMNum.top();
 	
 	//Create entities based on EntityData
 	_numEnt = level->numEntities;
@@ -83,16 +88,12 @@ Level::Level(LevelData_t* level) {
 		
 		switch(ed->type) {
 			case EntityTypes::player: {
-				u8 playerOAM = _OAMNum.top(); _OAMNum.pop();
-				u8 scytheOAM = _OAMNum.top(); _OAMNum.pop();
-				u8 swingOAM = _OAMNum.top(); _OAMNum.pop();
-				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, &(OAM[playerOAM]), playerOAM, &(OAM[scytheOAM]), scytheOAM, &(OAM[swingOAM]), swingOAM, i));
+				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, i));
 				break;
 			}
 				
 			case EntityTypes::brawler: {
-				u8 brawlerOAM = _OAMNum.top(); _OAMNum.pop();
-				_entities.push_back((Entity*)new Brawler(ed->x, ed->y, this, &(OAM[brawlerOAM]), brawlerOAM, i));
+				_entities.push_back((Entity*)new Brawler(ed->x, ed->y, this, i));
 				break;
 			}
 			
@@ -103,7 +104,7 @@ Level::Level(LevelData_t* level) {
 	_player = (Player*)_entities[0];
 	_x = _player->x >> 16;
 	_y = _player->y >> 16;
-		
+	
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
 	
@@ -111,6 +112,8 @@ Level::Level(LevelData_t* level) {
 	_tileFlags = level->tileFlags;
 	
 	//Load level
+	_level = level->levelScreenData;
+	
 	short x0 = (_x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
 	short y0 = (_y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
 	

@@ -16,6 +16,7 @@ typedef struct {
 const tile_t playerTiles = {playerTileSize,  playerTileData};
 const tile_t scytheTiles = {scytheTileSize,  scytheTileData};
 const tile_t swingTiles = {swingTileSize,  swingTileData};
+const tile_t cursorTiles = {cursorTileSize,  cursorTileData};
 const tile_t brawlerTiles = {brawlerTileSize,  brawlerTileData};
 
 //BG tiles

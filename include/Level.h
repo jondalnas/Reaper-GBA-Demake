@@ -6,6 +6,7 @@
 #include <stack>
 
 #include "gfx/LevelHandler.h"
+#include "gfx/Palette.h"
 #include "Entity.h"
 #include "Player.h"
 
@@ -60,20 +61,56 @@ public:
 		return _player;
 	}
 	
+	inline const level_t* getLevel() {
+		return _level;
+	}
+	
+	inline u8 lendOAM() {
+		if (_OAMNum->empty()) return 0;
+		
+		u8 OAMNum = _OAMNum->top();
+		_OAMNum->pop();
+		return OAMNum;
+	}
+	
+	inline void giveOAMBack(u8 OAMNum) {
+		_OAMNum->push(OAMNum);
+		OAM[OAMNum].attr0 = ATTR0_DISABLED;
+	}
+	
+	inline void freeze() {
+		timeFrozen = 1;
+		loadGrayscalePalettesToMem();
+	}
+	
+	inline void unfreeze() {
+		timeFrozen = 0;
+		loadPalettesToMem();
+	}
+	
+	inline u8 isTimeFrozen() {
+		return timeFrozen;
+	}
+	
 	~Level() {
 		for (auto e : _entities) {
 			delete e;
 		}
 		_entities.clear();
+		
+		delete _OAMNum;
 	}
 
 private:
 	u16 _x, _y;
 	
 	const u8* _tileFlags;
+	const level_t* _level;
 	
 	std::vector<Entity*> _entities = {};
 	u8 _numEnt;
-	std::stack<u8> _OAMNum;
+	std::stack<u8>* _OAMNum;
 	Player* _player;
+	
+	u8 timeFrozen;
 };
