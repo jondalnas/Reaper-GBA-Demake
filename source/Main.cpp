@@ -28,9 +28,9 @@ int main(void) {
 	EntityData_t brawler1Data = {56 << 16, 296 << 16, EntityTypes::brawler};
 	
 	const EntityData_t* level0Entities[3] = {&playerData, &brawler0Data, &brawler1Data};
-	const tile_t* level0EntityTiles[5] = {&playerTiles, &scytheTiles, &swingTiles, &cursorTiles, &brawlerTiles};
+	const tile_t* level0EntityTiles[6] = {&playerTiles, &scytheTiles, &swingTiles, &cursorTiles, &teleportTiles, &brawlerTiles};
 	
-	LevelData_t level0Data = {BG0_ON | BG1_ON, level0width, level0height, 3, level0Entities, 5, level0EntityTiles, &level0Tiles, &level0, level0TileFlag};
+	LevelData_t level0Data = {BG0_ON | BG1_ON, level0width, level0height, 3, level0Entities, 6, level0EntityTiles, &level0Tiles, &level0, level0TileFlag};
 	currLevel = new Level(&level0Data);
 	
 	irqInit();

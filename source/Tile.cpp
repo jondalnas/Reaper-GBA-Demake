@@ -1,4 +1,4 @@
-#include "gfx/tile.h"
+#include "gfx/Tile.h"
 #include <gba_video.h>
 
 void loadTileToMem(const tile_t* tile_p, const u16 tileOffs, u8 baseBlock) {

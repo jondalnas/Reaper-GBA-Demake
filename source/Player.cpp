@@ -44,7 +44,7 @@ Player::Player(u32 x, u32 y, Level* level, u8 entityNum) : Entity(x, y, 3, level
 	
 	_cursorAttributeObjATTR[0] = OBJ_MODE(0) | OBJ_16_COLOR | ATTR0_SQUARE;
 	_cursorAttributeObjATTR[1] = ATTR1_SIZE_16;
-	_cursorAttributeObjATTR[2] = 12 | OBJ_PRIORITY(2) | OBJ_PALETTE(0);
+	_cursorAttributeObjATTR[2] = OBJ_PRIORITY(2) | OBJ_PALETTE(0);
 }
 
 Player::~Player() {
@@ -61,26 +61,45 @@ void Player::BButton() {
 			
 			_cursorOAM = _level->lendOAM();
 			_cursorAttributeObj = &(OAM[_cursorOAM]);
-			_cursorAttributeObj->attr0 = _cursorAttributeObjATTR[0];
-			_cursorAttributeObj->attr1 = _cursorAttributeObjATTR[1];
-			_cursorAttributeObj->attr2 = _cursorAttributeObjATTR[2];
+			_cursorAttributeObj->attr0 = _cursorAttributeObjATTR[0] | 72;
+			_cursorAttributeObj->attr1 = _cursorAttributeObjATTR[1] | 112;
+			_cursorAttributeObj->attr2 = _cursorAttributeObjATTR[2] | (12 + (_cursorSelect << 2));
 			
 			//Reset cursor to middle of screen
 			cursorX = cursorY = 0;
 		}
 		
 		//Move cursor
-		if (REG_KEYINPUT ^ DPAD) {
+		if (~REG_KEYINPUT & DPAD) {
 			if (!(REG_KEYINPUT & KEY_RIGHT)) cursorX++; //RIGHT
 			if (!(REG_KEYINPUT & KEY_LEFT))  cursorX--; //LEFT
 			if (!(REG_KEYINPUT & KEY_DOWN))  cursorY++; //DOWN
 			if (!(REG_KEYINPUT & KEY_UP))    cursorY--; //UP
-			
-			_cursorAttributeObj->attr0 &= ~0x00FF;
-			_cursorAttributeObj->attr0 |= (72 + cursorY) & 0x00FF;
-			_cursorAttributeObj->attr1 &= ~0x01FF;
-			_cursorAttributeObj->attr1 |= (112 + cursorX) & 0x01FF;
+
+			_cursorAttributeObj->attr0 = _cursorAttributeObjATTR[0] | (72 + cursorY);
+			_cursorAttributeObj->attr1 = _cursorAttributeObjATTR[1] | (112 + cursorX);
 		}
+
+		//Change cursor type
+		if ((~REG_KEYINPUT & (KEY_L | KEY_R)) && !_lastLR) {
+			_cursorSelect = !_cursorSelect;
+			_cursorAttributeObj->attr2 = _cursorAttributeObjATTR[2] | (12 + (_cursorSelect << 2));
+
+			if (!_cursorSelect) {
+				setColorToPaletteMem(OBJPalette0[1][9], 0, 9);
+			}
+		}
+
+		//Cycle color when cursor is set to teleport
+		*((vu8*) 0x02000100) = _cursorTime;
+		if (_cursorSelect) {
+			_cursorTime--;
+			if ((_cursorTime >> 3) > 5) _cursorTime = 5 << 3;
+
+			loadCycleColorToPaletteMem(teleportColorPalette, 5, 0, 9, _cursorTime >> 3);
+		}
+
+		_lastLR = (~REG_KEYINPUT & (KEY_L | KEY_R)) > 0;
 		
 	} else if (_lastB) {
 		//B button is not pressed, but it was pressed last frame (falling edge)

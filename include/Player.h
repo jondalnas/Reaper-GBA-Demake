@@ -35,6 +35,9 @@ private:
 	short cursorX, cursorY;
 	OBJATTR* _cursorAttributeObj;
 	u16 _cursorAttributeObjATTR[3];
+	u8 _cursorSelect; //0 = mind control, 1 = teleport
+	u8 _lastLR;
+	u8 _cursorTime;
 	
 	void collideWithScythe() {}
 	void BButton();
