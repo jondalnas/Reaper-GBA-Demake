@@ -25,6 +25,21 @@ void Enemy::update() {
 
 	Entity::update();
 
+	if (_takenOver) {
+		_attributeObj->attr0 = 72  | (_initialAttribute.attr0 & 0xFF00);
+		_attributeObj->attr1 = 112 | (_initialAttribute.attr1 & 0xFE00);
+
+		//Update rotation
+		u16 cos = Math::cos(_rot);
+		u16 sin = Math::sin(_rot);
+		_affine->pa = cos;
+		_affine->pb = sin;
+		_affine->pc = -sin;
+		_affine->pd = cos;
+
+		return;
+	}
+
 	if (!isLineToEntityBlocked(_level->getPlayer())) {
 		_noticedPlayer = 1;
 	}
@@ -98,12 +113,24 @@ u8 Enemy::teleport() {
 	return 1;
 }
 
+u8 Enemy::takeOver() {
+	_takenOver = 1;
+
+	return 1;
+}
+
+void Enemy::unTakeOver() {
+	kill();
+}
+
 void Enemy::collideWithScythe() {
 	kill();
 }
 
 void Enemy::kill() {
 	_dead = 1;
+	_takenOver = 0;
+	_level->getPlayer()->targetDead();
 	
 	_attributeObj->attr0 = ATTR0_DISABLED;
 }

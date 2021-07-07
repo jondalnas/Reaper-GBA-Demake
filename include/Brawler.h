@@ -6,4 +6,6 @@ public:
 	~Brawler() {}
 	
 	void update();
+
+	void attack();
 };

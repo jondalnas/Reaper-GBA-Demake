@@ -24,3 +24,4 @@ void scrollLevelU(const level_t* level, u16 x, u16 y);
 void scrollLevelD(const level_t* level, u16 x, u16 y);
 void scrollLevelL(const level_t* level, u16 x, u16 y);
 void scrollLevelR(const level_t* level, u16 x, u16 y);
+void refreshLevel(const level_t* level, u16 x, u16 y);

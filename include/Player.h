@@ -8,8 +8,12 @@ public:
 	~Player();
 
 	void update();
-	
-	void init(u8 entityNum);
+
+	void targetDead();
+
+	inline Entity* mindControling() {
+		return _mindControl;
+	}
 	
 private:
 	u16 _rot;
@@ -38,6 +42,7 @@ private:
 	u8 _cursorSelect; //0 = mind control, 1 = teleport
 	u8 _lastLR;
 	u8 _cursorTime;
+	Entity* _mindControl = nullptr; //Entity the player is mindcontrolling, nullptr if none
 	
 	void collideWithScythe() {}
 	void BButton();

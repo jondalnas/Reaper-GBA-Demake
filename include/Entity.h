@@ -32,8 +32,13 @@ public:
 	virtual u8 teleport() {
 		return 0;
 	}
+	virtual u8 takeOver() {
+		return 0;
+	}
+	virtual void unTakeOver() {}
 	
 	u8 isLineToEntityBlocked(Entity* e);
+	void move(int dx, int dy);
 	
 	inline u8 getRadius() {
 		return _radius;
@@ -44,6 +49,4 @@ protected:
 	Level* _level;
 	OBJATTR* _attributeObj;
 	u8 _entityOAM;
-	
-	void move(int dx, int dy);
 };

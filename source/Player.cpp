@@ -110,59 +110,164 @@ void Player::BButton() {
 		_level->giveOAMBack(_cursorOAM);
 		_cursorOAM = -1;
 		
-		//Check if entity is inside teleport range and check if entity can be teleported to
-		std::vector<Entity*>* tpEntities = _level->getEntitiesInside(((u16)(x >> 16)) + cursorX, ((u16)(y >> 16)) + cursorY, 16, 16);
+		//Check if entity is inside cursor range
+		std::vector<Entity*>* entities = _level->getEntitiesInside(((u16)(x >> 16)) + cursorX, ((u16)(y >> 16)) + cursorY, 16, 16);
 		
-		for (u8 i = 0; i < tpEntities->size(); i++) {
-			Entity* e = (*tpEntities)[i];
-			if (e->teleport()) {
-				//teleport player to entity
-				u8 newTX = e->x >> (16 + 3);
-				u8 newTY = e->y >> (16 + 3);
-				
-				x = e->x;
-				y = e->y;
-				
-				//Move camera to new position
-				if (newTX < tx) {
-					//Target is to the left
-					while (newTX < tx) {
-						tx--;
-						scrollLevelL(_level->getLevel(), tx << 3, ty << 3);
+		if (_cursorSelect) {
+			//Teleport
+			for (u8 i = 0; i < entities->size(); i++) {
+				Entity* e = (*entities)[i];
+				if (e->teleport()) {
+					//teleport player to entity
+					u8 newTX = e->x >> (16 + 3);
+					u8 newTY = e->y >> (16 + 3);
+					
+					x = e->x;
+					y = e->y;
+					
+					//Move camera to new position
+					if (newTX < tx) {
+						//Target is to the left
+						while (newTX < tx) {
+							tx--;
+							scrollLevelL(_level->getLevel(), tx << 3, ty << 3);
+						}
+					} else if (newTX > tx) {
+						//Target is to the right
+						while (newTX > tx) {
+							tx++;
+							scrollLevelR(_level->getLevel(), tx << 3, ty << 3);
+						}
 					}
-				} else if (newTX > tx) {
-					//Target is to the right
-					while (newTX > tx) {
-						tx++;
-						scrollLevelR(_level->getLevel(), tx << 3, ty << 3);
+					
+					if (newTY < ty) {
+						//Target is upwards
+						while (newTY < ty) {
+							ty--;
+							scrollLevelU(_level->getLevel(), tx << 3, ty << 3);
+						}
+					} else if (newTY > ty) {
+						//Target is downwards
+						while (newTY < ty) {
+							ty++;
+							scrollLevelD(_level->getLevel(), tx << 3, ty << 3);
+						}
 					}
+					
+					break;
 				}
-				
-				if (newTY < ty) {
-					//Target is upwards
-					while (newTY < ty) {
-						ty--;
-						scrollLevelU(_level->getLevel(), tx << 3, ty << 3);
+			}
+		} else {
+			//Mind control
+			for (u8 i = 0; i < entities->size(); i++) {
+				Entity* e = (*entities)[i];
+				if (e->takeOver()) {
+					//Entity can be taken over
+					_mindControl = e;
+			
+					//Move camera to new position
+					u8 newTX = e->x >> (16 + 3);
+					u8 newTY = e->y >> (16 + 3);
+					
+					if (newTX < tx) {
+						//Target is to the left
+						while (newTX < tx) {
+							tx--;
+							scrollLevelL(_level->getLevel(), tx << 3, ty << 3);
+						}
+					} else if (newTX > tx) {
+						//Target is to the right
+						while (newTX > tx) {
+							tx++;
+							scrollLevelR(_level->getLevel(), tx << 3, ty << 3);
+						}
 					}
-				} else if (newTY > ty) {
-					//Target is downwards
-					while (newTY < ty) {
-						ty++;
-						scrollLevelD(_level->getLevel(), tx << 3, ty << 3);
+					
+					if (newTY < ty) {
+						//Target is upwards
+						while (newTY < ty) {
+							ty--;
+							scrollLevelU(_level->getLevel(), tx << 3, ty << 3);
+						}
+					} else if (newTY > ty) {
+						//Target is downwards
+						while (newTY < ty) {
+							ty++;
+							scrollLevelD(_level->getLevel(), tx << 3, ty << 3);
+						}
 					}
+
+					break;
 				}
-				
-				break;
 			}
 		}
 		
-		delete tpEntities;
+		delete entities;
 	}
 	
 	_lastB = !(REG_KEYINPUT & KEY_B);
 }
 
 void Player::update() {
+	if (_mindControl) {
+		//DPAD
+		if (REG_KEYINPUT ^ DPAD) {
+			_mindControl->move((REG_KEYINPUT & KEY_RIGHT) ? ((REG_KEYINPUT & KEY_LEFT) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED, (REG_KEYINPUT & KEY_DOWN) ? ((REG_KEYINPUT & KEY_UP) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED);
+		}
+
+		//Update player position
+		short sx = (x >> 16) - 8 - _level->getX();
+		short sy = (y >> 16) - 8 - _level->getY();
+		
+		if (sx < -16 || sy < -16 || sx >= SCREEN_WIDTH + 16 || sy >= SCREEN_HEIGHT + 16) {
+			_attributeObj->attr0 = (-16 & 0x00FF) | (_attributeObj->attr0 & 0xFF00);
+			_attributeObj->attr1 = (-16 & 0x01FF) | (_attributeObj->attr1 & 0xFE00);
+		} else {
+			_attributeObj->attr0 = (sy & 0x00FF) | (_attributeObj->attr0 & 0xFF00);
+			_attributeObj->attr1 = (sx & 0x01FF) | (_attributeObj->attr1 & 0xFE00);
+
+
+			short sin = Math::sin(_rot);
+			short cos = Math::cos(_rot);
+
+			//This should be changed, so the scythe cna be thrown
+			_scytheAttributeObj->attr0 = _scytheAttributeObjATTR0;
+			_scytheAttributeObj->attr0 |= (sy + ((sin >> 7) | (sin < 0 ? 0xFE00 : 0x0000))) & 0x00FF;
+			_scytheAttributeObj->attr1 &= ~0x01FF;
+			_scytheAttributeObj->attr1 |= (sx + ((cos >> 7) | (cos < 0 ? 0xFE00 : 0x0000))) & 0x01FF;
+		}
+
+		//Disable swing effect if player is controlling enemy
+		_swingAttributeObj->attr0 = ATTR0_DISABLED;
+
+		//BACK BUTTONS
+		if (!(REG_KEYINPUT & KEY_R)) {
+			//This should be changed, if player is able to target anything other than enemy
+			((Enemy*) _mindControl)->_rot += PLAYER_ROT_SPEED;
+			
+			if (((Enemy*) _mindControl)->_rot > 359) ((Enemy*) _mindControl)->_rot -= 360;
+		} else if (!(REG_KEYINPUT & KEY_L)) {
+			((Enemy*) _mindControl)->_rot -= PLAYER_ROT_SPEED;
+			
+			if (((Enemy*) _mindControl)->_rot > 359) ((Enemy*) _mindControl)->_rot += 360;
+		}
+
+		//A BUTTON
+		if (!(REG_KEYINPUT & KEY_A)) {
+			((Enemy*) _mindControl)->attack();
+		}
+
+		//B BUTTON
+		if (!(REG_KEYINPUT & KEY_B)) {
+			//Move camera to new position
+			refreshLevel(_level->getLevel(), tx << 3, ty << 3);
+
+			_mindControl->unTakeOver();
+		}
+
+		return;
+	}
+
 	if (_level->isTimeFrozen()) {
 		BButton();
 		return;
@@ -328,4 +433,13 @@ void Player::update() {
 	_affine->pb = sin;
 	_affine->pc = -sin;
 	_affine->pd = cos;
+}
+
+void Player::targetDead() {
+	_mindControl = nullptr;
+
+	_attributeObj->attr0 &= ~0x00FF;
+	_attributeObj->attr1 &= ~0x01FF;
+	_attributeObj->attr0 |= 72;
+	_attributeObj->attr1 |= 112;
 }

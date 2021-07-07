@@ -19,20 +19,24 @@ void Level::update() {
 		_entities[i]->update();
 	}
 	
-	_x = (_player->x >> 16) - (SCREEN_WIDTH >> 1);
-	_y = (_player->y >> 16) - (SCREEN_HEIGHT >> 1);
+	Entity* p = _player->mindControling();
+
+	if (!p) p = _player;
+
+	_x = (p->x >> 16) - (SCREEN_WIDTH >> 1);
+	_y = (p->y >> 16) - (SCREEN_HEIGHT >> 1);
 	
+	if 		(p->tdy == -1) scrollLevelU(&level0, p->x >> 16, p->y >> 16);
+	else if (p->tdy == 1)  scrollLevelD(&level0, p->x >> 16, p->y >> 16);
+	if 		(p->tdx == -1) scrollLevelL(&level0, p->x >> 16, p->y >> 16);
+	else if (p->tdx == 1)  scrollLevelR(&level0, p->x >> 16, p->y >> 16);
+
 	BG_OFFSET[0].x = _x - 4;
 	BG_OFFSET[0].y = _y - 4;
 	BG_OFFSET[1].x = _x;
 	BG_OFFSET[1].y = _y;
 	BG_OFFSET[2].x = _x;
 	BG_OFFSET[2].y = _y;
-	
-	if 		(_player->tdy == -1) scrollLevelU(&level0, _player->x >> 16, _player->y >> 16);
-	else if (_player->tdy == 1)  scrollLevelD(&level0, _player->x >> 16, _player->y >> 16);
-	if 		(_player->tdx == -1) scrollLevelL(&level0, _player->x >> 16, _player->y >> 16);
-	else if (_player->tdx == 1)  scrollLevelR(&level0, _player->x >> 16, _player->y >> 16);
 }
 
 std::vector<Entity*>* Level::getEntitiesInside(u16 x, u16 y, u16 w, u16 h) {
