@@ -68,18 +68,18 @@ void Player::BButton() {
 			_cursorAttributeObj->attr2 = _cursorAttributeObjATTR[2] | (12 + (_cursorSelect << 2));
 			
 			//Reset cursor to middle of screen
-			cursorX = cursorY = 0;
+			_cursorX = _cursorY = 0;
 		}
 		
 		//Move cursor
 		if (~REG_KEYINPUT & DPAD) {
-			if (!(REG_KEYINPUT & KEY_RIGHT)) cursorX += PLAYER_CSR_SPEED; //RIGHT
-			if (!(REG_KEYINPUT & KEY_LEFT))  cursorX -= PLAYER_CSR_SPEED; //LEFT
-			if (!(REG_KEYINPUT & KEY_DOWN))  cursorY += PLAYER_CSR_SPEED; //DOWN
-			if (!(REG_KEYINPUT & KEY_UP))    cursorY -= PLAYER_CSR_SPEED; //UP
+			if (!(REG_KEYINPUT & KEY_RIGHT)) _cursorX += PLAYER_CSR_SPEED; //RIGHT
+			if (!(REG_KEYINPUT & KEY_LEFT))  _cursorX -= PLAYER_CSR_SPEED; //LEFT
+			if (!(REG_KEYINPUT & KEY_DOWN))  _cursorY += PLAYER_CSR_SPEED; //DOWN
+			if (!(REG_KEYINPUT & KEY_UP))    _cursorY -= PLAYER_CSR_SPEED; //UP
 
-			_cursorAttributeObj->attr0 = _cursorAttributeObjATTR[0] | (72 + cursorY);
-			_cursorAttributeObj->attr1 = _cursorAttributeObjATTR[1] | (112 + cursorX);
+			_cursorAttributeObj->attr0 = _cursorAttributeObjATTR[0] | (72 + _cursorY);
+			_cursorAttributeObj->attr1 = _cursorAttributeObjATTR[1] | (112 + _cursorX);
 		}
 
 		//Change cursor type
@@ -93,7 +93,6 @@ void Player::BButton() {
 		}
 
 		//Cycle color when cursor is set to teleport
-		*((vu8*) 0x02000100) = _cursorTime;
 		if (_cursorSelect) {
 			_cursorTime--;
 			if ((_cursorTime >> 3) > 5) _cursorTime = 5 << 3;
@@ -113,7 +112,7 @@ void Player::BButton() {
 		_cursorOAM = -1;
 		
 		//Check if entity is inside cursor range
-		std::vector<Entity*>* entities = _level->getEntitiesInside(((u16)(x >> 16)) + cursorX, ((u16) (y >> 16)) + cursorY, 16, 16);
+		std::vector<Entity*>* entities = _level->getEntitiesInside(((u16)(x >> 16)) + _cursorX, ((u16) (y >> 16)) + _cursorY, 16, 16);
 		
 		if (_cursorSelect) {
 			//Teleport
@@ -150,9 +149,17 @@ void Player::BButton() {
 }
 
 void Player::update() {
+	if (_dead) {
+		if (!(REG_KEYINPUT & KEY_START)) {
+			_level->restart();
+		} 
+
+		return;
+	}
+
 	if (_mindControl) {
 		//DPAD
-		if (REG_KEYINPUT ^ DPAD) {
+		if (~REG_KEYINPUT & DPAD) {
 			_mindControl->move((REG_KEYINPUT & KEY_RIGHT) ? ((REG_KEYINPUT & KEY_LEFT) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED, (REG_KEYINPUT & KEY_DOWN) ? ((REG_KEYINPUT & KEY_UP) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED);
 		}
 
@@ -252,7 +259,7 @@ void Player::update() {
 					std::vector<Entity*>* entities = _level->getEntitiesInside(((sin >> 4) | (sin < 0 ? 0xF000 : 0x0000)) + (x >> 16), -((cos >> 4) | (cos < 0 ? 0xF000 : 0x0000)) + (y >> 16), 16, 16);
 					
 					for (u8 i = 0; i < entities->size(); i++) {
-						(*entities)[i]->collideWithScythe();
+						(*entities)[i]->melee(this);
 					}
 					
 					delete entities;
@@ -317,7 +324,7 @@ void Player::update() {
 			std::vector<Entity*>* entities = _level->getEntitiesInside(_scytheX, _scytheY, 16, 16);
 			
 			for (u8 i = 0; i < entities->size(); i++) {
-				(*entities)[i]->collideWithScythe();
+				(*entities)[i]->melee(this);
 			}
 			
 			delete entities;
@@ -371,6 +378,14 @@ void Player::update() {
 	_affine->pb = sin;
 	_affine->pc = -sin;
 	_affine->pd = cos;
+}
+
+void Player::melee(Entity* e) {
+	if (e != (Entity*)this)	kill();
+}
+
+void Player::kill() {
+	_dead = 1;
 }
 
 void Player::targetDead() {

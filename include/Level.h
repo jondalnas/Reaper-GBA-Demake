@@ -15,22 +15,9 @@
 
 class Entity;
 
-typedef struct {
-	u16 bgEnable;
-	const u16 width;
-	const u16 height;
-	const u8 numEntities;
-	const EntityData_t** entities;
-	const u8 numDiffEntities;
-	const tile_t** entityTiles;
-	const tile_t* levelTileCharacterData;
-	const level_t* levelScreenData;
-	const u8* tileFlags;
-} LevelData_t;
-
 class Level {
 public:
-	Level(LevelData_t* level);
+	Level(const LevelData_t* level);
 	
 	u16 _width, _height;
 
@@ -91,6 +78,14 @@ public:
 	inline u8 isTimeFrozen() {
 		return timeFrozen;
 	}
+
+	inline void restart() {
+		_restart = 1;
+	}
+
+	inline u8 shouldRestart() {
+		return _restart;
+	}
 	
 	~Level() {
 		for (auto e : _entities) {
@@ -102,15 +97,17 @@ public:
 	}
 
 private:
-	u16 _x, _y;
+	u16 _x = 0, _y = 0;
 	
 	const u8* _tileFlags;
 	const level_t* _level;
+
+	u8 _restart = 0;
 	
 	std::vector<Entity*> _entities = {};
-	u8 _numEnt;
+	u8 _numEnt = 0;
 	std::stack<u8>* _OAMNum;
-	Player* _player;
+	Player* _player = nullptr;
 	
-	u8 timeFrozen;
+	u8 timeFrozen = 0;
 };

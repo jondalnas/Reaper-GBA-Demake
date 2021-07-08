@@ -20,7 +20,7 @@ void Brawler::attack() {
 	for (u8 i = 0; i < entities->size(); i++) {
 		if ((*entities)[i] == this) continue;
 
-		(*entities)[i]->collideWithScythe();
+		(*entities)[i]->melee(this);
 
 		(*((vu8*) 0x02000100))++;
 	}

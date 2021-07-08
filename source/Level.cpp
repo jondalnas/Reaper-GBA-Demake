@@ -52,13 +52,7 @@ std::vector<Entity*>* Level::getEntitiesInside(u16 x, u16 y, u16 w, u16 h) {
 	return result;
 }
 
-Level::Level(LevelData_t* level) {
-	//Free old level
-	for (auto e : _entities) {
-		delete e;
-	}
-	_entities.clear();
-	
+Level::Level(const LevelData_t* level) {
 	//Set width and height of level
 	_width = level->width;
 	_height = level->height;
@@ -88,11 +82,12 @@ Level::Level(LevelData_t* level) {
 	//Create entities based on EntityData
 	_numEnt = level->numEntities;
 	for (int i = 0; i < _numEnt; i++) {
-		const EntityData_t* ed = level->entities[i];
+		const EntityData_t* ed = &(level->entities[i]);
 		
 		switch(ed->type) {
 			case EntityTypes::player: {
-				_entities.push_back((Entity*)new Player(ed->x, ed->y, this, i));
+				_player = new Player(ed->x, ed->y, this, i);
+				_entities.push_back((Entity*)_player);
 				break;
 			}
 				
@@ -105,9 +100,12 @@ Level::Level(LevelData_t* level) {
 				break;
 		}
 	}
-	_player = (Player*)_entities[0];
 	_x = _player->x >> 16;
 	_y = _player->y >> 16;
+
+	
+	*((vu16*) 0x02000100) = _x;
+	*((vu16*) 0x02000102) = _y;
 	
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);

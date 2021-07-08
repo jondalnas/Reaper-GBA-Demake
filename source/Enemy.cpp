@@ -126,7 +126,7 @@ void Enemy::unTakeOver() {
 	kill();
 }
 
-void Enemy::collideWithScythe() {
+void Enemy::melee(Entity* e) {
 	kill();
 }
 

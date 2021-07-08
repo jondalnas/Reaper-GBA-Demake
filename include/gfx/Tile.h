@@ -13,14 +13,16 @@ typedef struct {
 } tile_t;
 
 //OBJ tiles
-const tile_t playerTiles = {playerTileSize,  playerTileData};
-const tile_t scytheTiles = {scytheTileSize,  scytheTileData};
-const tile_t swingTiles = {swingTileSize,  swingTileData};
-const tile_t cursorTiles = {cursorTileSize,  cursorTileData};
-const tile_t teleportTiles = {teleportTileSize,  teleportTileData};
-const tile_t brawlerTiles = {brawlerTileSize,  brawlerTileData};
+extern const tile_t playerTiles;
+extern const tile_t scytheTiles;
+extern const tile_t swingTiles;
+extern const tile_t cursorTiles;
+extern const tile_t teleportTiles;
+extern const tile_t brawlerTiles;
+
+extern const tile_t* level0EntityTiles[6];
 
 //BG tiles
-const tile_t level0Tiles = {7, level0TileData};
+extern const tile_t level0Tiles;
 
 void loadTileToMem(const tile_t* tile_p, const u16 tileOffs, u8 baseBlock);

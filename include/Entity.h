@@ -6,17 +6,6 @@
 
 class Level;
 
-enum EntityTypes {
-	player,
-	brawler
-};
-
-typedef struct {
-	u32 x; //Fixed point 16-16
-	u32 y; //Fixed point 16-16
-	EntityTypes type;
-} EntityData_t;
-
 class Entity {
 public:
 	u32 x, y; //Fixed point 16-16
@@ -27,7 +16,7 @@ public:
 	virtual ~Entity();
 	
 	virtual void update();
-	virtual void collideWithScythe() = 0;
+	virtual void melee(Entity* e) = 0;
 	virtual u8 collides(Entity* e);
 	virtual u8 teleport() {
 		return 0;

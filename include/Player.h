@@ -16,7 +16,7 @@ public:
 	}
 	
 private:
-	u16 _rot;
+	u16 _rot = 0;
 	u8 _entityNum;
 	OBJAFFINE* _affine;
 	
@@ -26,24 +26,28 @@ private:
 	
 	OBJATTR* _scytheAttributeObj;
 	OBJATTR* _swingAttributeObj;
-	u16 _scytheAttributeObjATTR0;
-	u16 _swingAttributeObjATTR[3];
+	u16 _scytheAttributeObjATTR0 = 0;
+	u16 _swingAttributeObjATTR[3] = {0};
 	u8 _swingCooldown = 255;
 	u8 _throwButtonHoldDown = 255;
 	u8 _throwTime = 255;
-	u8 _lastA;
-	u8 _lastB;
-	u16 _scytheX, _scytheY;
-	short _scytheDX, _scytheDY;
+	u8 _lastA = 0;
+	u8 _lastB = 0;
+	u16 _scytheX = 0, _scytheY = 0;
+	short _scytheDX = 0, _scytheDY = 0;
 	
-	short cursorX, cursorY;
+	short _cursorX = 0, _cursorY = 0;
 	OBJATTR* _cursorAttributeObj;
-	u16 _cursorAttributeObjATTR[3];
-	u8 _cursorSelect; //0 = mind control, 1 = teleport
-	u8 _lastLR;
-	u8 _cursorTime;
+	u16 _cursorAttributeObjATTR[3] = {0};
+	u8 _cursorSelect = 0; //0 = mind control, 1 = teleport
+	u8 _lastLR = 0;
+	u8 _cursorTime = 0;
 	Entity* _mindControl = nullptr; //Entity the player is mindcontrolling, nullptr if none
 	
-	void collideWithScythe() {}
+	u8 _dead = 0;
+
+	void melee(Entity* e);
+	void kill();
+
 	void BButton();
 };
