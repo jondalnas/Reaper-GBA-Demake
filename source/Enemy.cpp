@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
 #include "Player.h"
-#include "Math.h"
+#include "FixedPointMath.h"
 #include "Level.h"
 
 #define ENEMY_MOV_SPEED (1 << 16 >> 1)

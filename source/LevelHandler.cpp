@@ -131,10 +131,10 @@ void refreshLevel(const level_t* level, u16 x, u16 y) {
 	
 	short yD = y0;
 	short yS = y0;
-
 	if (yD < 0)
 		yD += VIRTUAL_SCREEN_TILE_SIZE;
-	for (u8 y = 0; y < SCREEN_TILE_HEIGHT+2; y++) {
+	
+	for (u8 y = 0; y < SCREEN_TILE_HEIGHT + 2; y++) {
 		if (yD >= VIRTUAL_SCREEN_TILE_SIZE)
 			yD -= VIRTUAL_SCREEN_TILE_SIZE;
 		
@@ -142,10 +142,10 @@ void refreshLevel(const level_t* level, u16 x, u16 y) {
 		short xS = x0;
 		if (xD < 0)
 			xD += VIRTUAL_SCREEN_TILE_SIZE;
-		for (u8 x = 0; x < SCREEN_TILE_WIDTH+2; x++) {
+		for (u8 x = 0; x < SCREEN_TILE_WIDTH + 2; x++) {
 			if (xD >= VIRTUAL_SCREEN_TILE_SIZE)
 				xD -= VIRTUAL_SCREEN_TILE_SIZE;
-				
+			
 			if (yS < 0 || xS < 0 || yS >= level->height || xS >= level->width) {
 				((u16*) SCREEN_BASE_BLOCK(8))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->defaultTile; //BG0
 				((u16*) SCREEN_BASE_BLOCK(9))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->defaultTile; //BG1
@@ -157,7 +157,7 @@ void refreshLevel(const level_t* level, u16 x, u16 y) {
 			xD++;
 			xS++;
 		}
-			
+		
 		yD++;
 		yS++;
 	}

@@ -3,7 +3,7 @@
 #include <gba_input.h>
 #include <vector>
 
-#include "Math.h"
+#include "FixedPointMath.h"
 #include "Level.h"
 #include "Enemy.h"
 
@@ -13,6 +13,8 @@
 #define PLAYER_ATK_COOLDOWN 20
 #define PLAYER_MAX_TRW_TIME 180
 #define PLAYER_TRW_BTN_DOWN_TIME 20
+
+#define PLAYER_CSR_SPEED 2
 
 Player::Player(u32 x, u32 y, Level* level, u8 entityNum) : Entity(x, y, 3, level), _entityNum(entityNum) {
 	//Init player to center of screen
@@ -71,10 +73,10 @@ void Player::BButton() {
 		
 		//Move cursor
 		if (~REG_KEYINPUT & DPAD) {
-			if (!(REG_KEYINPUT & KEY_RIGHT)) cursorX++; //RIGHT
-			if (!(REG_KEYINPUT & KEY_LEFT))  cursorX--; //LEFT
-			if (!(REG_KEYINPUT & KEY_DOWN))  cursorY++; //DOWN
-			if (!(REG_KEYINPUT & KEY_UP))    cursorY--; //UP
+			if (!(REG_KEYINPUT & KEY_RIGHT)) cursorX += PLAYER_CSR_SPEED; //RIGHT
+			if (!(REG_KEYINPUT & KEY_LEFT))  cursorX -= PLAYER_CSR_SPEED; //LEFT
+			if (!(REG_KEYINPUT & KEY_DOWN))  cursorY += PLAYER_CSR_SPEED; //DOWN
+			if (!(REG_KEYINPUT & KEY_UP))    cursorY -= PLAYER_CSR_SPEED; //UP
 
 			_cursorAttributeObj->attr0 = _cursorAttributeObjATTR[0] | (72 + cursorY);
 			_cursorAttributeObj->attr1 = _cursorAttributeObjATTR[1] | (112 + cursorX);
@@ -111,7 +113,7 @@ void Player::BButton() {
 		_cursorOAM = -1;
 		
 		//Check if entity is inside cursor range
-		std::vector<Entity*>* entities = _level->getEntitiesInside(((u16)(x >> 16)) + cursorX, ((u16)(y >> 16)) + cursorY, 16, 16);
+		std::vector<Entity*>* entities = _level->getEntitiesInside(((u16)(x >> 16)) + cursorX, ((u16) (y >> 16)) + cursorY, 16, 16);
 		
 		if (_cursorSelect) {
 			//Teleport
@@ -119,40 +121,11 @@ void Player::BButton() {
 				Entity* e = (*entities)[i];
 				if (e->teleport()) {
 					//teleport player to entity
-					u8 newTX = e->x >> (16 + 3);
-					u8 newTY = e->y >> (16 + 3);
-					
 					x = e->x;
 					y = e->y;
 					
 					//Move camera to new position
-					if (newTX < tx) {
-						//Target is to the left
-						while (newTX < tx) {
-							tx--;
-							scrollLevelL(_level->getLevel(), tx << 3, ty << 3);
-						}
-					} else if (newTX > tx) {
-						//Target is to the right
-						while (newTX > tx) {
-							tx++;
-							scrollLevelR(_level->getLevel(), tx << 3, ty << 3);
-						}
-					}
-					
-					if (newTY < ty) {
-						//Target is upwards
-						while (newTY < ty) {
-							ty--;
-							scrollLevelU(_level->getLevel(), tx << 3, ty << 3);
-						}
-					} else if (newTY > ty) {
-						//Target is downwards
-						while (newTY < ty) {
-							ty++;
-							scrollLevelD(_level->getLevel(), tx << 3, ty << 3);
-						}
-					}
+					refreshLevel(_level->getLevel(), e->x >> 16, e->y >> 16);
 					
 					break;
 				}
@@ -166,36 +139,7 @@ void Player::BButton() {
 					_mindControl = e;
 			
 					//Move camera to new position
-					u8 newTX = e->x >> (16 + 3);
-					u8 newTY = e->y >> (16 + 3);
-					
-					if (newTX < tx) {
-						//Target is to the left
-						while (newTX < tx) {
-							tx--;
-							scrollLevelL(_level->getLevel(), tx << 3, ty << 3);
-						}
-					} else if (newTX > tx) {
-						//Target is to the right
-						while (newTX > tx) {
-							tx++;
-							scrollLevelR(_level->getLevel(), tx << 3, ty << 3);
-						}
-					}
-					
-					if (newTY < ty) {
-						//Target is upwards
-						while (newTY < ty) {
-							ty--;
-							scrollLevelU(_level->getLevel(), tx << 3, ty << 3);
-						}
-					} else if (newTY > ty) {
-						//Target is downwards
-						while (newTY < ty) {
-							ty++;
-							scrollLevelD(_level->getLevel(), tx << 3, ty << 3);
-						}
-					}
+					refreshLevel(_level->getLevel(), e->x >> 16, e->y >> 16);
 
 					break;
 				}
@@ -260,7 +204,7 @@ void Player::update() {
 		//B BUTTON
 		if (!(REG_KEYINPUT & KEY_B)) {
 			//Move camera to new position
-			refreshLevel(_level->getLevel(), tx << 3, ty << 3);
+			refreshLevel(_level->getLevel(), x >> 16, y >> 16);
 
 			_mindControl->unTakeOver();
 		}

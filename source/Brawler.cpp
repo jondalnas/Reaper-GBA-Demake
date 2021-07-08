@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "Level.h"
-#include "Math.h"
+#include "FixedPointMath.h"
 
 Brawler::Brawler(u32 x, u32 y, Level* level, u8 entityNum) : Enemy(x, y, 4, level, 20, entityNum) {}
 

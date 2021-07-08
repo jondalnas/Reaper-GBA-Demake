@@ -118,40 +118,5 @@ Level::Level(LevelData_t* level) {
 	//Load level
 	_level = level->levelScreenData;
 	
-	short x0 = (_x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
-	short y0 = (_y >> 3) - (SCREEN_TILE_HEIGHT >> 1) - 1;
-	
-	short yD = y0;
-	short yS = y0;
-	if (yD < 0)
-		yD += VIRTUAL_SCREEN_TILE_SIZE;
-	
-	for (u8 y = 0; y < SCREEN_TILE_HEIGHT + 2; y++) {
-		if (yD >= VIRTUAL_SCREEN_TILE_SIZE)
-			yD -= VIRTUAL_SCREEN_TILE_SIZE;
-		
-		short xD = x0;
-		short xS = x0;
-		if (xD < 0)
-			xD += VIRTUAL_SCREEN_TILE_SIZE;
-		
-		for (u8 x = 0; x < SCREEN_TILE_WIDTH + 2; x++) {
-			if (xD >= VIRTUAL_SCREEN_TILE_SIZE)
-				xD -= VIRTUAL_SCREEN_TILE_SIZE;
-			
-			if (yS < 0 || xS < 0 || yS >= level->levelScreenData->height || xS >= level->levelScreenData->width) {
-				((u16*) SCREEN_BASE_BLOCK(8))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->defaultTile; //BG0
-				((u16*) SCREEN_BASE_BLOCK(9))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->defaultTile; //BG1
-			} else {
-				((u16*) SCREEN_BASE_BLOCK(8))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->screenData[0][xS + yS * level->levelScreenData->width]; //BG0
-				((u16*) SCREEN_BASE_BLOCK(9))[xD + yD * VIRTUAL_SCREEN_TILE_SIZE] = level->levelScreenData->screenData[1][xS + yS * level->levelScreenData->width]; //BG1
-			}
-			
-			xD++;
-			xS++;
-		}
-		
-		yD++;
-		yS++;
-	}
+	refreshLevel(_level, _x, _y);
 }
