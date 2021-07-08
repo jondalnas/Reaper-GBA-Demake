@@ -137,9 +137,6 @@ void Player::BButton() {
 				if (e->takeOver()) {
 					//Entity can be taken over
 					_mindControl = e;
-			
-					//Move camera to new position
-					refreshLevel(_level->getLevel(), e->x >> 16, e->y >> 16);
 
 					break;
 				}
@@ -203,9 +200,6 @@ void Player::update() {
 
 		//B BUTTON
 		if (!(REG_KEYINPUT & KEY_B)) {
-			//Move camera to new position
-			refreshLevel(_level->getLevel(), x >> 16, y >> 16);
-
 			_mindControl->unTakeOver();
 		}
 
@@ -386,4 +380,7 @@ void Player::targetDead() {
 	_attributeObj->attr1 &= ~0x01FF;
 	_attributeObj->attr0 |= 72;
 	_attributeObj->attr1 |= 112;
+
+	
+	refreshLevel(_level->getLevel(), x >> 16, y >> 16);
 }

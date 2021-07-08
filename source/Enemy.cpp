@@ -115,6 +115,9 @@ u8 Enemy::teleport() {
 
 u8 Enemy::takeOver() {
 	_takenOver = 1;
+	
+	//Move camera to new position
+	refreshLevel(_level->getLevel(), x >> 16, y >> 16);
 
 	return 1;
 }
@@ -129,8 +132,12 @@ void Enemy::collideWithScythe() {
 
 void Enemy::kill() {
 	_dead = 1;
-	_takenOver = 0;
-	_level->getPlayer()->targetDead();
+
+	if (_takenOver) {
+		//This enemy is taken over
+		_takenOver = 0;
+		_level->getPlayer()->targetDead();
+	}
 	
 	_attributeObj->attr0 = ATTR0_DISABLED;
 }

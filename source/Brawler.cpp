@@ -21,6 +21,8 @@ void Brawler::attack() {
 		if ((*entities)[i] == this) continue;
 
 		(*entities)[i]->collideWithScythe();
+
+		(*((vu8*) 0x02000100))++;
 	}
 	
 	delete entities;
