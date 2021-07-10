@@ -2,15 +2,26 @@
 
 #include <gba_video.h>
 #include <gba_sprites.h>
+#include <gba_input.h>
 #include <stdlib.h>
 
 #include "Player.h"
 #include "Brawler.h"
 #include "Entity.h"
+#include "gfx/Palette.h"
 
 void Level::update() {
+	//If game is won, then don't update anything
+	if (_won) {
+		if (!(REG_KEYINPUT & KEY_START)) {
+			restart();
+		}
+		
+		return;
+	}
+
 	//If time is frozen, then don't update anything but the player
-	if (timeFrozen) {
+	if (_timeFrozen) {
 		_player->update();
 		return;
 	}
@@ -35,8 +46,6 @@ void Level::update() {
 	BG_OFFSET[0].y = _y - 4;
 	BG_OFFSET[1].x = _x;
 	BG_OFFSET[1].y = _y;
-	BG_OFFSET[2].x = _x;
-	BG_OFFSET[2].y = _y;
 }
 
 std::vector<Entity*>* Level::getEntitiesInside(u16 x, u16 y, u16 w, u16 h) {
@@ -102,13 +111,13 @@ Level::Level(const LevelData_t* level) {
 	}
 	_x = _player->x >> 16;
 	_y = _player->y >> 16;
-
-	
-	*((vu16*) 0x02000100) = _x;
-	*((vu16*) 0x02000102) = _y;
 	
 	//Load level tiles
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
+
+	//Load text tiles and clear null tile
+	loadTileToMem(&textTiles, 256, 0);
+	clearHUD();
 	
 	//Set tile flag data
 	_tileFlags = level->tileFlags;
@@ -117,4 +126,12 @@ Level::Level(const LevelData_t* level) {
 	_level = level->levelScreenData;
 	
 	refreshLevel(_level, _x, _y);
+}
+
+void Level::win() {
+	_won = 1;
+
+	loadGrayscalePalettesToMem();
+
+	loadPressStart();	
 }

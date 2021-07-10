@@ -25,6 +25,9 @@ public:
 		return 0;
 	}
 	virtual void unTakeOver() {}
+	virtual u8 dead() {
+		return 0;
+	}
 	
 	u8 isLineToEntityBlocked(Entity* e);
 	void move(int dx, int dy);

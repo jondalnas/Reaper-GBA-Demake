@@ -2,7 +2,7 @@
 
 const level_t level0 = {level0width, level0height, level0defaultTile, 2, level0ScreenData, level0TileFlag};
 
-const LevelData_t level0Data = {BG0_ON | BG1_ON, level0width, level0height, 3, level0EntityData, 6, level0EntityTiles, &level0Tiles, &level0, level0TileFlag};
+const LevelData_t level0Data = {BG0_ON | BG1_ON | BG2_ON, level0width, level0height, 11, level0EntityData, 6, level0EntityTiles, &level0Tiles, &level0, level0TileFlag};
 
 void scrollLevelU(const level_t* level, u16 x, u16 y) {
 	short x0 = (x >> 3) - (SCREEN_TILE_WIDTH >> 1) - 1;
@@ -164,5 +164,25 @@ void refreshLevel(const level_t* level, u16 x, u16 y) {
 		
 		yD++;
 		yS++;
+	}
+}
+
+void loadPressStart() {
+	for (u8 x = 0; x < 8; x++) {
+		((u16*) SCREEN_BASE_BLOCK(10))[(x + (SCREEN_TILE_WIDTH >> 1) - 3) + ((SCREEN_TILE_HEIGHT >> 1) - 2) * VIRTUAL_SCREEN_TILE_SIZE] = x + 256;
+	}
+}
+
+void removePressStart() {
+	for (u8 x = 0; x < 8; x++) {
+		((u16*) SCREEN_BASE_BLOCK(10))[(x + (SCREEN_TILE_WIDTH >> 1) - 3) + ((SCREEN_TILE_HEIGHT >> 1) - 2) * VIRTUAL_SCREEN_TILE_SIZE] = 16;
+	}
+}
+
+void clearHUD() {
+	for (u8 y = 0; y < SCREEN_TILE_HEIGHT; y++) {
+		for (u8 x = 0; x < SCREEN_TILE_WIDTH; x++) {
+			((u16*) SCREEN_BASE_BLOCK(10))[x + y * VIRTUAL_SCREEN_TILE_SIZE] = 16;
+		}
 	}
 }

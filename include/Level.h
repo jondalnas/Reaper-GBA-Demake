@@ -66,17 +66,17 @@ public:
 	}
 	
 	inline void freeze() {
-		timeFrozen = 1;
+		_timeFrozen = 1;
 		loadGrayscalePalettesToMem();
 	}
 	
 	inline void unfreeze() {
-		timeFrozen = 0;
+		_timeFrozen = 0;
 		loadPalettesToMem();
 	}
 	
 	inline u8 isTimeFrozen() {
-		return timeFrozen;
+		return _timeFrozen;
 	}
 
 	inline void restart() {
@@ -85,6 +85,16 @@ public:
 
 	inline u8 shouldRestart() {
 		return _restart;
+	}
+
+	inline void killedEnemy() {
+		_killedEnemy++;
+
+		if (_killedEnemy >= _numEnemy) win();
+	}
+
+	inline void addedEnemy() {
+		_numEnemy++;
 	}
 	
 	~Level() {
@@ -109,5 +119,11 @@ private:
 	std::stack<u8>* _OAMNum;
 	Player* _player = nullptr;
 	
-	u8 timeFrozen = 0;
+	u8 _timeFrozen = 0;
+
+	u8 _won = 0;
+	u8 _numEnemy = 0;
+	u8 _killedEnemy = 0;
+
+	void win();
 };

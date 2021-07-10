@@ -18,6 +18,8 @@ Enemy::Enemy(u32 x, u32 y, u8 radius, Level* level, u8 tile, u8 entityNum) : Ent
 	_affine->pb = Math::sin(_rot);
 	_affine->pc = -Math::sin(_rot);
 	_affine->pd = Math::cos(_rot);
+
+	_level->addedEnemy();
 }
 
 void Enemy::update() {
@@ -40,13 +42,26 @@ void Enemy::update() {
 		return;
 	}
 
-	if (!isLineToEntityBlocked(_level->getPlayer())) {
-		_noticedPlayer = 1;
-	}
-	
-	if (_noticedPlayer) {
-		lookAtPlayer(_level->getPlayer());
-		goToPlayer(_level->getPlayer());
+	if (!_noticedPlayer) {
+		if (!isLineToEntityBlocked(_level->getPlayer())) {
+			_noticedPlayer = 1;
+
+			_target = (Entity*)_level->getPlayer();
+		} else if (!isLineToEntityBlocked(_level->getPlayer()->mindControling())) {
+			_noticedPlayer = 1;
+
+			_target = (Entity*)_level->getPlayer()->mindControling();
+		}
+	} else {
+		if (_target->dead()) {
+			_noticedPlayer = 0;
+			_target = nullptr;
+
+			return;
+		}
+
+		lookAtTarget();
+		goToTarget();
 	}
 
 	//Update entity parts
@@ -68,17 +83,17 @@ void Enemy::update() {
 	}
 }
 
-void Enemy::lookAtPlayer(Player* p) {
+void Enemy::lookAtTarget() {
 	//Calc look dir
-	short xx = (p->x - x) >> 16;
-	short yy = (p->y - y) >> 16;
+	short xx = (_target->x - x) >> 16;
+	short yy = (_target->y - y) >> 16;
 	
 	_rot = Math::atan2(xx, yy);
 }
 
-void Enemy::goToPlayer(Player* p) {
-	short xx = (p->x - x) >> 16;
-	short yy = (p->y - y) >> 16;
+void Enemy::goToTarget() {
+	short xx = (_target->x - x) >> 16;
+	short yy = (_target->y - y) >> 16;
 	
 	if (xx == 0) {
 		if (yy < 0) {
@@ -114,6 +129,8 @@ u8 Enemy::teleport() {
 }
 
 u8 Enemy::takeOver() {
+	if (_dead) return 0;
+
 	_takenOver = 1;
 	
 	//Move camera to new position
@@ -131,6 +148,8 @@ void Enemy::melee(Entity* e) {
 }
 
 void Enemy::kill() {
+	if (_dead) return;
+
 	_dead = 1;
 
 	if (_takenOver) {
@@ -140,10 +159,15 @@ void Enemy::kill() {
 	}
 	
 	_attributeObj->attr0 = ATTR0_DISABLED;
+
+	_level->killedEnemy();
 }
 
 u8 Enemy::collides(Entity* e) {
 	if (_dead) return 0;
+
+	if ((Player*) e == _level->getPlayer()) _level->getPlayer()->kill();
+	if ((Enemy*) e == _level->getPlayer()->mindControling()) ((Enemy*) e)->unTakeOver();
 
 	return 1;
 }

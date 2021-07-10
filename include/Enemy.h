@@ -19,10 +19,14 @@ public:
 	u8 takeOver();
 	void unTakeOver();
 	virtual void attack() = 0;
+
+	u8 dead() {
+		return _dead;
+	}
 	
 protected:
-	void lookAtPlayer(Player* p);
-	void goToPlayer(Player* p);
+	void lookAtTarget();
+	void goToTarget();
 
 	u8 _entityNum;
 	
@@ -32,6 +36,8 @@ private:
 	u8 _dead = 0;
 	OBJATTR _initialAttribute;
 	OBJAFFINE* _affine;
+
+	Entity* _target = nullptr;
 
 	u8 _takenOver = 0;
 };

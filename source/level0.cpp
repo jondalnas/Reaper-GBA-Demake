@@ -142,4 +142,14 @@ const u8 level0TileFlag[47*42] = {0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000
 
 const u16* level0ScreenData[2] = {level0ScreenData0, level0ScreenData1};
 
-const EntityData_t level0EntityData[] = {{164 << 16, 328 << 16, EntityTypes::player}, {48 << 16, 48 << 16, EntityTypes::brawler}, {56 << 16, 296 << 16, EntityTypes::brawler}};
+const EntityData_t level0EntityData[] = {{164 << 16, 328 << 16, EntityTypes::player}, 
+										 {(6  << 3) << 16, (6  << 3) << 16, EntityTypes::brawler}, 
+										 {(7  << 3) << 16, (37 << 3) << 16, EntityTypes::brawler}, 
+										 {(32 << 3) << 16, (37 << 3) << 16, EntityTypes::brawler}, 
+										 {(7  << 3) << 16, (27 << 3) << 16, EntityTypes::brawler}, 
+										 {(15 << 3) << 16, (30 << 3) << 16, EntityTypes::brawler}, 
+										 {(32 << 3) << 16, (27 << 3) << 16, EntityTypes::brawler}, 
+										 {(39 << 3) << 16, (24 << 3) << 16, EntityTypes::brawler}, 
+										 {(42 << 3) << 16, (27 << 3) << 16, EntityTypes::brawler}, 
+										 {(32 << 3) << 16, (6  << 3) << 16, EntityTypes::brawler}, 
+										 {(22 << 3) << 16, (12 << 3) << 16, EntityTypes::brawler}};

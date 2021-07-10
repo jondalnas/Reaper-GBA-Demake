@@ -2,6 +2,7 @@
 
 #include <gba_input.h>
 #include <vector>
+#include <stdio.h>
 
 #include "FixedPointMath.h"
 #include "Level.h"
@@ -13,6 +14,9 @@
 #define PLAYER_ATK_COOLDOWN 20
 #define PLAYER_MAX_TRW_TIME 180
 #define PLAYER_TRW_BTN_DOWN_TIME 20
+
+#define PLAYER_TEL_COOLDOWN 240
+#define PLAYER_MDC_COOLDOWN 240
 
 #define PLAYER_CSR_SPEED 2
 
@@ -97,7 +101,13 @@ void Player::BButton() {
 			_cursorTime--;
 			if ((_cursorTime >> 3) > 5) _cursorTime = 5 << 3;
 
-			loadCycleColorToPaletteMem(teleportColorPalette, 5, 0, 9, _cursorTime >> 3);
+			loadCycleColorToPaletteMem(teleportColorPalette, 5, 0, 9, _teleportCoolDown > PLAYER_TEL_COOLDOWN ? _cursorTime >> 3 : 0);
+		} else {
+			if (_mindControlCoolDown > PLAYER_MDC_COOLDOWN) {
+				setColorToPaletteMem(0x001F, 0, 9);
+			} else {
+				setColorToPaletteMem(0x2529, 0, 9);
+			}
 		}
 
 		_lastLR = (~REG_KEYINPUT & (KEY_L | KEY_R)) > 0;
@@ -116,28 +126,34 @@ void Player::BButton() {
 		
 		if (_cursorSelect) {
 			//Teleport
-			for (u8 i = 0; i < entities->size(); i++) {
-				Entity* e = (*entities)[i];
-				if (e->teleport()) {
-					//teleport player to entity
-					x = e->x;
-					y = e->y;
-					
-					//Move camera to new position
-					refreshLevel(_level->getLevel(), e->x >> 16, e->y >> 16);
-					
-					break;
+			if (_teleportCoolDown > PLAYER_TEL_COOLDOWN) {
+				for (u8 i = 0; i < entities->size(); i++) {
+					Entity* e = (*entities)[i];
+					if (e->teleport()) {
+						//teleport player to entity
+						x = e->x;
+						y = e->y;
+						
+						//Move camera to new position
+						refreshLevel(_level->getLevel(), e->x >> 16, e->y >> 16);
+						
+						_teleportCoolDown = 0;
+
+						break;
+					}
 				}
 			}
 		} else {
 			//Mind control
-			for (u8 i = 0; i < entities->size(); i++) {
-				Entity* e = (*entities)[i];
-				if (e->takeOver()) {
-					//Entity can be taken over
-					_mindControl = e;
+			if (_mindControlCoolDown > PLAYER_MDC_COOLDOWN) {
+				for (u8 i = 0; i < entities->size(); i++) {
+					Entity* e = (*entities)[i];
+					if (e->takeOver()) {
+						//Entity can be taken over
+						_mindControl = e;
 
-					break;
+						break;
+					}
 				}
 			}
 		}
@@ -152,7 +168,7 @@ void Player::update() {
 	if (_dead) {
 		if (!(REG_KEYINPUT & KEY_START)) {
 			_level->restart();
-		} 
+		}
 
 		return;
 	}
@@ -162,6 +178,9 @@ void Player::update() {
 		if (~REG_KEYINPUT & DPAD) {
 			_mindControl->move((REG_KEYINPUT & KEY_RIGHT) ? ((REG_KEYINPUT & KEY_LEFT) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED, (REG_KEYINPUT & KEY_DOWN) ? ((REG_KEYINPUT & KEY_UP) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED);
 		}
+
+		//If mindcontrol is null, then don't continue
+		if (!_mindControl) return;
 
 		//Update player position
 		short sx = (x >> 16) - 8 - _level->getX();
@@ -218,13 +237,17 @@ void Player::update() {
 		return;
 	}
 
+	//Only update teleport and mond control when game is not frozen
+	if (_teleportCoolDown <= PLAYER_TEL_COOLDOWN) _teleportCoolDown++;
+	if (_mindControlCoolDown <= PLAYER_MDC_COOLDOWN) _mindControlCoolDown++;
+
 	short sin = Math::sin(_rot);
 	short cos = Math::cos(_rot);
 	
 	scanKeys();
 	
 	//DPAD
-	if (REG_KEYINPUT ^ DPAD) {
+	if (~REG_KEYINPUT & DPAD) {
 		move((REG_KEYINPUT & KEY_RIGHT) ? ((REG_KEYINPUT & KEY_LEFT) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED, (REG_KEYINPUT & KEY_DOWN) ? ((REG_KEYINPUT & KEY_UP) ? 0 : -PLAYER_MOV_SPEED) : PLAYER_MOV_SPEED);
 	}
 	
@@ -386,6 +409,10 @@ void Player::melee(Entity* e) {
 
 void Player::kill() {
 	_dead = 1;
+
+	loadGrayscalePalettesToMem();
+	
+	loadPressStart();
 }
 
 void Player::targetDead() {
@@ -395,7 +422,8 @@ void Player::targetDead() {
 	_attributeObj->attr1 &= ~0x01FF;
 	_attributeObj->attr0 |= 72;
 	_attributeObj->attr1 |= 112;
-
 	
 	refreshLevel(_level->getLevel(), x >> 16, y >> 16);
+
+	_mindControlCoolDown = 0;
 }

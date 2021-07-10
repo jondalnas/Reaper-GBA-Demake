@@ -28,11 +28,11 @@ void VBlank() {
 }
 
 int main(void) {
+	REG_DISPCNT = MODE_0 | OBJ_ON | OBJ_1D_MAP; //Set to mode 0, enable object layer, set objects to be stored as 1D in VRAM
 	
-	REG_DISPCNT = MODE_0 | OBJ_ON | OBJ_1D_MAP; //Set to mode 1, enable object layer, set objects to be stored as 1D in VRAM
-	
-	REG_BG0CNT = BG_SIZE_0 | (0x8 << 8) | BG_16_COLOR | (0x0 << 2) | 0x3; //Background size = 256x256, screen starts at VRAM + 8 * 2kb, color mode = 16x16, character starts at VRAM + 0 * 16kb, priority = 0
-	REG_BG1CNT = BG_SIZE_0 | (0x9 << 8) | BG_16_COLOR | (0x0 << 2) | 0x3; //Background size = 256x256, screen starts at VRAM + 9 * 2kb, color mode = 16x16, character starts at VRAM + 0 * 16kb, priority = 0
+	REG_BG0CNT = BG_SIZE_0 | (0x8 << 8) | BG_16_COLOR | (0x0 << 2) | 0x3; //Background size = 256x256, screen starts at VRAM + 8  * 2kb, color mode = 16x16, character starts at VRAM + 0 * 16kb, priority = 3
+	REG_BG1CNT = BG_SIZE_0 | (0x9 << 8) | BG_16_COLOR | (0x0 << 2) | 0x3; //Background size = 256x256, screen starts at VRAM + 9  * 2kb, color mode = 16x16, character starts at VRAM + 0 * 16kb, priority = 3
+	REG_BG2CNT = BG_SIZE_0 | (0xA << 8) | BG_16_COLOR | (0x0 << 2) | 0x0; //Background size = 256x256, screen starts at VRAM + 10 * 2kb, color mode = 16x16, character starts at VRAM + 1 * 16kb, priority = 0
 	
 	reloadLevel();
 	

@@ -10,9 +10,14 @@ public:
 	void update();
 
 	void targetDead();
+	void kill();
 
 	inline Entity* mindControling() {
 		return _mindControl;
+	}
+
+	u8 dead() {
+		return _dead;
 	}
 	
 private:
@@ -43,11 +48,12 @@ private:
 	u8 _lastLR = 0;
 	u8 _cursorTime = 0;
 	Entity* _mindControl = nullptr; //Entity the player is mindcontrolling, nullptr if none
-	
+	u8 _teleportCoolDown = 255;
+	u8 _mindControlCoolDown = 255;
+
 	u8 _dead = 0;
 
 	void melee(Entity* e);
-	void kill();
 
 	void BButton();
 };
