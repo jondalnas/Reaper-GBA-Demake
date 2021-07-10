@@ -47,8 +47,7 @@ void Entity::move(int dx, int dy) {
 		
 		if (((x + dx) >> 16) - _radius < (e->x >> 16) + e->getRadius() && ((x + dx) >> 16) + _radius > (e->x >> 16) - e->getRadius() &&
 			((y + dy) >> 16) - _radius < (e->y >> 16) + e->getRadius() && ((y + dy) >> 16) + _radius > (e->y >> 16) - e->getRadius()) {
-				u8 col = e->collides(this);
-				if (collides(e) || col) {
+				if (e->collides(this)) {
 					return;
 				}
 			}

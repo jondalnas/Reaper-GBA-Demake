@@ -167,7 +167,7 @@ u8 Enemy::collides(Entity* e) {
 	if (_dead) return 0;
 
 	if ((Player*) e == _level->getPlayer()) _level->getPlayer()->kill();
-	if ((Enemy*) e == _level->getPlayer()->mindControling()) ((Enemy*) e)->unTakeOver();
+	if ((Enemy*) e  == _level->getPlayer()->mindControling()) ((Enemy*) e)->unTakeOver();
 
 	return 1;
 }
