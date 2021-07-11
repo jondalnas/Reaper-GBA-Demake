@@ -77,10 +77,29 @@ void Player::BButton() {
 		
 		//Move cursor
 		if (~REG_KEYINPUT & DPAD) {
-			if (!(REG_KEYINPUT & KEY_RIGHT)) _cursorX += PLAYER_CSR_SPEED; //RIGHT
-			if (!(REG_KEYINPUT & KEY_LEFT))  _cursorX -= PLAYER_CSR_SPEED; //LEFT
-			if (!(REG_KEYINPUT & KEY_DOWN))  _cursorY += PLAYER_CSR_SPEED; //DOWN
-			if (!(REG_KEYINPUT & KEY_UP))    _cursorY -= PLAYER_CSR_SPEED; //UP
+			if (!(REG_KEYINPUT & KEY_RIGHT)) {
+				_cursorX += PLAYER_CSR_SPEED; //RIGHT
+
+				if (_cursorX >= (SCREEN_WIDTH >> 1) - 8) _cursorX = (SCREEN_WIDTH >> 1) - 8;
+			}
+			
+			if (!(REG_KEYINPUT & KEY_LEFT)) {
+				_cursorX -= PLAYER_CSR_SPEED; //LEFT
+
+				if (_cursorX < -(SCREEN_WIDTH >> 1) + 8) _cursorX = -(SCREEN_WIDTH >> 1) + 8;
+			}
+			
+			if (!(REG_KEYINPUT & KEY_DOWN)) {
+				_cursorY += PLAYER_CSR_SPEED; //DOWN
+
+				if (_cursorY >= (SCREEN_HEIGHT >> 1) - 8) _cursorY = (SCREEN_HEIGHT >> 1) - 8;
+			}
+			
+			if (!(REG_KEYINPUT & KEY_UP)) {
+				_cursorY -= PLAYER_CSR_SPEED; //UP
+
+				if (_cursorY < - (SCREEN_HEIGHT >> 1) + 8) _cursorY = -(SCREEN_HEIGHT >> 1) + 8;
+			}
 
 			_cursorAttributeObj->attr0 = _cursorAttributeObjATTR[0] | (72 + _cursorY);
 			_cursorAttributeObj->attr1 = _cursorAttributeObjATTR[1] | (112 + _cursorX);
