@@ -24,7 +24,7 @@ extern const tile_t* level0EntityTiles[6];
 
 //BG tiles
 extern const tile_t level0Tiles;
-extern const tile_t textTiles;
+extern const tile_t textTiles[];
 
 void loadTileToMem(const tile_t* tile_p, const u16 tileOffs, u8 baseBlock);
 void clearTile(const u16 tileOffs, u8 baseBlock);

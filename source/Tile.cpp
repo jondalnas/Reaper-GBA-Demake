@@ -14,7 +14,7 @@ const tile_t* level0EntityTiles[6] = {&playerTiles, &scytheTiles, &swingTiles, &
 
 const tile_t level0Tiles = {7, level0TileData};
 
-const tile_t textTiles = {pressStartTileSize, pressStartTileData};
+const tile_t textTiles[2] = {{pressStartTileSize, pressStartTileData}, {youWinTileSize, youWinTileData}};
 
 void loadTileToMem(const tile_t* tile_p, const u16 tileOffs, u8 baseBlock) {
 	for (int j = 0; j < tile_p->tileSize; j++) {

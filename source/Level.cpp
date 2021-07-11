@@ -116,7 +116,11 @@ Level::Level(const LevelData_t* level) {
 	loadTileToMem(level->levelTileCharacterData, 0, 0);
 
 	//Load text tiles and clear null tile
-	loadTileToMem(&textTiles, 256, 0);
+	u16 tile = 256;
+	for (u8 i = 0; i < 2; i++) {
+		loadTileToMem(&(textTiles[i]), tile, 0);
+		tile += textTiles[i].tileSize;
+	}
 	clearHUD();
 	
 	//Set tile flag data
@@ -130,6 +134,8 @@ Level::Level(const LevelData_t* level) {
 
 void Level::win() {
 	_won = 1;
+
+	loadYouWin();
 
 	loadGrayscalePalettesToMem();
 

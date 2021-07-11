@@ -9,7 +9,7 @@
 Enemy::Enemy(u32 x, u32 y, u8 radius, Level* level, u8 tile, u8 entityNum) : Entity(x, y, radius, level), _entityNum(entityNum) {
 	_attributeObj->attr0 = (x >> 16) | OBJ_ROT_SCALE_ON | OBJ_MODE(0) | OBJ_16_COLOR | ATTR0_SQUARE;
 	_attributeObj->attr1 = (y >> 16) | ATTR1_ROTDATA(entityNum) | ATTR1_SIZE_16;
-	_attributeObj->attr2 = tile | OBJ_PRIORITY(0) | OBJ_PALETTE(0);
+	_attributeObj->attr2 = tile | OBJ_PRIORITY(2) | OBJ_PALETTE(0);
 	
 	_initialAttribute = *_attributeObj;
 	

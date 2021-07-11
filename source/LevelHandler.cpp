@@ -179,6 +179,18 @@ void removePressStart() {
 	}
 }
 
+void loadYouWin() {
+	for (u8 x = 0; x < 5; x++) {
+		((u16*) SCREEN_BASE_BLOCK(10))[(x + (SCREEN_TILE_WIDTH >> 1) - 2) + ((SCREEN_TILE_HEIGHT >> 1) - 4) * VIRTUAL_SCREEN_TILE_SIZE] = x + 256 + 8;
+	}
+}
+
+void removeYouWin() {
+	for (u8 x = 0; x < 5; x++) {
+		((u16*) SCREEN_BASE_BLOCK(10))[(x + (SCREEN_TILE_WIDTH >> 1) - 2) + ((SCREEN_TILE_HEIGHT >> 1) - 4) * VIRTUAL_SCREEN_TILE_SIZE] = 16;
+	}
+}
+
 void clearHUD() {
 	for (u8 y = 0; y < SCREEN_TILE_HEIGHT; y++) {
 		for (u8 x = 0; x < SCREEN_TILE_WIDTH; x++) {

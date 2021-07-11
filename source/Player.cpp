@@ -24,7 +24,7 @@ Player::Player(u32 x, u32 y, Level* level, u8 entityNum) : Entity(x, y, 3, level
 	//Init player to center of screen
 	_attributeObj->attr0 = 72 | OBJ_ROT_SCALE_ON | OBJ_MODE(0) | OBJ_16_COLOR | ATTR0_SQUARE;
 	_attributeObj->attr1 = 112 | ATTR1_ROTDATA(entityNum) | ATTR1_SIZE_16;
-	_attributeObj->attr2 = 0 | OBJ_PRIORITY(0) | OBJ_PALETTE(0);
+	_attributeObj->attr2 = 0 | OBJ_PRIORITY(1) | OBJ_PALETTE(0);
 	
 	_scytheOAM = _level->lendOAM();
 	_scytheAttributeObj = &(OAM[_scytheOAM]);
@@ -40,13 +40,13 @@ Player::Player(u32 x, u32 y, Level* level, u8 entityNum) : Entity(x, y, 3, level
 	//Init scythe to player hand with same rotation as player
 	_scytheAttributeObj->attr0 = OBJ_ROT_SCALE_ON | OBJ_MODE(0) | OBJ_16_COLOR | ATTR0_SQUARE;
 	_scytheAttributeObj->attr1 = ATTR1_ROTDATA(entityNum) | ATTR1_SIZE_16;
-	_scytheAttributeObj->attr2 = 4 | OBJ_PRIORITY(0) | OBJ_PALETTE(0);
+	_scytheAttributeObj->attr2 = 4 | OBJ_PRIORITY(1) | OBJ_PALETTE(0);
 	
 	_scytheAttributeObjATTR0 = _scytheAttributeObj->attr0 & 0xFF00;
 	
 	_swingAttributeObjATTR[0] = OBJ_ROT_SCALE_ON | OBJ_MODE(0) | OBJ_16_COLOR | ATTR0_SQUARE;
 	_swingAttributeObjATTR[1] = ATTR1_ROTDATA(entityNum) | ATTR1_SIZE_16;
-	_swingAttributeObjATTR[2] = 8 | OBJ_PRIORITY(0) | OBJ_PALETTE(0);
+	_swingAttributeObjATTR[2] = 8 | OBJ_PRIORITY(1) | OBJ_PALETTE(0);
 	
 	_cursorAttributeObjATTR[0] = OBJ_MODE(0) | OBJ_16_COLOR | ATTR0_SQUARE;
 	_cursorAttributeObjATTR[1] = ATTR1_SIZE_16;

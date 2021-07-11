@@ -44,4 +44,6 @@ void refreshLevel(const level_t* level, u16 x, u16 y);
 
 void loadPressStart();
 void resetPressStart();
+void loadYouWin();
+void resetYouWin();
 void clearHUD();

@@ -19,6 +19,10 @@ public:
 	u8 dead() {
 		return _dead;
 	}
+
+	u8 collides(Entity* e) {
+		return 1;
+	}
 	
 private:
 	u16 _rot = 0;
